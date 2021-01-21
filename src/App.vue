@@ -1,12 +1,12 @@
 /* eslint-disable */
 <template>
-<div>
-  <div class="main-content">
-        <main-menu />
-        <main-contain />
-    <!-- <footer-contain /> -->
+  <div>
+    <div class="main-content">
+      <main-menu />
+      <main-contain />
+      <footer-contain />
     </div>
-</div>
+  </div>
 </template>
 
 <script>

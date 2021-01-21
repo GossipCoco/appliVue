@@ -1,6 +1,6 @@
 /* eslint-disable */
 <template>
-  <div>
+  <div class="user-list">
     <ul>
       <li v-for="(usersList, id) in users" :key="id">
         {{ usersList.name }}
