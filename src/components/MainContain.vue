@@ -8,7 +8,7 @@
   <div class="grid-item item4"><p>Se loger</p></div>
   <div class="grid-item item5">
   <p>5</p>
-  <p><user-list v-bind:data="users" v-bind:users-coming="userWelcome"></user-list></p>
+  <user-list v-bind:data="users" v-bind:users-coming="userWelcome"></user-list>
   </div>
 </div>
 </template>
@@ -25,7 +25,6 @@ export default {
       msg: 'Bienvenue dans l\'application La Guerre des Clans',
       description: 'Créez vos propres personnages',
       img: '../images/etoile-de-feu.png',
-      userDatas: 'https://jsonplaceholder.typicode.com/users',
       users: [],
       userWelcome: []
     }
