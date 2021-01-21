@@ -19,16 +19,10 @@ library.add(faFontAwesome)
 library.add(faUserSecret, faUser, faSearch, faQuestion, faQuestionCircle)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-
 Vue.config.productionTip = false
-
 Vue.use(Vuex)
-
 Vue.config.productionTip = false
-
-// Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 /* eslint-disable no-new */
 new Vue({

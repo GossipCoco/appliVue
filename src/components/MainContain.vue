@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
 <div class="grid-container">
   <div class="grid-item item1">

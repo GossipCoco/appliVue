@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <div class="footer">
         <p>{{msg}}</p>
