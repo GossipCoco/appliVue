@@ -39,6 +39,20 @@
     flex-direction: column;
     height: auto;
   }
+  /* Bloc utilisateurs */
+  .users-container{
+    display: flex;
+    flex-direction: row;
+  }
+  .user-list{
+    flex:1;
+  }
+  .user-details{
+    flex: 2;
+    background-color: aliceblue;
+  }
+
+
   /* Style the footer */
   .footer {
     background-color: #858585;

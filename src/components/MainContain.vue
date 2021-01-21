@@ -7,8 +7,7 @@
   <div class="grid-item item3"><p>{{description}}</p></div>
   <div class="grid-item item4"><p>Se loger</p></div>
   <div class="grid-item item5">
-  <p>5</p>
-  <user-list v-bind:data="users" v-bind:users-coming="userWelcome"></user-list>
+    <user-list v-bind:data="users" v-bind:users-coming="userWelcome" />
   </div>
 </div>
 </template>
@@ -24,7 +23,6 @@ export default {
     return {
       msg: 'Bienvenue dans l\'application La Guerre des Clans',
       description: 'Créez vos propres personnages',
-      img: '../images/etoile-de-feu.png',
       users: [],
       userWelcome: []
     }
