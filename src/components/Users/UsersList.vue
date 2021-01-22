@@ -1,26 +1,41 @@
 /* eslint-disable */
 <template>
-  <div class="user-list">
+  <div>
+    <p>{{msg}}</p>
     <ul>
-      <li v-for="(usersList, id) in users" :key="id">
-        {{ usersList.name }}
-      </li>
+      <li v-for="user in usersList" :key="user.id">
+        <p>
+          {{user.name}} <button  type="button" class="btn btn-link" @click="emitCustomEvent(user)">Plus d'info</button>
+        </p>
+      </li > 
     </ul>
   </div>
 </template>
 <script>
-import users from "../datas/usersDatas.json";
 export default {
   name: "UsersList",
-  data (){
+  props:['usersList'],
+  components:{
+  },data (){
     return{
-      users
-    }  
-  },
-  mounted () {
-    axios
-      .get('../datas/usersDatas.json')
-      .then(response => (this.usersList = response))
-  },
+        msg: 'Tous les utilisateurs',
+        userName: '',
+        userInformations: []
+      }  
+  },methods: {
+    showUser: function (user) {
+      console.log(user);
+      this.userInformations = user;
+      console.log(this.userInformations);
+    },
+    emitCustomEvent(user) {
+      this.userInformations = user;
+      this.$emit('show-info-user', this.userInformations);
+    }
+  }
 };
 </script>
+
+function newFunction() {
+  console.log(this.userInformations);
+}
