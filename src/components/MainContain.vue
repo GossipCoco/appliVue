@@ -3,29 +3,44 @@
   <div class="grid-item item1">
     <h3>{{msg}}</h3>
   </div>
-  <div class="grid-item item2"><p>Image à venir to do debug</p></div>
-  <div class="grid-item item3"><p>{{description}}</p></div>
-  <div class="grid-item item4"><p>Se loger</p></div>
+  <div class="grid-item item3">
+    <p>{{description}}</p>
+  </div>
   <div class="grid-item item5">
-    <user-list v-bind:data="users" v-bind:users-coming="userWelcome" />
+    <div class="users-container">
+      <div class="user-list">
+      <user-list v-bind:usersList="userDatas"/>
+      </div>
+      <div class="user-information">
+        <user-details />
+      </div>
+    </div>
   </div>
 </div>
 </template>
 
 <script>
+import usersJson from "./datas/usersDatas.json"
 import UsersList from './Users/UsersList.vue'
+import UserDetails from './Users/UserDetails.vue'
 export default {
   name: 'MainContain',
   components: {
-    'user-list': UsersList
+    'user-list': UsersList,
+    'user-details': UserDetails
   },
   data () {
     return {
+      userDatas: usersJson,
       msg: 'Bienvenue dans l\'application La Guerre des Clans',
-      description: 'Créez vos propres personnages',
-      users: [],
-      userWelcome: []
+      description: 'Créez vos propres personnages'
     }
-  }
+  },created: function() {
+    axios.get(this.userDatas)
+      .then((response) => {
+          this.users = response.data;
+          console.log(this.users);
+      })
+  },
 }
 </script>
