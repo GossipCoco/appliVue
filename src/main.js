@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuex from 'vuex'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
@@ -20,11 +22,9 @@ library.add(faFontAwesome)
 library.add(faUserSecret, faUser, faSearch, faQuestion, faQuestionCircle)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-
 Vue.config.productionTip = false
-
+Vue.use(VueAxios, axios)
 Vue.use(Vuex)
-
 Vue.config.productionTip = false
 
 // Make BootstrapVue available throughout your project

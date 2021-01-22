@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
   <div>
     <div class="main-content">
@@ -9,8 +10,6 @@
 </template>
 
 <script>
-import axios from "axios";
-const instance = axios.create();
 import MainMenu from './components/MainMenu.vue'
 import MainContain from './components/MainContain.vue'
 import FooterMain from './components/layout/FooterContain.vue'

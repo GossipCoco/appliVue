@@ -1,3 +1,6 @@
+/* eslint-disable */
+/*eslint space-before-function-paren: ["error", "never"]*/
+/*eslint-env es6*/
 <template>
 <div class="grid-container">
   <div class="grid-item item1">
@@ -9,11 +12,10 @@
   <div class="grid-item item5">
     <div class="users-container">
       <div class="user-list">
-      <user-list v-bind:usersList="userDatas"/>
+      <user-list v-bind:usersList="userDatas" v-on:show-info-user="setUser"/>
       </div>
       <div class="user-information">
-        <user-details @show-info-user="setUser"></user-details>
-        <p>{{userPersonnalInfo}}</p>
+        <user-details  v-bind:usrInfo="userPersonnalInfo"></user-details>
       </div>
     </div>
   </div>
@@ -21,9 +23,10 @@
 </template>
 
 <script>
-import usersJson from "./datas/usersDatas.json"
+import usersJson from './datas/usersDatas.json'
 import UsersList from './Users/UsersList.vue'
 import UserDetails from './Users/UserDetails.vue'
+
 export default {
   name: 'MainContain',
   components: {
@@ -35,21 +38,21 @@ export default {
       userDatas: usersJson,
       msg: 'Bienvenue dans l\'application La Guerre des Clans',
       description: 'Créez vos propres personnages',
-      userPersonnalInfo: '',
+      userPersonnalInfo: ''
     }
-  },created: function() {
+  },
+  created: function () {
     axios.get(this.userDatas)
       .then((response) => {
-          this.users = response.data;
-          console.log(this.users);
+        this.users = response.data
+        console.log(this.users)
       })
   },
   methods: {
-      // Define method that will use the payload to update the data property
-      setUser(value) {
-        console.log(value);
-          //this.message = payload.message
-      }
+    setUser(value) {
+      console.log(value)
+      this.userPersonnalInfo = value
+    }
   }
 }
 </script>
