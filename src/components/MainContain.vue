@@ -1,9 +1,6 @@
 /* eslint-disable */
-<<<<<<< HEAD
-=======
 /*eslint space-before-function-paren: ["error", "never"]*/
 /*eslint-env es6*/
->>>>>>> dev
 <template>
 <div class="grid-container">
   <div class="grid-item item1">
