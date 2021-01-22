@@ -12,7 +12,8 @@
       <user-list v-bind:usersList="userDatas"/>
       </div>
       <div class="user-information">
-        <user-details />
+        <user-details @show-info-user="setUser"></user-details>
+        <p>{{userPersonnalInfo}}</p>
       </div>
     </div>
   </div>
@@ -33,7 +34,8 @@ export default {
     return {
       userDatas: usersJson,
       msg: 'Bienvenue dans l\'application La Guerre des Clans',
-      description: 'Créez vos propres personnages'
+      description: 'Créez vos propres personnages',
+      userPersonnalInfo: '',
     }
   },created: function() {
     axios.get(this.userDatas)
@@ -42,5 +44,12 @@ export default {
           console.log(this.users);
       })
   },
+  methods: {
+      // Define method that will use the payload to update the data property
+      setUser(value) {
+        console.log(value);
+          //this.message = payload.message
+      }
+  }
 }
 </script>

@@ -3,7 +3,9 @@
     <p>{{msg}}</p>
     <ul>
       <li v-for="user in usersList" :key="user.id">
-        <p>{{user.name}} <button v-on:click="showUser(user)">Plus</button></p>
+        <p>{{user.name}} <button @click="showUser(user)">Plus</button>
+        <button @click="emitCustomEvent(user)">Emit Event</button>
+        </p>
       </li > 
     </ul>
   </div>
@@ -24,8 +26,12 @@ export default {
       console.log(user);
       this.userInformations = user;
       console.log(this.userInformations);
-     
-
+    },
+    emitCustomEvent(user) {
+      console.log(user);
+      this.userInformations = user;
+      console.log(this.userInformations);
+      this.$emit('show-info-user', this.userInformations);
     }
   }
 };
