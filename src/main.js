@@ -23,10 +23,9 @@ library.add(faUserSecret, faUser, faSearch, faQuestion, faQuestionCircle)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
-<<<<<<< HEAD
-=======
+
 Vue.use(VueAxios, axios)
->>>>>>> dev
+
 Vue.use(Vuex)
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
