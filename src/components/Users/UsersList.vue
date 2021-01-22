@@ -5,7 +5,7 @@
     <ul>
       <li v-for="user in usersList" :key="user.id">
         <p>
-          {{user.name}} <button @click="emitCustomEvent(user)">Plus d'info</button>
+          {{user.name}} <button  type="button" class="btn btn-link" @click="emitCustomEvent(user)">Plus d'info</button>
         </p>
       </li > 
     </ul>

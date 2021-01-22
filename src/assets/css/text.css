@@ -1,3 +1,10 @@
+@import 'variables.scss';
 .user-list{
     text-align: left;
+}
+.user-personnal-info {
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: var(--main-blue);
 }
