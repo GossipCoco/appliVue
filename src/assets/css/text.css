@@ -1,5 +1,5 @@
 @import 'variables.scss';
-.user-list{
+.user-list ul li{
     text-align: left;
 }
 .user-personnal-info {

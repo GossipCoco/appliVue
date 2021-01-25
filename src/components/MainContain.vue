@@ -11,11 +11,19 @@
   </div>
   <div class="grid-item item5">
     <div class="users-container">
-      <div class="user-list">
-      <user-list v-bind:usersList="userDatas" v-on:show-info-user="setUser"/>
-      </div>
-      <div class="user-information">
-        <user-details  v-bind:usrInfo="userPersonnalInfo"></user-details>
+      <div class="container">
+        <div class="row  align-items-start">
+          <div class="col">
+            <div class="user-list">
+              <user-list v-bind:usersList="userDatas" v-on:show-info-user="setUser"/>
+            </div>
+          </div>
+          <div class="col">
+            <div class="user-information">
+              <user-details  v-bind:usrInfo="userPersonnalInfo"></user-details>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
