@@ -7,6 +7,7 @@
 </template>
 <script>
 export default {
-    name:'UserFormEdit'
+    name:'UserFormEdit',
+    props: ['usrInfo'],
 }
 </script>

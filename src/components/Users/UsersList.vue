@@ -20,7 +20,8 @@ export default {
     return{
         msg: 'Tous les utilisateurs',
         userName: '',
-        userInformations: []
+        userInformations: [],
+        showUserInfoDetail: true
       }  
   },methods: {
     showUser: function (user) {

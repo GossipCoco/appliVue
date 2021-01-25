@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="user-information">
+            <div class="user-information" v-if="showUserInfoDetail === true">
               <user-details  v-bind:usrInfo="userPersonnalInfo"></user-details>
             </div>
           </div>
@@ -46,20 +46,21 @@ export default {
       userDatas: usersJson,
       msg: 'Bienvenue dans l\'application La Guerre des Clans',
       description: 'Créez vos propres personnages',
-      userPersonnalInfo: ''
+      userPersonnalInfo: '',
+      showUserInfoDetail: false
     }
   },
   created: function () {
     axios.get(this.userDatas)
       .then((response) => {
         this.users = response.data
-        console.log(this.users)
       })
   },
   methods: {
     setUser(value) {
       console.log(value)
-      this.userPersonnalInfo = value
+      this.userPersonnalInfo = value,
+      this.showUserInfoDetail = true
     }
   }
 }
