@@ -51,7 +51,9 @@
     flex: 2;
     background-color: aliceblue;
   }
-
+  .contain-infoUser{
+    margin: 1rem;
+  }
 
   /* Style the footer */
   .footer {

@@ -1,11 +1,13 @@
 /* eslint-disable */
 <template>
     <div class="user-personnal-info">
-        <p>Information sur l'utilisateur</p>
-        <p>Nom : {{ usrName }}</p>
-        <p>Nom d'usage : {{ usrInfo.username }}</p>
-        <p>Email : {{ usrInfo.email }}</p>
-        <button v-on:click="showFormEdit()">Modifier des informations</button>
+        <div class="contain-infoUser">
+            <p>Information sur l'utilisateur</p>
+            <p>Nom : {{ usrName }}</p>
+            <p>Nom d'usage : {{ usrInfo.username }}</p>
+            <p>Email : {{ usrInfo.email }}</p>
+            <button class="btn btn-primary" v-on:click="showFormEdit()">Modifier des informations</button>
+        </div>
         <div v-if="showFormEditContaine === true">
             <user-form-edit v-bind:userPersonnalInfo="usrInfo" @editInfoUsrSuccess="editInfoUsrSuccess"></user-form-edit>
         </div>
@@ -31,7 +33,6 @@ export default {
         },
         editInfoUsrSuccess(value){
             this.usrName = value
-            console.log(value)
         }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div mb-3>
         <p>
             Modifier {{usrName}}
         </p>
@@ -7,15 +7,11 @@
             <form id="editForm">
                 <label>Nom</label>
                 <input
-                type="text"
-                v-model="usrName"> <br>
+                type="text" class="form-control" v-model="usrName"> <br>
                 <label>Email</label>
-                <input type="email"
-                v-model="usrEmail"> <br>
-                <button v-on:click="editUserInformation">Modifier</button>
-            </form>
-            <p>{{answerName}}</p>
-            <p>{{answerEmail}}</p>
+                <input type="email" class="form-control" v-model="usrEmail"> <br>
+                <button class="btn btn-primary" v-on:click="editUserInformation">Modifier</button>
+            </form>            
         </div>
     </div>
 </template>
