@@ -37,9 +37,13 @@
 
 <script>
 import usersJson from './datas/usersDatas.json'
+import photosJson from './datas/photos.json'
+import commentsJson from './datas/comments.json'
+import postsJson from './datas/posts.json'
 import UsersList from './Users/UsersList.vue'
 import UserDetails from './Users/UserDetails.vue'
 import LoginContain from './Secure/LoginContain.vue'
+
 
 export default {
   name: 'MainContain',
