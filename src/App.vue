@@ -1,11 +1,13 @@
 /* eslint-disable */
 <template>
   <div>
-    <div class="main-content">
-      <main-menu />
-      <main-contain />
-      <footer-contain />
-    </div>
+    <main-menu />
+    <div class="container">
+      <div class="main-content">
+        <main-contain />
+      </div>
+    </div>   
+    <footer-contain /> 
   </div>
 </template>
 

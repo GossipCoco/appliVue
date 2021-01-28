@@ -27,6 +27,9 @@ export default {
             usrName: this.usrInfo.name
         }
     },
+    computed: {
+
+    },
     methods:{
         showFormEdit(){
             this.showFormEditContaine = true
