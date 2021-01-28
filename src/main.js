@@ -10,7 +10,6 @@ import VueAxios from 'vue-axios'
 import MainContain from '@/components/MainContain'
 import LoginContain from '@/components/Secure/LoginContain'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-// Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/css/main.css'
@@ -34,14 +33,14 @@ Vue.use(VueRouter)
 
 const routes = [
 	{ path: '/', name: 'MainContain',component: MainContain},
-	{ path: '/login', name: 'LoginContain', component: LoginContain, }
+	{ path: '/login', name: 'LoginContain', component: LoginContain}
 ];
 
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router: routes,
+  router,
   components: { App },
   template: '<App/>'
 })
