@@ -3,28 +3,33 @@
 /*eslint-env es6*/
 <template>
 <div class="grid-container">
-  <div class="grid-item item1">
-    <h3>{{msg}}</h3>
+  <div class="row top-main-contain">
+    <div class="col">
+      <div class="header-ban-contain">
+        <img src="../images/warrior_ban.jpg">
+        <h3>{{msg}}</h3>
+      </div>
+    </div>
+    <div class="col">
+      <login-contain />
+    </div>
   </div>
-  <div class="grid-item item3">
-    <p>{{description}}</p>
-  </div>
-  <div class="grid-item item5">
-    <div class="users-container">
-      <div class="container">
-        <div class="row  align-items-start">
-          <div class="col">
-            <div class="user-list">
-              <user-list v-bind:usersList="userDatas" v-on:show-info-user="setUser"/>
-            </div>
-          </div>
-          <div class="col">
-            <div class="user-information" v-if="showUserInfoDetail === true">
-              <user-details  v-bind:usrInfo="userPersonnalInfo"></user-details>
-            </div>
-          </div>
+  <div class="row">
+    <div class="col">
+      <div class="all-users-contain">
+        <button  class="btn btn-primary btn-sm" v-on:click="showAllUsers()">Afficher les utilisateurs</button>
+        <div v-if="showListOfAllUsers === true" class="list-all-user-contain">
+          <user-list v-bind:usersList="userDatas" v-on:show-info-user="setUser"/>
         </div>
       </div>
+    </div>
+    <div class="col">
+          <div class="user-information" v-if="showUserInfoDetail === true">
+            <user-details  v-bind:usrInfo="userPersonnalInfo"></user-details>
+          </div>
+    </div>
+    <div class="col">
+      3 of 3
     </div>
   </div>
 </div>
@@ -34,20 +39,24 @@
 import usersJson from './datas/usersDatas.json'
 import UsersList from './Users/UsersList.vue'
 import UserDetails from './Users/UserDetails.vue'
+import LoginContain from './Secure/LoginContain.vue'
 
 export default {
   name: 'MainContain',
   components: {
     'user-list': UsersList,
-    'user-details': UserDetails
+    'user-details': UserDetails,
+    'login-contain': LoginContain
   },
   data () {
     return {
+      banImg: '../images/warrior_ban.jpg',
       userDatas: usersJson,
       msg: 'Bienvenue dans l\'application La Guerre des Clans',
       description: 'Créez vos propres personnages',
       userPersonnalInfo: '',
-      showUserInfoDetail: false
+      showUserInfoDetail: false,
+      showListOfAllUsers: false
     }
   },
   created: function () {
@@ -61,6 +70,9 @@ export default {
       console.log(value)
       this.userPersonnalInfo = value,
       this.showUserInfoDetail = true
+    },
+    showAllUsers(){
+      this.showListOfAllUsers = true
     }
   }
 }

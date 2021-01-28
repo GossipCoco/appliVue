@@ -2,11 +2,9 @@
 <template>
   <div>
     <p>{{msg}}</p>
-    <ul>
-      <li v-for="user in usersList" :key="user.id">
-        <p>
-          {{user.name}} <button  type="button" class="btn btn-link" @click="emitCustomEvent(user)">Plus d'info</button>
-        </p>
+    <ul  class="list-group">
+      <li v-for="user in usersList" :key="user.id"  class="list-group-item">
+        {{user.name}} <button  type="button" class="btn btn-link" @click="emitCustomEvent(user)">Plus d'info</button>
       </li > 
     </ul>
   </div>

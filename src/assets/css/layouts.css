@@ -15,10 +15,27 @@
 .menu-principal ul li{
     list-style: none;
 }
+.header-ban-contain{
+  display: flex;
+  flex-direction: column;
+}
+.header-ban-contain h3{
+  text-align: center;
+}
 /* Contenu principal */
 .middle-content{
     display: flex;
     flex-direction: column;
+}
+.top-main-contain{
+  height: 350px;
+}
+.all-users-contain{
+  display: flex;
+  flex-direction: column;
+}
+.list-all-user-contain{
+  margin: 1rem 2rem;
 }
 /* Container for flexboxes */
 .row {
@@ -48,8 +65,7 @@
     flex:1;
   }
   .user-details{
-    flex: 2;
-    background-color: aliceblue;
+    flex: 1;
   }
   .contain-infoUser{
     margin: 1rem;
@@ -71,33 +87,4 @@
       -webkit-flex-direction: column;
       flex-direction: column;
     }
-  }
-  .grid-container {
-    display: grid;
-    grid-gap: 10px;
-    background-color: #c8e6ff;
-    padding: 10px;
-  }
-  
-  .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 20px;
-    font-size: 30px;
-  }
-  
-  .item1 {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-  }
-  
-  .item2 {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-  }
-  
-  .item5 {
-    grid-column: 1 / span 3;
-    grid-row: 3;
-    height: 250px;
   }

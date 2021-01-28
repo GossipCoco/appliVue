@@ -14,6 +14,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/css/main.css'
 import './assets/css/layouts.css'
+import './assets/css/composants.css'
 import './assets/css/text.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faQuestion, faQuestionCircle, faSearch, faUser, faUserSecret } from '@fortawesome/free-solid-svg-icons'
@@ -32,15 +33,18 @@ Vue.use(IconsPlugin)
 Vue.use(VueRouter)
 
 const routes = [
-	{ path: '/', name: 'MainContain',component: MainContain},
-	{ path: '/login', name: 'LoginContain', component: LoginContain}
+  { path: '/', name: 'MainContain',component: MainContain},
+  {
+    path: '/login',
+    name: 'LoginContain',
+    component: LoginContain
+  }
 ];
-
-
+const allroutes = new VueRouter({ routes: routes });
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
+  router:allroutes,
   components: { App },
   template: '<App/>'
 })

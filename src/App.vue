@@ -2,12 +2,9 @@
 <template>
   <div>
     <main-menu />
-    <div class="container">
-      <div class="main-content">
-        <main-contain />
-      </div>
-    </div>   
-    <footer-contain /> 
+    <div class="main-content">
+      <main-contain />
+    </div>  
   </div>
 </template>
 
