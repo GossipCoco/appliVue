@@ -20,6 +20,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faQuestion, faQuestionCircle, faSearch, faUser, faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faFontAwesome } from '@fortawesome/free-brands-svg-icons'
+import Router from './router/index.js'
 
 library.add(faFontAwesome)
 library.add(faUserSecret, faUser, faSearch, faQuestion, faQuestionCircle)
@@ -30,21 +31,12 @@ Vue.use(VueAxios, axios)
 Vue.use(Vuex)
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
-Vue.use(VueRouter)
+Vue.use(Router)
 
-const routes = [
-  { path: '/', name: 'MainContain',component: MainContain},
-  {
-    path: '/login',
-    name: 'LoginContain',
-    component: LoginContain
-  }
-];
-const allroutes = new VueRouter({ routes: routes });
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router:allroutes,
+  router,
   components: { App },
   template: '<App/>'
 })

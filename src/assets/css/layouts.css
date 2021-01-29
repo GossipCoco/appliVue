@@ -13,10 +13,16 @@
 }
 .title-site-containe{
   flex:1;
+  text-align: center;
+  padding-top: 5rem;
 }
-.title-site-containe h3{
+.title-site-containe h3:first{
     margin-top: 10rem;
     text-align: center;
+}
+.title-site-containe h3.titleBook{
+  margin-top: 5rem;
+  text-align: center;
 }
 .top-main-contain{
   background-image: url('../../images/etoile-de-feu.png');
@@ -42,7 +48,7 @@
     flex-direction: column;
 }
 .top-main-contain{
-  height: 350px;
+  height: 250px;
 }
 .main-app-containe{
   flex:2;

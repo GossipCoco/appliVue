@@ -3,8 +3,6 @@ import Router from 'vue-router'
 import MainContain from '@/components/MainContain'
 import LoginContain from '@/components/Secure/LoginContain'
 
-Vue.use(Router)
-
 export default new Router({
   routes: [
     {
