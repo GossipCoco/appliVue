@@ -4,22 +4,20 @@
 <template>
 <div class="grid-container">
   <div class="row top-main-contain">
-    <div class="col">
-      <div class="header-ban-contain">
-        <img src="../images/warrior_ban.jpg">
-        <h3>{{msg}}</h3>
-      </div>
-    </div>
-    <div class="col">
+    <div class="col title-site-containe">
+      <h3>{{msg}}</h3>
+      <h3>{{titleBook}}</h3>
+    </div>    
+  </div>
+  <div class="row main-app-containe">
+    <div class="col sm login-container">
       <login-contain />
     </div>
-  </div>
-  <div class="row">
     <div class="col">
       <div class="all-users-contain">
         <button  class="btn btn-primary btn-sm" v-on:click="showAllUsers()">Afficher les utilisateurs</button>
         <div v-if="showListOfAllUsers === true" class="list-all-user-contain">
-          <user-list v-bind:usersList="userDatas" v-on:show-info-user="setUser"/>
+          <user-list v-bind:usersList="userDatas" v-bind:listPhotos="listPhotos" v-on:show-info-user="setUser"/>
         </div>
       </div>
     </div>
@@ -29,8 +27,8 @@
           </div>
     </div>
     <div class="col">
-      3 of 3
-    </div>
+      <user-comments />
+    </div>    
   </div>
 </div>
 </template>
@@ -42,31 +40,37 @@ import commentsJson from './datas/comments.json'
 import postsJson from './datas/posts.json'
 import UsersList from './Users/UsersList.vue'
 import UserDetails from './Users/UserDetails.vue'
+import UserComments from './Users/UserComments.vue'
 import LoginContain from './Secure/LoginContain.vue'
-
 
 export default {
   name: 'MainContain',
   components: {
     'user-list': UsersList,
     'user-details': UserDetails,
-    'login-contain': LoginContain
+    'login-contain': LoginContain,
+    'user-comments': UserComments
   },
   data () {
     return {
       banImg: '../images/warrior_ban.jpg',
       userDatas: usersJson,
-      msg: 'Bienvenue dans l\'application La Guerre des Clans',
+      msg: 'Bienvenue dans l\'application',
+      titleBook: '\"La Guerre des Clans\"',
       description: 'Créez vos propres personnages',
       userPersonnalInfo: '',
       showUserInfoDetail: false,
-      showListOfAllUsers: false
+      showListOfAllUsers: false,
+      listPhotos: photosJson,
     }
   },
   created: function () {
     axios.get(this.userDatas)
       .then((response) => {
         this.users = response.data
+      }),
+      axios.get(this.listPhotos).then((response) => {
+        this.photos = response.data
       })
   },
   methods: {

@@ -2,33 +2,50 @@
     display: flex;
     flex-direction: column;
 }
-.header-content{
-    display: flex;
-    flex-direction: row;
-}
+/* NAV  */
 .nav-contain{
     flex:1;
 }
-.logo img{
-    width: 15%;
-}
-.menu-principal ul li{
-    list-style: none;
-}
+
+/* Header & title */
 .header-ban-contain{
+  flex:1;
+}
+.title-site-containe{
+  flex:1;
+}
+.title-site-containe h3{
+    margin-top: 10rem;
+    text-align: center;
+}
+.top-main-contain{
+  background-image: url('../../images/etoile-de-feu.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 25rem;
+}
+/* Contenu principal */
+.main-app-containe{
+  margin: 1rem;
+}
+.col.login-container{
+  padding: 1rem;
+}
+
+
+.grid-container{
   display: flex;
   flex-direction: column;
 }
-.header-ban-contain h3{
-  text-align: center;
-}
-/* Contenu principal */
 .middle-content{
     display: flex;
     flex-direction: column;
 }
 .top-main-contain{
   height: 350px;
+}
+.main-app-containe{
+  flex:2;
 }
 .all-users-contain{
   display: flex;
@@ -42,20 +59,7 @@
     display: -webkit-flex;
     display: flex;
   }
-  
-  /* Create three equal columns that sits next to each other */
-  .column {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    padding: 10px;
-    height: 50%; /* Should be removed. Only for demonstration */
-  }
-  .grid-item.item5{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
+
   /* Bloc utilisateurs */
   .users-container{
     display: flex;

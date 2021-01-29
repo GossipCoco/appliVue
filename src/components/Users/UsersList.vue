@@ -12,7 +12,7 @@
 <script>
 export default {
   name: "UsersList",
-  props:['usersList'],
+  props:['usersList', 'listPhotos'],
   components:{
   },data (){
     return{
@@ -23,9 +23,8 @@ export default {
       }  
   },methods: {
     showUser: function (user) {
-      console.log(user);
+      console.log(this.listPhoto)
       this.userInformations = user;
-      console.log(this.userInformations);
     },
     emitCustomEvent(user) {
       this.userInformations = user;
@@ -34,7 +33,3 @@ export default {
   }
 };
 </script>
-
-function newFunction() {
-  console.log(this.userInformations);
-}
