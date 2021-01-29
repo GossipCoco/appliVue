@@ -10,7 +10,7 @@
     </div>    
   </div>
   <div class="row main-app-containe">
-    <div class="col sm login-container">
+    <div class="col sm login-container">       
       <login-contain />
     </div>
     <div class="col">

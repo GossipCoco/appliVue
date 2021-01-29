@@ -7,6 +7,7 @@ export default new Router({
   routes: [
     {
       path: '/',
+      redirect: '/home',
       name: 'MainContain',
       component: MainContain
     },
