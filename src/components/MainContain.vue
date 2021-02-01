@@ -36,6 +36,9 @@
 </template>
 
 <script>
+import axios from 'axios'
+import usersJson from './datas/usersDatas.json'
+import photosJson from './datas/photos.json'
 import UsersList from './Users/UsersList.vue'
 import UserDetails from './Users/UserDetails.vue'
 import UserComments from './Users/UserComments.vue'
@@ -51,37 +54,22 @@ export default {
   },
   data () {
     return {
-      banImg: '../../assets/images/warrior_ban.jpg',
-      userDatas: './datas/usersDatas.json',
-      listPhotos: './datas/photos.json',
+      banImg: '../images/warrior_ban.jpg',
+      userDatas: usersJson,
       msg: 'Bienvenue dans l\'application',
       titleBook: '\"La Guerre des Clans\"',
       description: 'Créez vos propres personnages',
       userPersonnalInfo: '',
       showUserInfoDetail: false,
       showListOfAllUsers: false,
+      listPhotos: photosJson,
       userId: '',
       photoUserId: ''
     }
   },
-  created: function () {
-    axios.get(this.userDatas)
-      .then((response) => {
-        this.users = response.data
-      })
-      .catch(error => {
-        console.log(error.response)
-      }),
-      axios.get(this.listPhotos).then((response) => {
-        this.photos = response.data        
-      })
-      .catch(error => {
-        console.log(error.response)
-      })
-  },
   methods: {
     setUser(value) {
-      //console.log(value)
+      console.log(value)
       this.userPersonnalInfo = value,
       //console.log(this.userPersonnalInfo.id),
       this.userId = this.userPersonnalInfo.id,
