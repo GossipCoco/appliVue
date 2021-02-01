@@ -3,11 +3,15 @@
     <div class="nav-contain">
       <b-navbar type="dark" variant="dark">
         <b-navbar-nav>
-          <b-nav-item href="/home">Home</b-nav-item>
-          <b-nav-item href="/login">
-            Login
+          <b-nav-item href="/home">
+          Home
           </b-nav-item>
-          <b-nav-item href="#">Register</b-nav-item>        
+          <b-nav-item href="/login">
+          Login
+          </b-nav-item>
+          <b-nav-item href="#">
+            Register
+          </b-nav-item>
           <b-nav-item-dropdown text="User" right>
             <b-dropdown-item href="#">Account</b-dropdown-item>
             <b-dropdown-item href="#">Settings</b-dropdown-item>
@@ -15,8 +19,8 @@
         </b-navbar-nav>
       </b-navbar>
     </div>
-  </div>
-</template>
+    </div>
+  </template>
 
 <script>
 export default {

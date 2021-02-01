@@ -4,7 +4,7 @@
     <main-menu />
     <div class="main-content">
       <main-contain />
-    </div>  
+    </div>
   </div>
 </template>
 

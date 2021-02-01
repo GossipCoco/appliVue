@@ -19,11 +19,12 @@ export default {
         msg: 'Tous les utilisateurs',
         userName: '',
         userInformations: [],
-        showUserInfoDetail: true
+        showUserInfoDetail: true,
+        usrId: ''
       }  
   },methods: {
     showUser: function (user) {
-      console.log(this.listPhoto)
+      console.log(user.id)
       this.userInformations = user;
     },
     emitCustomEvent(user) {

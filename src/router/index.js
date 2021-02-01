@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import Router from 'vue-router'
 import MainContain from '@/components/MainContain'
 import LoginContain from '@/components/Secure/LoginContain'
