@@ -3,40 +3,49 @@
 /*eslint-env es6*/
 <template>
 <div class="grid-container">
-  <div class="row top-main-contain">
-    <div class="col title-site-containe">
-      <h3>{{msg}}</h3>
-      <h3 class="titleBook">{{titleBook}}</h3>
-    </div>    
-  </div>
-  <div class="row main-app-containe">
-    <!-- <div class="col sm login-container">       
-      <login-contain />
-    </div> -->
+  <div class="row">
+    <div class="col col-md-auto menu-left">
+      <main-menu-left />
+    </div>
     <div class="col">
-      <div class="all-users-contain">
-        <button  class="btn btn-primary btn-sm" v-on:click="showAllUsers()">Afficher les utilisateurs</button>
-        <div v-if="showListOfAllUsers === true" class="list-all-user-contain">
-          <user-list v-bind:usersList="userDatas" v-on:show-info-user="setUser"/>
+      <div class="row">
+        <div class="col col-main-contain">
+          <div class="row top-main-contain">
+            <div class="col title-site-containe">
+              <h3>{{msg}}</h3>
+              <h3 class="titleBook">{{titleBook}}</h3>
+            </div>    
+          </div>
+          <div class="row main-app-containe">
+            <div class="col">
+              <div class="all-users-contain">
+                <button  class="btn btn-primary btn-sm" v-on:click="showAllUsers()">Afficher les utilisateurs</button>
+                <div v-if="showListOfAllUsers === true" class="list-all-user-contain">
+                  <user-list v-bind:usersList="userDatas" v-on:show-info-user="setUser"/>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                  <div class="user-information" v-if="showUserInfoDetail === true">
+                    <user-details  v-bind:usrInfo="userPersonnalInfo"></user-details>
+                  </div>
+            </div>
+            <div class="col">
+              <div class="user-information" v-if="showUserInfoDetail === true">
+                <user-comments v-bind:photoUser="listPhotos" v-bind:userId="userId"/>
+              </div>
+            </div> 
+          </div>
         </div>
       </div>
     </div>
-    <div class="col">
-          <div class="user-information" v-if="showUserInfoDetail === true">
-            <user-details  v-bind:usrInfo="userPersonnalInfo"></user-details>
-          </div>
-    </div>
-    <div class="col">
-      <div class="user-information" v-if="showUserInfoDetail === true">
-        <user-comments v-bind:photoUser="listPhotos" v-on:showImgUsr="showPhoto(photoUserId)" />
-      </div>
-    </div>    
   </div>
 </div>
 </template>
 
 <script>
 import axios from 'axios'
+import MainMenuLeft from './Navigation/MainMenuLeft.vue'
 import usersJson from './datas/usersDatas.json'
 import photosJson from './datas/photos.json'
 import UsersList from './Users/UsersList.vue'
@@ -50,7 +59,8 @@ export default {
     'user-list': UsersList,
     'user-details': UserDetails,
     'login-contain': LoginContain,
-    'user-comments': UserComments
+    'user-comments': UserComments,
+    'main-menu-left': MainMenuLeft
   },
   data () {
     return {
@@ -67,9 +77,12 @@ export default {
       photoUserId: ''
     }
   },
+  computed: {},
   methods: {
+    goBack() {
+      window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
+    },
     setUser(value) {
-      console.log(value)
       this.userPersonnalInfo = value,
       //console.log(this.userPersonnalInfo.id),
       this.userId = this.userPersonnalInfo.id,
@@ -77,9 +90,6 @@ export default {
     },
     showAllUsers(){
       this.showListOfAllUsers = true
-    },
-    showPhoto(photoUserId){
-      console.log(photoUserId)
     }
   }
 }

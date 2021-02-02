@@ -2,12 +2,24 @@
     display: flex;
     flex-direction: column;
 }
-/* NAV  */
+.grid-container .row{
+  height: 100%;
+}
+/* NAV  TOP*/
 .nav-contain{
     flex:1;
 }
-
+/* MENU LATERAL */
+.main-menu-left{
+  margin: 2rem 0 0 2rem;
+}
+.col.col-md-auto.menu-left{
+  background-color: rgba(0, 73, 22,1);
+}
 /* Header & title */
+.row.top-main-contain{
+  height: 300px;
+}
 .header-ban-contain{
   flex:1;
 }
@@ -25,7 +37,7 @@
   text-align: center;
 }
 .top-main-contain{
-  background-image: url('../../images/etoile-de-feu.png');
+  background-image: url('../images/etoile-de-feu.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 25rem;

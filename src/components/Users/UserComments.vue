@@ -1,17 +1,58 @@
 <template>
-    <div>
-        Les commentaires
-        <ul  class="list-group">
-            <li v-for="photo in photoUser" :key="photo.id"  class="list-group-item">
-                <p>Titre {{photo.title}}</p>
-                <p>{{photo.id}}</p>
-                <img :src="photo.thumbnailUrl" />
+    <div class="photos-contain">
+        <p>ID utilisateur : {{userId}} correspond à l'id de l'album</p>
+        <ul  class="list-group" v-for="photo in allPhotosById" :key="photo.id">
+            <li class="list-group-item">    
+                <div class="id-album-photo-contain">            
+                    <p>ID PHOTO : {{photo.id}}</p>
+                    <p>ID Album : {{photo.albumId}}</p>
+                </div>
+                <div class="thumbnai-contain">
+                    <img :src="photo.thumbnailUrl" />
+                </div>
             </li >
         </ul>
     </div>
 </template>
 <script>
 export default {
-    props:['photoUser']    
+    props:['photoUser', 'userId'],
+    data (){
+        return{
+            allPhotos: this.photoUser,
+            photoUserFilter:[],
+            albumById: this.userId,
+        }
+    },
+    computed: {
+        allPhotosById: function () {
+            //Retourn allPhoto où albumId = userId
+            
+            const result = this.allPhotos.filter(photo => photo.albumId = this.userId);
+            console.log(result)
+            this.photoUserFilter = result
+            return this.photoUserFilter
+        }
+    }
 }
 </script>
+<style scoped>
+
+.list-group-item{
+    display: flex;
+    flex-direction: row;
+    }
+    .id-album-photo-contain{
+        display: flex;
+        flex-direction: column;
+        flex:2;
+    }
+    .thumbnai-contain{
+        flex:1;
+        align-items: center;
+    }
+    .thumbnai-contain img{
+        width: 100px;
+        height: 100px;
+    }
+</style>
