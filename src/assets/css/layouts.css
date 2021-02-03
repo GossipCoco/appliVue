@@ -1,9 +1,16 @@
+.col{
+  border: 1px solid #858585;
+}
+.global-contain{
+  display: flex;
+  flex-direction: column;
+}
 .main-content{
     display: flex;
     flex-direction: column;
 }
-.grid-container .row{
-  height: 100%;
+.grid-container{
+  min-height: 100%;
 }
 /* NAV  TOP*/
 .nav-contain{
@@ -12,6 +19,7 @@
 /* MENU LATERAL */
 .main-menu-left{
   margin: 2rem 0 0 2rem;
+  height: 100%;
 }
 .col.col-md-auto.menu-left{
   background-color: rgba(0, 73, 22,1);

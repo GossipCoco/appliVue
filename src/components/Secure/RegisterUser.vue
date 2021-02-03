@@ -5,6 +5,6 @@
 </template>
 <script>
 export default {
-    name: 'registrain-contain'
+    name: 'register-user'
 }
 </script>

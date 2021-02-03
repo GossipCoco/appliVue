@@ -1,15 +1,15 @@
 /* eslint-disable */
 <template>
   <div>
-    <div class="container-fluid">
+    <div class="global-contain">
       <main-menu-top />
       <div class="main-content">
         <main-contain />
       </div>
+      <footer-contain />
     </div>
   </div>
 </template>
-
 <script>
 import MainMenuTop from './components/Navigation/MainMenuTop.vue'
 import MainContain from './components/MainContain.vue'
