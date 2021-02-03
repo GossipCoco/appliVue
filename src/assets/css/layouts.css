@@ -49,8 +49,6 @@
 .col.login-container{
   padding: 1rem;
 }
-
-
 .grid-container{
   display: flex;
   flex-direction: column;
@@ -71,6 +69,12 @@
 }
 .list-all-user-contain{
   margin: 1rem 2rem;
+}
+/* Container Characters by Users*/
+.list-character-container{
+  max-height: 500px;
+  overflow-y: scroll;
+  
 }
 /* Container for flexboxes */
 .row {

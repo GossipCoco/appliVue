@@ -3,11 +3,11 @@
     <div class="nav-contain">
       <b-navbar type="dark" variant="dark">
         <b-navbar-nav>
-          <b-nav-item href="/">
-          Home
+          <b-nav-item>
+            <router-link to="/home">Home</router-link>
           </b-nav-item>
-          <b-nav-item href="/login">
-            Login
+          <b-nav-item>
+            <router-link to="/login">Login</router-link>
           </b-nav-item>
           <b-nav-item href="#">
             Register

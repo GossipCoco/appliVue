@@ -15,7 +15,7 @@
 </template>
 <script>
 export default {
-  name: 'LoginContain',
+  name: 'Login',
   data () {
     return {
       msg: 'Se logger'

@@ -24,12 +24,10 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(Router)
 
-
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  Router: Router,
+  Router,
   components: { App },
   render: h =>h(App)
 })

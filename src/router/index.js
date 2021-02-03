@@ -1,23 +1,22 @@
 import Router from 'vue-router'
 import MainContain from '@/components/MainContain'
-import LoginContain from '@/components/Secure/LoginContain'
+import Login from '@/components/Secure/Login'
 import RegisterContain from '@/components/Secure/RegisterContain'
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      redirect: '/home',
+      path: 'home',
       name: 'MainContain',
       component: MainContain
     },
     {
-      path: '/login/',
-      name: 'LoginContain',
-      component: LoginContain
+      path: 'login',
+      name: 'Login',
+      component: Login
     },
     {
-      path: '/register/',
+      path: 'register',
       name: 'RegisterContain',
       component: RegisterContain
     }

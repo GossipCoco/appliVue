@@ -32,7 +32,7 @@
             </div>
             <div class="col">
               <div class="user-information" v-if="showUserInfoDetail === true">
-                <user-comments v-bind:photoUser="listPhotos" v-bind:userId="userId"/>
+                <user-comments v-bind:photoUser="listPhotos" v-bind:userId="userId" v-bind:userUsrName="userUserName"/>
               </div>
             </div> 
           </div>
@@ -51,29 +51,27 @@ import photosJson from './datas/photos.json'
 import UsersList from './Users/UsersList.vue'
 import UserDetails from './Users/UserDetails.vue'
 import UserComments from './Users/UserComments.vue'
-import LoginContain from './Secure/LoginContain.vue'
-
 export default {
   name: 'MainContain',
   components: {
     'user-list': UsersList,
     'user-details': UserDetails,
-    'login-contain': LoginContain,
     'user-comments': UserComments,
     'main-menu-left': MainMenuLeft
   },
   data () {
     return {
       banImg: '../images/warrior_ban.jpg',
-      userDatas: usersJson,
       msg: 'Bienvenue dans l\'application',
       titleBook: '\"La Guerre des Clans\"',
       description: 'Créez vos propres personnages',
-      userPersonnalInfo: '',
       showUserInfoDetail: false,
       showListOfAllUsers: false,
+      userDatas: usersJson,
       listPhotos: photosJson,
+      userPersonnalInfo: '',
       userId: '',
+      userUserName: '',
       photoUserId: ''
     }
   },
@@ -84,8 +82,8 @@ export default {
     },
     setUser(value) {
       this.userPersonnalInfo = value,
-      //console.log(this.userPersonnalInfo.id),
       this.userId = this.userPersonnalInfo.id,
+      this.userUserName = this.userPersonnalInfo.username,
       this.showUserInfoDetail = true
     },
     showAllUsers(){

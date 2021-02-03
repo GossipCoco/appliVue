@@ -1,25 +1,28 @@
 <template>
     <div class="photos-contain">
-        <p>ID utilisateur : {{userId}} correspond à l'id de l'album</p>
-        <ul  class="list-group" v-for="(photo, id, index) in allPhotosById" :key="photo.id">
-            <li class="list-group-item">    
-                <div class="id-album-photo-contain">            
-                    <p>ID PHOTO : {{photo.id}}</p>
-                    <p>ID Album : {{photo.albumId}}</p>
-                    <p>{{index}}</p>
-                </div>
-                <div class="thumbnai-contain">
-                    <img :src="photo.thumbnailUrl" />
-                </div>
-            </li >
-        </ul>
+        <p>{{title}}: {{userUsrName}}</p>
+        <div class="list-character-container">
+            <ul class="list-group" v-for="photo in photoUser" :key="photo.id">
+                <li class="list-group-item" v-if="photo.albumId === userId">    
+                    <div class="id-album-photo-contain">     
+                        <p>{{photo.title}}</p>       
+                        <p>ID PHOTO : {{photo.id}}</p>
+                        <p>ID Album : {{photo.albumId}}</p>
+                    </div>
+                    <div class="thumbnai-contain">
+                        <img :src="photo.thumbnailUrl" />
+                    </div>
+                </li >
+            </ul>
+        </div>
     </div>
 </template>
 <script>
 export default {
-    props:['photoUser', 'userId'],
+    props:['photoUser', 'userId', 'userUsrName'],
     data (){
         return{
+            title: 'Personnages créés par ',
             allPhotos: this.photoUser,
             photoUserFilter:[],
             albumById: this.userId,
@@ -30,9 +33,9 @@ export default {
         allPhotosById: function () {
             //Retourn allPhoto où albumId = userId
             
-            const result = this.allPhotos.filter(photo => photo.albumId = this.userId);
+            const result = this.allPhotos.filter();
             console.log(result)
-            this.photoUserFilter = result
+            this.allPhotos = result
             return result
         }
     }
