@@ -19,8 +19,8 @@
           <div class="row main-app-containe">
             <div class="col">
               <div class="all-users-contain">
-                <button  class="btn btn-primary btn-sm" v-on:click="showAllUsers()">Afficher les utilisateurs</button>
-                <div v-if="showListOfAllUsers === true" class="list-all-user-contain">
+                <!-- <button  class="btn btn-primary btn-sm" v-on:click="showAllUsers()">Afficher les utilisateurs</button> -->
+                <div class="list-all-user-contain">
                   <user-list v-bind:usersList="userDatas" v-on:show-info-user="setUser"/>
                 </div>
               </div>
