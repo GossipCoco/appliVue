@@ -45,10 +45,11 @@
   text-align: center;
 }
 .top-main-contain{
-  background-image: url('../images/etoile-de-feu.png');
+  background-image: url(/static/img/etoile-de-feu.38a8180.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 25rem;
+  background-attachment: local;
+  background-position: left;
 }
 /* Contenu principal */
 .main-app-containe{
