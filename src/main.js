@@ -27,7 +27,7 @@ Vue.use(Router)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  Router,
+  router: Router,
   components: { App },
   render: h =>h(App)
 })

@@ -18,6 +18,9 @@
           </div>
           <div class="row main-app-containe">
             <div class="col">
+              <test-routes></test-routes>
+            </div>
+            <div class="col">
               <div class="all-users-contain">
                 <!-- <button  class="btn btn-primary btn-sm" v-on:click="showAllUsers()">Afficher les utilisateurs</button> -->
                 <div class="list-all-user-contain">
@@ -51,13 +54,15 @@ import photosJson from './datas/photos.json'
 import UsersList from './Users/UsersList.vue'
 import UserDetails from './Users/UserDetails.vue'
 import UserComments from './Users/UserComments.vue'
+import TestRoutes from './TestRoutes/TestRoutes.vue'
 export default {
   name: 'MainContain',
   components: {
     'user-list': UsersList,
     'user-details': UserDetails,
     'user-comments': UserComments,
-    'main-menu-left': MainMenuLeft
+    'main-menu-left': MainMenuLeft,
+    'test-routes': TestRoutes
   },
   data () {
     return {

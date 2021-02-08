@@ -45,7 +45,7 @@
   text-align: center;
 }
 .top-main-contain{
-  background-image: url(/static/img/etoile-de-feu.38a8180.png);
+  background-image: url(../images/etoile-de-feu.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: local;
