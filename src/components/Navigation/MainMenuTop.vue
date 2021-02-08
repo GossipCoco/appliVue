@@ -2,14 +2,14 @@
   <div class="nav-contain">
     <b-navbar class="navbar navbar-dark bg-primary">
       <b-navbar-nav>
-        <b-nav-item href="/home">
-        Home
+        <b-nav-item>
+          <router-link to="/login">Home</router-link>
         </b-nav-item>
-        <b-nav-item href="/login">
-          Login
+        <b-nav-item>
+          <router-link to="/login">Login</router-link>
         </b-nav-item>
-        <b-nav-item href="/registerUser">
-          Register
+        <b-nav-item>
+          <router-link to="/register">Register</router-link>
         </b-nav-item>
         <b-nav-item-dropdown text="User" right>
           <b-dropdown-item href="#">Account</b-dropdown-item>

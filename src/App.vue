@@ -1,13 +1,10 @@
 /* eslint-disable */
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-
 <template>
   <div>
     <div class="global-contain">
       <main-menu-top />
-      <div class="main-content">
-        <main-contain />
+      <div class="main-content">        
+        <router-view/>
       </div>
       <footer-contain />
     </div>

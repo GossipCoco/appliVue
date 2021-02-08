@@ -18,7 +18,7 @@
           </div>
           <div class="row main-app-containe">
             <div class="col">
-              <test-routes></test-routes>
+              <test-routes />
             </div>
             <div class="col">
               <div class="all-users-contain">
