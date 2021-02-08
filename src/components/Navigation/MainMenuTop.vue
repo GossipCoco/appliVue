@@ -1,6 +1,6 @@
 <template>
   <div class="nav-contain">
-    <b-navbar class="navbar navbar-dark bg-primary">
+    <b-navbar class="navbar navbar-dark bg-primary navbar-link">
       <b-navbar-nav>
         <b-nav-item>
           <router-link to="/login">Home</router-link>
