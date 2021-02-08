@@ -2,8 +2,8 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import Router from './router/index.js'
 import Vuex from 'vuex'
+import Router from './router/index.js'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -25,7 +25,7 @@ Vue.use(IconsPlugin)
 Vue.use(Router)
 
 /* eslint-disable no-new */
-new Vue({
+const app = new Vue({
   el: '#app',
   router: Router,
   components: { App },
