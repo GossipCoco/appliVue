@@ -10,6 +10,7 @@
   </div>
 </template>
 <script>
+import usersJson from '../datas/usersDatas.json'
 export default {
   name: "UsersList",
   props:['usersList', 'listPhotos'],
