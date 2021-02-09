@@ -55,6 +55,9 @@
 .main-app-containe{
   margin: 1rem;
 }
+.main-container{
+  display: flex;
+}
 .col.login-container{
   padding: 1rem;
 }
