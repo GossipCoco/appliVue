@@ -105,7 +105,11 @@
   .contain-infoUser{
     margin: 1rem;
   }
-
+.login-contain{
+  width: 50%;
+  height: 50%;
+  margin: 5rem auto;
+}
   /* Style the footer */
   .footer {
     background-color: #858585;

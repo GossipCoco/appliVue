@@ -1,6 +1,6 @@
 /* eslint-disable */
 <template>
-    <div>
+    <div class="login-contain">
       <div class="mb-3">
         <h3>Se connecter</h3>
         <label class="form-label">Email</label>
@@ -10,7 +10,8 @@
       <label class="form-label">Mot de passe</label>
       <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Votre mot de passe">
       </div>
-        <button class="btn btn-primary">Se connecter</button>
+        <router-link to="/home" class="btn btn-primary">Se connecter</router-link>
+        Pas encore inscrit? <router-link to="/register">Register</router-link>
     </div>
 </template>
 <script>

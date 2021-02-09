@@ -3,7 +3,8 @@
       "id": 1,
       "name": "Etoile de Feu",
       "grade": "chef",
-      "image": "gossipcoco@hotmail.fr",
-      "idUser": 1
+      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/personnage/01.png",
+      "idUser": 1,
+      "biographie": "Étoile de Feu est un large et maigre chat roux flamme tigré à la courte et belle fourrure épaisse, au ventre roux pâle et à la longue queue. Il a des yeux perçants vert émeraude, des oreilles larges et des griffes acérées. Il est le personnage emblématique de la série. Grand chef du Clan du Tonnerre, il meurt lors de la grande bataille dans Le dernier espoir en détruisant l'esprit d'Étoile du Tigre. Ce matou restera dans la mémoire de chacun. Il est le treizième chef du Clan du Tonnerre après Étoile Bleue et avant Étoile de Ronce."
     }
 ]

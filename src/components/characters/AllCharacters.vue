@@ -3,14 +3,14 @@
         <ul  class="list-group">
             <li v-for="char in charList" :key="char.id"  class="list-group-item">
                 {{char.name}} <br>
-                <img :src="char.image" />
+                <img class="image-character" :src="char.image" />
             </li >
         </ul>
     </div>
 </template>
 <script>
 export default {
-    name: 'TestRoutes',
+    name: 'AllCharacters',
     props:['charList'],
     data () {
         return{

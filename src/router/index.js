@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import MainContain from '@/components/MainContain'
 import Login from '@/components/Secure/Login'
 import RegisterUser from '@/components/Secure/RegisterUser'
+import UserList from '@/components/Users/UsersList'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,10 @@ const routes = [
     path: '/register',
     name: 'Register',
     component : RegisterUser
+  },{
+    path: '/allusers',
+    name: 'AllUser',
+    component : UserList
   }
 ]
 const router = new VueRouter({

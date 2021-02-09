@@ -3,7 +3,8 @@
   <div>
     <div class="global-contain">
       <main-menu-top />
-      <div class="main-content">        
+      <div class="main-content">     
+           
         <router-view/>
       </div>
       <footer-contain />

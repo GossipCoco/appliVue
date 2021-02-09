@@ -18,20 +18,19 @@
           </div>
           <div class="row main-app-containe">
             <div class="col">
-              <test-routes />
+              <all-characters v-bind:charList="listCharacters"/>
             </div>
             <div class="col">
-              <div class="all-users-contain">
-                <!-- <button  class="btn btn-primary btn-sm" v-on:click="showAllUsers()">Afficher les utilisateurs</button> -->
+              <div class="all-users-contain">               
                 <div class="list-all-user-contain">
                   <user-list v-bind:usersList="userDatas" v-on:show-info-user="setUser"/>
                 </div>
               </div>
             </div>
             <div class="col">
-                  <div class="user-information" v-if="showUserInfoDetail === true">
-                    <user-details  v-bind:usrInfo="userPersonnalInfo"></user-details>
-                  </div>
+              <div class="user-information" v-if="showUserInfoDetail === true">
+                <user-details  v-bind:usrInfo="userPersonnalInfo"></user-details>
+              </div>
             </div>
             <div class="col">
               <div class="user-information" v-if="showUserInfoDetail === true">
@@ -51,10 +50,13 @@ import axios from 'axios'
 import MainMenuLeft from './Navigation/MainMenuLeft.vue'
 import usersJson from './datas/usersDatas.json'
 import photosJson from './datas/photos.json'
+import charactersJson from './datas/characters.json'
 import UsersList from './Users/UsersList.vue'
 import UserDetails from './Users/UserDetails.vue'
 import UserComments from './Users/UserComments.vue'
 import TestRoutes from './TestRoutes/TestRoutes.vue'
+import AllCharacters from './characters/AllCharacters.vue'
+
 export default {
   name: 'MainContain',
   components: {
@@ -62,7 +64,8 @@ export default {
     'user-details': UserDetails,
     'user-comments': UserComments,
     'main-menu-left': MainMenuLeft,
-    'test-routes': TestRoutes
+    'test-routes': TestRoutes,
+    'all-characters': AllCharacters
   },
   data () {
     return {
@@ -74,6 +77,7 @@ export default {
       showListOfAllUsers: false,
       userDatas: usersJson,
       listPhotos: photosJson,
+      listCharacters: charactersJson,
       userPersonnalInfo: '',
       userId: '',
       userUserName: '',
