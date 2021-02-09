@@ -4,6 +4,7 @@ import MainContain from '@/components/MainContain'
 import Login from '@/components/Secure/Login'
 import RegisterUser from '@/components/Secure/RegisterUser'
 import UserList from '@/components/Users/UsersList'
+import AllCharacters from '@/components/characters/AllCharacters'
 
 Vue.use(VueRouter)
 
@@ -29,6 +30,10 @@ const routes = [
     path: '/allusers',
     name: 'AllUser',
     component : UserList
+  },{
+    path: '/allcharacters',
+    name: 'AllCharacters',
+    component : AllCharacters
   }
 ]
 const router = new VueRouter({
