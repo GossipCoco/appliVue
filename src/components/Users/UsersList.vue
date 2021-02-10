@@ -32,7 +32,7 @@ export default {
         msg: 'Tous les utilisateurs',
         userName: '',
         userInformations: [],
-        showUserInfoDetail: true,
+        showUserInfoDetail: false,
         usrId: '',
         usersList: usersJson,
         userPersonnalInfo: '',
