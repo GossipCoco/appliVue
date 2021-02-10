@@ -33,11 +33,11 @@ const routes = [
     name: 'AllUser',
     component : UserList
   },{
-    path: '/allcharacters',
+    path: '/characters/allcharacters',
     name: 'AllCharacters',
     component : AllCharacters
   },{
-    path: '/createacharacter',
+    path: '/characters/createacharacter',
     name: 'CreateACharacter',
     component : CreateACharacter
   }

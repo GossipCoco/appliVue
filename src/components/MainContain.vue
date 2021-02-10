@@ -9,18 +9,18 @@
     <div class="col">
       <div class="all-users-contain">               
         <div class="list-all-user-contain">
-          <user-list v-bind:usersList="userDatas" v-on:show-info-user="setUser"/>
+          
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="user-information" v-if="showUserInfoDetail === true">
-        <user-details  v-bind:usrInfo="userPersonnalInfo"></user-details>
+      <div class="user-information">
+        
       </div>
     </div>
     <div class="col">
-      <div class="user-information" v-if="showUserInfoDetail === true">
-        <user-comments v-bind:photoUser="listPhotos" v-bind:userId="userId" v-bind:userUsrName="userUserName"/>
+      <div class="user-information">
+        
       </div>
     </div> 
   </div>

@@ -1,32 +1,39 @@
 /* eslint-disable */
 <template>
-    <div class="row">
+  <div class="row">
       <div class="col">
-          <div class="all-users-contain">               
-            <div class="list-all-user-contain">
-              <ul  class="list-group">
-                <li v-for="user in usersList" :key="user.id"  class="list-group-item">
-                  {{user.name}} <button  type="button" class="btn btn-link" @click="emitCustomEvent(user)" v-on:click="setUser(user)">Plus d'info</button>
-                </li > 
-              </ul>
-            </div>
+        <div class="all-users-contain">               
+          <div class="list-all-user-contain">
+            <ul  class="list-group">
+              <li v-for="user in usersList" :key="user.id"  class="list-group-item">
+                {{user.name}} <button  type="button" class="btn btn-link" @click="emitCustomEvent(user)" v-on:click="setUser(user)">Plus d'info</button>
+              </li > 
+            </ul>
           </div>
         </div>
+      </div>
       <div class="col">
         <div class="user-information" v-if="showUserInfoDetail === true">
           <user-details  v-bind:usrInfo="userPersonnalInfo"></user-details>
         </div>
-    </div>
+      </div>
+      <div class="col">
+        <div class="user-information" v-if="showUserInfoDetail === true">
+          <user-comments v-bind:photoUser="listPhotos" v-bind:userId="userId" v-bind:userUsrName="userUserName"/>
+        </div>
     </div>    
+  </div>
 </template>
 <script>
 import usersJson from '../datas/usersDatas.json'
+import photosJson from '../datas/photos.json'
 import UserDetails from './UserDetails'
+import UserComments from './UserComments'
 export default {
   name: "UsersList",
-  props:['listPhotos'],
   components:{
-    'user-details': UserDetails
+    'user-details': UserDetails,
+    'user-comments': UserComments,
   },data (){
     return{
         msg: 'Tous les utilisateurs',
@@ -36,6 +43,10 @@ export default {
         usrId: '',
         usersList: usersJson,
         userPersonnalInfo: '',
+        listPhotos: photosJson,
+        userId: '',
+        userUserName: '',
+        photoUserId: ''
       }  
   },methods: {
     showUser: function (user) {
