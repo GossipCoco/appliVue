@@ -4,9 +4,11 @@ import MainContain from '@/components/MainContain'
 import Login from '@/components/Secure/Login'
 import RegisterUser from '@/components/Secure/RegisterUser'
 import UserList from '@/components/Users/UsersList'
+import UserProfil from '@/components/Users/UserProfil'
 import AllCharacters from '@/components/characters/AllCharacters'
 import CharacterDetails from '@/components/characters/CharacterDetails'
 import CreateACharacter from '@/components/characters/CreateACharacter'
+import listOfAllUsers from '@/components/datas/usersDatas.json'
 
 Vue.use(VueRouter)
 
@@ -29,10 +31,17 @@ const routes = [
     name: 'Register',
     component : RegisterUser
   },{
-    path: '/allusers',
+    path: '/user/allusers',
     name: 'AllUser',
     component : UserList
-  },{
+  },
+  {
+    path: '/user/userProfil/:id',
+    name: 'userProfil',
+    component: UserProfil,
+    props: true
+  },
+  {
     path: '/characters/allcharacters',
     name: 'AllCharacters',
     component : AllCharacters

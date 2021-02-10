@@ -6,7 +6,10 @@
           <div class="list-all-user-contain">
             <ul  class="list-group">
               <li v-for="user in usersList" :key="user.id"  class="list-group-item">
-                {{user.name}} <button  type="button" class="btn btn-link" @click="emitCustomEvent(user)" v-on:click="setUser(user)">Plus d'info</button>
+                {{user.name}}<br> <button  type="button" class="btn btn-link" @click="emitCustomEvent(user)" v-on:click="setUser(user)">Plus d'info</button>
+                <br>
+                <router-link v-bind:to="'/user/userProfil/'+user.id" v-bind:usrInfo="userPersonnalInfo">Utilisateur</router-link>
+                <router-view v-bind:usrInfo="userPersonnalInfo"></router-view>
               </li > 
             </ul>
           </div>

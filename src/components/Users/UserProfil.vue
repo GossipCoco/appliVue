@@ -1,10 +1,12 @@
 <template>
     <div>
-        Mon profil
+        <p>Mon profil</p>
+        
     </div>
 </template>
 <script>
 export default {
-    name:'UserProfil'
+    name:'UserProfil',
+    props: ['usrInfo']
 }
 </script>
