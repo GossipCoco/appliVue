@@ -1,5 +1,6 @@
 /* eslint-disable */
 <template>
+ <div class="col main-container-app">
     <div class="login-contain">
       <div class="mb-3">
         <h3>Se connecter</h3>
@@ -13,6 +14,7 @@
         <router-link to="/home" class="btn btn-primary">Se connecter</router-link>
         Pas encore inscrit? <router-link to="/register">Register</router-link>
     </div>
+ </div>
 </template>
 <script>
 export default {
