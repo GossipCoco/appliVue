@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import MainContain from '@/components/MainContain'
+import Accueil from '@/components/Accueil'
 import Login from '@/components/Secure/Login'
 import RegisterUser from '@/components/Secure/RegisterUser'
 import UserList from '@/components/Users/UsersList'
@@ -15,8 +16,8 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: MainContain
+    name: 'Accueil',
+    component: Accueil
 },
   {
       path: '/home',

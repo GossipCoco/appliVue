@@ -3,7 +3,7 @@
     <b-navbar class="navbar navbar-dark bg-primary navbar-link">
       <b-navbar-nav>
         <b-nav-item>
-          <router-link to="/home">Home</router-link>
+          <router-link to="/">Accueil</router-link>
         </b-nav-item>
         <b-nav-item>
           <router-link to="/login">Login</router-link>
