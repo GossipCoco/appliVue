@@ -18,8 +18,7 @@ const routes = [
     path: '/',
     name: 'Accueil',
     component: Accueil
-},
-  {
+  },{
       path: '/home',
       name: 'Home',
       component: MainContain
@@ -35,14 +34,12 @@ const routes = [
     path: '/user/allusers',
     name: 'AllUser',
     component : UserList
-  },
-  {
+  },{
     path: '/user/userProfil/:id',
     name: 'userProfil',
     component: UserProfil,
     props: true
-  },
-  {
+  },{
     path: '/characters/allcharacters',
     name: 'AllCharacters',
     component : AllCharacters
