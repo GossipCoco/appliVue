@@ -59,6 +59,9 @@
   background-position: left;
 }
 /* Contenu principal */
+.main-container-app{
+  min-height: 500px;
+}
 .main-app-containe{
   margin: 1rem;
 }

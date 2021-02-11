@@ -1,7 +1,7 @@
 /* eslint-disable */
 <template>
   <div class="row">
-      <div class="col">
+      <div class="col main-container-app">
         <div class="all-users-contain">               
           <div class="list-all-user-contain">
             <ul  class="list-group">
