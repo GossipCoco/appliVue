@@ -44,6 +44,10 @@ const routes = [
     name: 'AllCharacters',
     component : AllCharacters
   },{
+    path: '/characters/characterDetails/:idCharacter',
+    name: "characterDetails",
+    component : CharacterDetails
+  },{
     path: '/characters/createacharacter',
     name: 'CreateACharacter',
     component : CreateACharacter
