@@ -4,6 +4,12 @@
             <li v-for="char in charList" :key="char.id"  class="list-group-item">
                 {{char.name}} <br>
                 <img class="image-character" :src="char.image" />
+                <router-link v-bind:to="'/characters/characterDetails/'+char.id">Voir le profil complet</router-link>
+                <router-view/>
+                <!--
+                    <p>
+                     <router-link v-bind:to="'/characters/characterDetails/'+char.id">Voir le profil complet</router-link>
+                    <router-view v-bind:usrInfo="user.id"></router-view></p> -->
             </li >
         </ul>
     </div>

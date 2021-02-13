@@ -10,14 +10,20 @@
                     Site : {{userProfil.website}}
                 </p>
             </div>
-            <div class="col">
-                <user-form-edit @editInfoUsrSuccess="editInfoUsrSuccess"/>
+            <div v-if="userProfil.idPermission === 1">
+                <div class="col">
+                    <user-form-edit @editInfoUsrSuccess="editInfoUsrSuccess"/>
+                </div>
+            </div>
+            <div v-else>
+                Aucune modification autorisée
             </div>
         </div>
     </div>
 </template>
 <script>
 import UsersDatas from '../datas/usersDatas.json'
+import Permissions from '../datas/permissions.json'
 import UserFormEdit from './UserFormEdit.vue'
 export default {
     name:'UserProfil',
@@ -30,7 +36,7 @@ export default {
             usrId: '',
             UsersDatas: UsersDatas,
             currentRoute: window.location.pathname,
-            userProfil: null
+            userProfil: null,            
         }
     },
     created: function () {
