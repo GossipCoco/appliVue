@@ -8,8 +8,8 @@
               <li v-for="user in usersList" :key="user.id"  class="list-group-item">
                 {{user.name}}<br> <button  type="button" class="btn btn-link" @click="emitCustomEvent(user)" v-on:click="setUser(user)">Plus d'info</button>
                 <br>
-                <router-link v-bind:to="'/user/userProfil/'+user.id" v-bind:usrInfo="userPersonnalInfo">Utilisateur</router-link>
-                <router-view v-bind:usrInfo="userPersonnalInfo"></router-view>
+                <router-link v-bind:to="'/user/userProfil/'+user.id" v-bind:usrInfo="user.id">Voir le profil complet</router-link>
+                <router-view v-bind:usrInfo="user.id"></router-view>
               </li > 
             </ul>
           </div>

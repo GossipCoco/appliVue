@@ -1,0 +1,10 @@
+[
+    {
+        "idPermission": 1,
+        "role": "Admin"
+    },{
+        
+        "idPermission": 2,
+        "role": "User"
+    }
+]

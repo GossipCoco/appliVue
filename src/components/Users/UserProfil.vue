@@ -1,18 +1,51 @@
 <template>
     <div class="col main-container-app">
-        <p>
-            Mon profil
-        </p>
+        <div class="row">
+            <div class="col">
+                <p>
+                    Mon profil {{ userProfil.name }}<br>
+                    Nom d'utilisateur : {{ userProfil.username }}<br>
+                    Email : {{ userProfil.email }}<br>
+                    Adresse : {{ userProfil.address.city}}<br>
+                    Site : {{userProfil.website}}
+                </p>
+            </div>
+            <div class="col">
+                <user-form-edit @editInfoUsrSuccess="editInfoUsrSuccess"/>
+            </div>
+        </div>
     </div>
 </template>
 <script>
-
+import UsersDatas from '../datas/usersDatas.json'
+import UserFormEdit from './UserFormEdit.vue'
 export default {
     name:'UserProfil',
     props: ['usrInfo'],
+    components:{
+        'user-form-edit': UserFormEdit
+    },
     data(){
         return{
             usrId: '',
+            UsersDatas: UsersDatas,
+            currentRoute: window.location.pathname,
+            userProfil: null
+        }
+    },
+    created: function () {
+        this.usrId = this.currentRoute.slice(17)
+    },
+    beforeMount: function(){
+        this.usrId = this.usrId - 1;
+        this.userProfil = this.UsersDatas[this.usrId];        
+    },
+    methods:{
+        showFormEdit(){
+            this.showFormEditContaine = true
+        },
+        editInfoUsrSuccess(value){
+            this.usrName = value
         }
     }
 }

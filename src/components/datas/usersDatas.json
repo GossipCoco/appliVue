@@ -4,20 +4,21 @@
       "name": "Coralie Honorin",
       "username": "GossipCoco",
       "email": "gossipcoco@hotmail.fr",
+      "idPermission": 1,
       "address": {
-        "street": "Kulas Light",
+        "street": "10 chemin du Massot",
         "suite": "Apt. 556",
-        "city": "Gwenborough",
-        "zipcode": "92998-3874",
+        "city": "Biol",
+        "zipcode": "38690",
         "geo": {
           "lat": "-37.3159",
           "lng": "81.1496"
         }
       },
-      "phone": "1-770-736-8031 x56442",
-      "website": "hildegard.org",
+      "phone": "06 00 00 00 00",
+      "website": "gossip-coco.com",
       "company": {
-        "name": "Romaguera-Crona",
+        "name": "Gossip",
         "catchPhrase": "Multi-layered client-server neural-net",
         "bs": "harness real-time e-markets"
       }
@@ -27,6 +28,7 @@
       "name": "Ervin Howell",
       "username": "Antonette",
       "email": "Shanna@melissa.tv",
+      "idPermission": 2,
       "address": {
         "street": "Victor Plains",
         "suite": "Suite 879",
@@ -50,6 +52,7 @@
       "name": "Clementine Bauch",
       "username": "Samantha",
       "email": "Nathan@yesenia.net",
+      "idPermission": 2,
       "address": {
         "street": "Douglas Extension",
         "suite": "Suite 847",
@@ -73,6 +76,7 @@
       "name": "Patricia Lebsack",
       "username": "Karianne",
       "email": "Julianne.OConner@kory.org",
+      "idPermission": 2,
       "address": {
         "street": "Hoeger Mall",
         "suite": "Apt. 692",
@@ -96,6 +100,7 @@
       "name": "Chelsey Dietrich",
       "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
+      "idPermission": 2,
       "address": {
         "street": "Skiles Walks",
         "suite": "Suite 351",
