@@ -8,7 +8,9 @@
     </div>
 </template>
 <script>
+import AllCharactersJson from "../datas/characters.json"
 export default {
-    name:'CharacterDetails'
+    name:'CharacterDetails',
+    props:['charId', 'charInfo']
 }
 </script>

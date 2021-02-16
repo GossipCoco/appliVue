@@ -10,12 +10,12 @@
                     Site : {{userProfil.website}}
                 </p>
             </div>
-            <div v-if="userProfil.idPermission === 1">
-                <div class="col">
+            <div  class="col" v-if="userProfil.idPermission === 1">
+                <div>
                     <user-form-edit @editInfoUsrSuccess="editInfoUsrSuccess"/>
                 </div>
             </div>
-            <div v-else>
+            <div  class="col" v-else>
                 Aucune modification autorisée
             </div>
         </div>

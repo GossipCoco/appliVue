@@ -10,6 +10,7 @@
                 <br>
                 <router-link v-bind:to="'/user/userProfil/'+user.id" v-bind:usrInfo="user.id">Voir le profil complet</router-link>
                 <router-view v-bind:usrInfo="user.id"></router-view>
+                <div v-on="methodTest"></div>
               </li > 
             </ul>
           </div>
@@ -68,6 +69,9 @@ export default {
     },
     showAllUsers(){
       this.showListOfAllUsers = true
+    },
+    methodTest(){
+      console.log('Click')
     }
   }
 };
