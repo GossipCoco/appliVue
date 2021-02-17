@@ -5,24 +5,7 @@
   <div class="main-container">
     <div class="col">
       <all-characters v-bind:charList="listCharacters"/>
-    </div>
-    <div class="col">
-      <div class="all-users-contain">               
-        <div class="list-all-user-contain">
-          
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="user-information">
-        
-      </div>
-    </div>
-    <div class="col">
-      <div class="user-information">
-        
-      </div>
-    </div> 
+    </div>    
   </div>
 </template>
 

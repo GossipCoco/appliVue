@@ -93,6 +93,10 @@
   margin: 1rem 2rem;
 }
 /* Container Characters by Users*/
+.contain-all-characters{
+  display: flex;
+  flex-direction: row;
+}
 .list-character-container{
   max-height: 500px;
   overflow-y: scroll;

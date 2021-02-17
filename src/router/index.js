@@ -46,7 +46,8 @@ const routes = [
   },{
     path: '/characters/characterDetails/:idCharacter',
     name: "characterDetails",
-    component : CharacterDetails
+    component : CharacterDetails,
+    props: true
   },{
     path: '/characters/createacharacter',
     name: 'CreateACharacter',

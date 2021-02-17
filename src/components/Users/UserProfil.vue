@@ -15,7 +15,7 @@
                     <user-form-edit @editInfoUsrSuccess="editInfoUsrSuccess"/>
                 </div>
             </div>
-            <div  class="col" v-else>
+            <div class="col" v-else>
                 Aucune modification autorisée
             </div>
         </div>
