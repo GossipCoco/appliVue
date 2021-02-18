@@ -43,7 +43,7 @@
       "id": 5,
       "name": "Etoile Filante",
       "clan": "Clan du Vent",
-      "idClan": 2,
+      "idClan": 3,
       "grade": "Chef",
       "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/personnage/Etoile_Filante-0.png",
       "idUser": 1,

@@ -9,19 +9,13 @@
         "street": "10 chemin du Massot",
         "suite": "Apt. 556",
         "city": "Biol",
-        "zipcode": "38690",
-        "geo": {
-          "lat": "-37.3159",
-          "lng": "81.1496"
-        }
+        "zipcode": "38690"
       },
       "phone": "06 00 00 00 00",
       "website": "gossip-coco.com",
-      "company": {
-        "name": "Gossip",
-        "catchPhrase": "Multi-layered client-server neural-net",
-        "bs": "harness real-time e-markets"
-      }
+      "birthday": "1983-03-23",
+      "inscriptionDate": "2020-12-24"
+     
     },
     {
       "id": 2,
@@ -33,19 +27,12 @@
         "street": "Victor Plains",
         "suite": "Suite 879",
         "city": "Wisokyburgh",
-        "zipcode": "90566-7771",
-        "geo": {
-          "lat": "-43.9509",
-          "lng": "-34.4618"
-        }
+        "zipcode": "90566-7771"
       },
       "phone": "010-692-6593 x09125",
       "website": "anastasia.net",
-      "company": {
-        "name": "Deckow-Crist",
-        "catchPhrase": "Proactive didactic contingency",
-        "bs": "synergize scalable supply-chains"
-      }
+      "birthday": "1993-06-21",
+      "inscriptionDate": "2021-01-21"
     },
     {
       "id": 3,
@@ -57,19 +44,12 @@
         "street": "Douglas Extension",
         "suite": "Suite 847",
         "city": "McKenziehaven",
-        "zipcode": "59590-4157",
-        "geo": {
-          "lat": "-68.6102",
-          "lng": "-47.0653"
-        }
+        "zipcode": "59590-4157"
       },
       "phone": "1-463-123-4447",
       "website": "ramiro.info",
-      "company": {
-        "name": "Romaguera-Jacobson",
-        "catchPhrase": "Face to face bifurcated interface",
-        "bs": "e-enable strategic applications"
-      }
+      "birthday": "1999-10-03",
+      "inscriptionDate": "2021-02-01"
     },
     {
       "id": 4,
@@ -81,19 +61,12 @@
         "street": "Hoeger Mall",
         "suite": "Apt. 692",
         "city": "South Elvis",
-        "zipcode": "53919-4257",
-        "geo": {
-          "lat": "29.4572",
-          "lng": "-164.2990"
-        }
+        "zipcode": "53919-4257"
       },
       "phone": "493-170-9623 x156",
       "website": "kale.biz",
-      "company": {
-        "name": "Robel-Corkery",
-        "catchPhrase": "Multi-tiered zero tolerance productivity",
-        "bs": "transition cutting-edge web services"
-      }
+      "birthday": "1988-05-13",
+      "inscriptionDate": "2021-02-01"
     },
     {
       "id": 5,
@@ -105,18 +78,11 @@
         "street": "Skiles Walks",
         "suite": "Suite 351",
         "city": "Roscoeview",
-        "zipcode": "33263",
-        "geo": {
-          "lat": "-31.8129",
-          "lng": "62.5342"
-        }
+        "zipcode": "33263"
       },
       "phone": "(254)954-1289",
       "website": "demarco.info",
-      "company": {
-        "name": "Keebler LLC",
-        "catchPhrase": "User-centric fault-tolerant solution",
-        "bs": "revolutionize end-to-end systems"
-      }
+      "birthday": "1995-08-15",
+      "inscriptionDate": "2021-02-11"
     }
   ]
