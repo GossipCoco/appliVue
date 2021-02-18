@@ -1,0 +1,18 @@
+[
+    {
+        "chaton":{
+            "name1": "Petit"
+        }
+    },
+    {
+        "apprenti":{
+            "name1": "Patte",
+            "name2": "Nuage"
+        }
+    },
+    {
+        "chef":{
+            "name1": "Etoile"
+        }   
+    }
+]
