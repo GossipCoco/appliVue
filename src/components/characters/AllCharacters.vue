@@ -13,7 +13,7 @@
             </ul>
         </div>
         <div class="col container-form-create-character">
-            <router-link to="/characters/createacharacter">Créer un nouveau personnage</router-link>
+            <router-link to="/characters/createacharacter" class="btn btn-primary">Créer un nouveau personnage</router-link>
                 <router-view></router-view>
         </div>
     </div>

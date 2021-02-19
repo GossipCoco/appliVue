@@ -1,3 +1,14 @@
+/* BUTTONS */
 .all-users-contain button{
     margin: 0 5rem;
+}
+.btn-primary {
+    color: #fff;
+    background-color: rgba(0, 73, 22,1);
+    border-color: rgba(0, 73, 22,1);
+}
+.btn-primary:hover {
+    color: rgba(0, 73, 22,1);
+    background-color: rgba(181, 215, 83,1);
+    border-color: rgba(181, 215, 83,1);
 }
