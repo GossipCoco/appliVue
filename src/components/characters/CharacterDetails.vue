@@ -1,20 +1,19 @@
 <template>
     <div class="col main-container-app">
         <div class="row">
-            <div class="col">
-                <p>Détail sur le personnage</p>
-                <p>{{characterDetails.name}}</p>
+            <div class="col-md-2">
+                <h2>Détail sur {{characterDetails.name}}</h2>                
                 <img :src="characterImage">
             </div>
-            <div class="col">
+            <div class="col-md-10">
                 <p>
                      {{characterDetails.clan}}<br>
                     {{characterDetails.grade}}
                 </p>
-                <p>
+                <p class="presentation-text">
                     {{characterDetails.biographie}}
                 </p>
-                <p>
+                <p class="presentation-text">
                     Description du clan <br>
                     {{clanByCharacter.description}}
                 </p>

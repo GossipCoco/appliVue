@@ -17,3 +17,6 @@
 .title-site-containe h3{
     color: rgba(255,255, 255, 1); 
 }
+.presentation-text{
+    text-align: justify;
+}
