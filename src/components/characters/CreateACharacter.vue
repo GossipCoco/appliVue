@@ -34,7 +34,7 @@ export default {
     data(){
         return{
             title: 'Créer un nouveau personnage',
-            selected: 'A',
+            selected: '',
             options: ClansJson,
             grades: GradesJson
         }

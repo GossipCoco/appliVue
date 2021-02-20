@@ -6,8 +6,15 @@
                 <img :src="characterImage">
             </div>
             <div class="col-md-10">
+                <div class="row">
+                    <div class="col">
+                        <img :src="clanByCharacter.img" />
+                    </div>                    
+                    <div class="col">
+                        <h3>{{characterDetails.clan}}</h3>
+                    </div>
+                </div>
                 <p>
-                     {{characterDetails.clan}}<br>
                     {{characterDetails.grade}}
                 </p>
                 <p class="presentation-text">
