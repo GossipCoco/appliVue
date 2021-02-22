@@ -1,27 +1,27 @@
 <template>
     <div class="col-10 main-container-app">
         <p>{{title}}</p>
-        <form>
-            <div class="mb-1 row">
+        <form class="row">            
+            <div class="col-6">
                 <label for="selectClan" class="col-sm-4 col-form-label">Choisir le groupe de votre personnage</label>
-                <div class="col-10">
-                    <select v-model="selected"  class="form-select  form-select-lg mb-1" id="selectClan">
-                        <option v-for="(clan, id) in options" v-bind:value="clan.name" :key="id">
-                            {{ clan.name }}
-                        </option>
-                    </select>
-                </div>
             </div>
-            <div class="mb-1 row">
-                <label for="selectGrade" class="col-sm-4 col-form-label">Choisir le grade de votre personnage</label>
-                <div class="col-10">
-                    <select v-model="selected"  class="form-select  form-select-lg mb-1" id="selectGrade">
-                        <option v-for="(grade, id) in grades" v-bind:value="grade.grade" :key="id">
-                            {{ grade.grade }}
-                        </option>
-                    </select>
-                </div>
+            <div class="col-6">
+                <select v-model="selectedClan"  class="form-select  form-select-lg " id="selectClan">
+                    <option v-for="(clan, id) in options" v-bind:value="clan.name" :key="id">
+                        {{ clan.name }}
+                    </option>
+                </select>
+            </div>        
+            <div class="col-6">
+                <label for="selectGrade" class="col-6 col-form-label">Choisir le grade de votre personnage</label>
             </div>
+            <div class="col-6">
+                <select v-model="selectedGrade"  class="form-select  form-select-lg " id="selectGrade">
+                    <option v-for="(grade, id) in grades" v-bind:value="grade.grade" :key="id">
+                        {{ grade.grade }}
+                    </option>
+                </select>
+            </div>        
         </form>
     </div>
 </template>
@@ -34,7 +34,8 @@ export default {
     data(){
         return{
             title: 'Créer un nouveau personnage',
-            selected: '',
+            selectedClan: '',
+            selectedGrade: '',
             options: ClansJson,
             grades: GradesJson
         }
