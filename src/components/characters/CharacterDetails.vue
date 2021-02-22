@@ -13,9 +13,14 @@
                     <div class="col">
                         <h3>{{characterDetails.clan}}</h3>
                     </div>
+
                 </div>
+                <p>{{characterDetails.age}} lunes soit {{ humanAge}} ans</p>
                 <p>
                     {{characterDetails.grade}}
+                </p>
+                <p class="presentation-text">
+                    {{characterDetails.description}}
                 </p>
                 <p class="presentation-text">
                     {{characterDetails.biographie}}
@@ -42,7 +47,8 @@ export default {
             characterDetails: null,
             characterImage: '',
             allClans: ClansJson,
-            clanByCharacter: null
+            clanByCharacter: null,
+            humanAge: ''
         }
     },
     created: function(){
@@ -53,6 +59,12 @@ export default {
         this.charClanId = this.characterDetails.idClan
         this.charClanId = this.charClanId
         this.clanByCharacter = this.allClans[this.charClanId]
+        if(this.characterDetails.age === "Inconnu"){
+            return this.humanAge = "Inconnu"
+        }else{
+            this.humanAge = this.characterDetails.age / 12
+        }
+        
 
 
     }

@@ -2,11 +2,9 @@
 /*eslint space-before-function-paren: ["error", "never"]*/
 /*eslint-env es6*/
 <template>
-  <div class="main-container">
-    <div class="col">
-      <all-characters v-bind:charList="listCharacters"/>
-    </div>    
-  </div>
+  <div class="col">
+    <all-characters v-bind:charList="listCharacters"/>
+  </div>    
 </template>
 
 <script>

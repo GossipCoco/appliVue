@@ -1,26 +1,30 @@
 <template>
     <div class="row contain-all-characters">
-        <div class="col">
-            <ul  class="list-group">
-                <li v-for="char in charList" :key="char.id"  class="list-group-item">
-                    {{char.name}} <br>
-                    <img class="image-character" :src="char.image" /><br>
-                    <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="char.id">Voir le profil complet</router-link>
+        <div class="col-sm" v-for="char in charList" :key="char.id">
+            <div class="card" style="width: 18rem;"  >
+                <div class="container-image-character">
+                <img :src="char.image" class="card-img-top" :alt="char.name">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{char.name}}</h5>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="char.id" class="btn btn-primary">En savoir plus</router-link>
                     <transition>
-                        <router-view v-bind:charId="char.id"/>
-                    </transition>
-                </li >
-            </ul>
+                            <router-view v-bind:charId="char.id"/>
+                        </transition>
+                </div>
+            </div>            
         </div>
-        <div class="col container-form-create-character">
+        <!-- <div class="col-1 container-form-create-character">
             <router-link to="/characters/createacharacter" class="btn btn-primary">Créer un nouveau personnage</router-link>
                 <router-view></router-view>
-        </div>
+        </div> -->
     </div>
 </template>
 <script>
 import Characters from "../datas/characters.json"
 import CreateACharacter from './CreateACharacter.vue'
+import genres from "../datas/genres.json"
 export default {
     name: 'AllCharacters',
     props:['charList'],
@@ -30,8 +34,13 @@ export default {
     data () {
         return{
             imageChar: this.charList.image,
-            Characters: Characters
+            Characters: Characters,
+            genreChar: ''
         }
+    },
+    created: function(){
+        this.genreChar = this.Characters.genre
+
     }
 }
 </script>
