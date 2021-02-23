@@ -23,6 +23,7 @@
 }
 .col.col-md-auto.menu-left{
   background-color: rgba(0, 73, 22,1);
+  min-height: 900px;
 }
 /* Header & title */
 .row.top-main-contain{
