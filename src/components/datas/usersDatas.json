@@ -14,8 +14,10 @@
       "phone": "06 00 00 00 00",
       "website": "gossip-coco.com",
       "birthday": "1983-03-23",
-      "inscriptionDate": "2020-12-24"
-     
+      "inscriptionDate": "2020-12-24",
+      "genre": 1,
+      "pwd": "123",
+      "thumbnailUrl": "https://via.placeholder.com/150/e743b"     
     },
     {
       "id": 2,
@@ -32,7 +34,10 @@
       "phone": "010-692-6593 x09125",
       "website": "anastasia.net",
       "birthday": "1993-06-21",
-      "inscriptionDate": "2021-01-21"
+      "inscriptionDate": "2021-01-21",
+      "genre": 0,
+      "pwd": "abc",
+      "thumbnailUrl": "https://via.placeholder.com/150/e743b"
     },
     {
       "id": 3,
@@ -49,7 +54,10 @@
       "phone": "1-463-123-4447",
       "website": "ramiro.info",
       "birthday": "1999-10-03",
-      "inscriptionDate": "2021-02-01"
+      "inscriptionDate": "2021-02-01",
+      "genre": 0,
+      "pwd": "123",
+      "thumbnailUrl": "https://via.placeholder.com/150/e743b"
     },
     {
       "id": 4,
@@ -66,7 +74,10 @@
       "phone": "493-170-9623 x156",
       "website": "kale.biz",
       "birthday": "1988-05-13",
-      "inscriptionDate": "2021-02-01"
+      "inscriptionDate": "2021-02-01",
+      "genre": 1,
+      "pwd": "123",
+      "thumbnailUrl": "https://via.placeholder.com/150/e743b"
     },
     {
       "id": 5,
@@ -83,6 +94,9 @@
       "phone": "(254)954-1289",
       "website": "demarco.info",
       "birthday": "1995-08-15",
-      "inscriptionDate": "2021-02-11"
+      "inscriptionDate": "2021-02-11",
+      "genre": 1,
+      "pwd": "123",
+      "thumbnailUrl": "https://via.placeholder.com/150/e743b"
     }
   ]

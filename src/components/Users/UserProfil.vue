@@ -7,7 +7,8 @@
                     Nom d'utilisateur : {{ userProfil.username }}<br>
                     Email : {{ userProfil.email }}<br>
                     Adresse : {{ userProfil.address.city}}<br>
-                    Site : {{userProfil.website}}
+                    Site : {{userProfil.website}}<br>
+                    Anniversaire : {{userProfil.birthday}}
                 </p>
             </div>
             <div  class="col" v-if="userProfil.idPermission === 1">

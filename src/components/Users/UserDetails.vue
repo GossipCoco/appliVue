@@ -7,6 +7,7 @@
             <p>Nom : {{ usrInfo.name }}</p>
             <p>Nom d'usage : {{ usrInfo.username }}</p>
             <p>Email : {{ usrInfo.email }}</p>
+            <p>Date de naissance : {{ usrInfo.birthday}}</p>
             <button class="btn btn-primary" v-on:click="showFormEdit()">Modifier des informations</button>
         </div>
         <div v-if="showFormEditContaine === true">
