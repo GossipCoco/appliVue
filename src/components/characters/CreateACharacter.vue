@@ -58,6 +58,9 @@
             <div class="col-8">
                 <textarea class="form-control form-control-md" type="text" v-model="biographieChar" id="biographieChar" rows="3"></textarea>
             </div>          
+            <div class="col-12">
+                <button class="btn btn-primary">Créer son personnage</button>
+            </div>
         </form>
     </div>
 </template>
