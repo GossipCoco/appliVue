@@ -1,59 +1,61 @@
 <template>
     <div class="col-10 main-container-app">
         <p>{{title}}</p>
-        <form class="row">            
-            <div class="col-6">
-                <label for="selectClan" class="col-sm-4 col-form-label">Choisir le groupe de votre personnage</label>
+        <form class="row"
+        @submit="checkForm"
+        >            
+            <div class="col-4">
+                <label for="selectClan" class="col-sm-4 col-form-label">Groupe ou clan</label>
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 <select v-model="selectedClan"  class="form-select  form-select-lg " id="selectClan">
                     <option v-for="(clan, id) in options" v-bind:value="clan.name" :key="id">
                         {{ clan.name }}
                     </option>
                 </select>
             </div>
-            <div class="col-6">
-                <label for="selectGenre" class="col-sm-4 col-form-label">Choisir le genre de votre personnage</label>
+            <div class="col-4">
+                <label for="selectGenre" class="col-sm-4 col-form-label">Genre du personnage</label>
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 <select v-model="selectedGenre"  class="form-select  form-select-lg " id="selectGenre">
                     <option v-for="(genre, id) in genre" v-bind:value="genre.genre" :key="id">
                         {{ genre.genre }}
                     </option>
                 </select>
             </div>         
-            <div class="col-6">
-                <label for="selectGrade" class="col-6 col-form-label">Choisir le grade de votre personnage</label>
+            <div class="col-4">
+                <label for="selectGrade" class="col-6 col-form-label">Grade du personnage</label>
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 <select v-model="selectedGrade"  class="form-select  form-select-lg " id="selectGrade">
                     <option v-for="(grade, id) in grades" v-bind:value="grade.grade" :key="id">
                         {{ grade.grade }}
                     </option>
                 </select>
             </div>
-            <div class="col-6">
-                <label for="newName" class="col-6 col-form-label">Choisir le nom de votre personnage</label>
+            <div class="col-4">
+                <label for="newName" class="col-6 col-form-label">Nom du personnage</label>
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 <input class="form-control form-control-md" type="text" v-model="newNameCharacter" id="newName">
             </div>  
-            <div class="col-6">
-                <label for="ageChar" class="col-6 col-form-label">Choisir l'âge de votre personnage</label>
+            <div class="col-4">
+                <label for="ageChar" class="col-6 col-form-label">Âge du personnage</label>
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 <input class="form-control form-control-md" type="text" v-model="ageCharacter" id="ageChar">
             </div>
-            <div class="col-6">
-                <label for="descChar" class="col-6 col-form-label">Description de votre personnage</label>
+            <div class="col-4">
+                <label for="descChar" class="col-6 col-form-label">Description</label>
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 <textarea class="form-control form-control-md" type="text" v-model="descChara" id="ageChar" rows="3"></textarea>
             </div>
-            <div class="col-6">
-                <label for="biographieChar" class="col-6 col-form-label">Biographie de votre personnage</label>
+            <div class="col-4">
+                <label for="biographieChar" class="col-6 col-form-label">Biographie</label>
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 <textarea class="form-control form-control-md" type="text" v-model="biographieChar" id="biographieChar" rows="3"></textarea>
             </div>          
         </form>
@@ -78,13 +80,19 @@ export default {
             biographieChar: '',
             options: ClansJson,
             grades: GradesJson,
-            genre: genre
+            genre: genre,
+            errors:[]
         }
     },
     methods:{
         setGrade(value){
 
-        }
+        },
+        checkForm: function (e) {
+            console.log(e);
+            this.errors = [];
+
+        },
     }
 }
 </script>
