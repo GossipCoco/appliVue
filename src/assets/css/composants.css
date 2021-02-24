@@ -12,3 +12,6 @@
     background-color: rgba(181, 215, 83,1);
     border-color: rgba(181, 215, 83,1);
 }
+.container-avatar{
+    width: 25%;
+}

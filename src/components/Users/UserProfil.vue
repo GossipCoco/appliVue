@@ -3,6 +3,7 @@
         <div class="row">
             <div class="col">
                 <p>
+                    <img :src="userProfil.thumbnailUrl" class="container-avatar"><br>
                     Mon profil {{ userProfil.name }}<br>
                     Nom d'utilisateur : {{ userProfil.username }}<br>
                     Email : {{ userProfil.email }}<br>
