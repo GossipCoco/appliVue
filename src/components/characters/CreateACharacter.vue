@@ -1,65 +1,97 @@
 <template>
-    <div class="col-10 main-container-app">
+    <div class="col-12 main-container-app">
         <p>{{title}}</p>
-        <form class="row"
+        <p v-if="errors.length">
+            <b>Please correct the following error(s):</b>
+            <ul>
+            <li v-for="error in errors" :key="error">{{ error }}</li>
+            </ul>
+        </p>
+        <form class="container-form-create-character"
         @submit="checkForm"
-        >            
-            <div class="col-4">
-                <label for="selectClan" class="col-sm-4 col-form-label">Groupe ou clan</label>
+        action="/characters/allcharacters"
+        method="POST"
+        >
+            <div class="row">           
+                <div class="col-4">
+                    <label for="selectClan" class="col-sm-4 col-form-label">Groupe ou clan</label>
+                </div>
+                <div class="col-8">
+                    <select v-model="selectedClan"  class="form-select form-select-lg mb-3" id="selectClan" @change="selectClan(selectedClan)">
+                        <option v-for="(clan, id) in clans" v-bind:value="clan.id" :key="id">
+                            {{ clan.id }} - {{ clan.name }}
+                        </option>
+                    </select>                  
+                </div>                
             </div>
-            <div class="col-8">
-                <select v-model="selectedClan"  class="form-select  form-select-lg " id="selectClan">
-                    <option v-for="(clan, id) in options" v-bind:value="clan.name" :key="id">
-                        {{ clan.name }}
-                    </option>
-                </select>
+            <div class="row">
+                <div class="col-4">
+                    <label for="selectGenre" class="col-sm-4 col-form-label">Genre du personnage</label>
+                </div>
+                <div class="col-8">
+                    <select v-model="selectedGenre"  class="form-select form-select-lg mb-3" id="selectGenre">
+                        <option v-for="(genre, id) in genre" v-bind:value="genre.genre" :key="id">
+                            {{ genre.genre }}
+                        </option>
+                    </select>
+                </div>
             </div>
-            <div class="col-4">
-                <label for="selectGenre" class="col-sm-4 col-form-label">Genre du personnage</label>
+            
+            <div v-if=" selectedClan === 0 || selectedClan === 1|| selectedClan === 2 || selectedClan === 3 || selectedClan === 4">
+                <div class="row">         
+                    <div class="col-4">
+                        <label for="selectGrade" class="col-6 col-form-label">Grade du personnage</label>
+                    </div>
+                    <div class="col-8">
+                        <select v-model="selectedGrade"  class="form-select  form-select-lg " id="selectGrade" @selectAncienClan="selectAncienClan">
+                            <option v-for="(grade, id) in grades" v-bind:value="grade.grade" :key="id">
+                                {{ grade.grade }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div class="col-8">
-                <select v-model="selectedGenre"  class="form-select  form-select-lg " id="selectGenre">
-                    <option v-for="(genre, id) in genre" v-bind:value="genre.genre" :key="id">
-                        {{ genre.genre }}
-                    </option>
-                </select>
-            </div>         
-            <div class="col-4">
-                <label for="selectGrade" class="col-6 col-form-label">Grade du personnage</label>
+            <div v-else-if=" selectedClan === 5">                
+                    <select-clan label="Ancien Clan"/>
             </div>
-            <div class="col-8">
-                <select v-model="selectedGrade"  class="form-select  form-select-lg " id="selectGrade">
-                    <option v-for="(grade, id) in grades" v-bind:value="grade.grade" :key="id">
-                        {{ grade.grade }}
-                    </option>
-                </select>
+            <div v-else></div>
+            
+            <div class="row">
+                <div class="col-4">
+                    <label for="newName" class="col-6 col-form-label">Nom du personnage</label>
+                </div>
+                <div class="col-8">
+                    <input class="form-control form-control-md" type="text" v-model="newNameCharacter" id="newName">
+                </div>
             </div>
-            <div class="col-4">
-                <label for="newName" class="col-6 col-form-label">Nom du personnage</label>
+            <div class="row">
+                <div class="col-4">
+                    <label for="ageChar" class="col-6 col-form-label">Âge du personnage</label>
+                </div>
+                <div class="col-8">
+                    <input class="form-control form-control-md" type="text" v-model="ageCharacter" id="ageChar">
+                </div>
             </div>
-            <div class="col-8">
-                <input class="form-control form-control-md" type="text" v-model="newNameCharacter" id="newName">
-            </div>  
-            <div class="col-4">
-                <label for="ageChar" class="col-6 col-form-label">Âge du personnage</label>
+            <div class="row">
+                <div class="col-4">
+                    <label for="descChar" class="col-6 col-form-label">Description</label>
+                </div>
+                <div class="col-8">
+                    <textarea class="form-control form-control-md" type="text" v-model="descChara" id="ageChar" rows="3"></textarea>
+                </div>
             </div>
-            <div class="col-8">
-                <input class="form-control form-control-md" type="text" v-model="ageCharacter" id="ageChar">
-            </div>
-            <div class="col-4">
-                <label for="descChar" class="col-6 col-form-label">Description</label>
-            </div>
-            <div class="col-8">
-                <textarea class="form-control form-control-md" type="text" v-model="descChara" id="ageChar" rows="3"></textarea>
-            </div>
-            <div class="col-4">
-                <label for="biographieChar" class="col-6 col-form-label">Biographie</label>
-            </div>
-            <div class="col-8">
-                <textarea class="form-control form-control-md" type="text" v-model="biographieChar" id="biographieChar" rows="3"></textarea>
-            </div>          
-            <div class="col-12">
-                <button class="btn btn-primary">Créer son personnage</button>
+            <div class="row">
+                <div class="col-4">
+                    <label for="biographieChar" class="col-6 col-form-label">Biographie</label>
+                </div>
+                <div class="col-8">
+                    <textarea class="form-control form-control-md" type="text" v-model="biographieChar" id="biographieChar" rows="3"></textarea>
+                </div>          
+                </div>            
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-primary">Créer son personnage</button>
+                </div>            
             </div>
         </form>
     </div>
@@ -69,8 +101,13 @@
 import ClansJson from "../datas/clans.json"
 import GradesJson from "../datas/grades.json"
 import genre from "../datas/genres.json"
+import prefixs from "../datas/prefixs.json"
+import SelectClan from "../clans/SelectClan.vue"
 export default {
     name: 'CreateACharacter',
+    components:{
+        'select-clan': SelectClan
+    },
     data(){
         return{
             title: 'Créer un nouveau personnage',
@@ -81,20 +118,55 @@ export default {
             ageCharacter: '',
             descChara: '',
             biographieChar: '',
-            options: ClansJson,
+            clans: ClansJson,
             grades: GradesJson,
             genre: genre,
-            errors:[]
+            errors:[],
+            newCharacter:[]
         }
     },
     methods:{
+        selectClan(value){
+            console.log("id clan", value);
+        },
+        setClan(value){
+            console.log(value)
+            const clanArray = this.ClansJson.filter(value);
+            console.log(clanArray);
+
+        },
         setGrade(value){
 
         },
+        selectAncienClan(value){
+            console.log(value);
+        },
         checkForm: function (e) {
-            console.log(e);
+            //console.log(e);
             this.errors = [];
-
+            this.newCharacter = [];
+            const newCharacterArray = [];
+            console.log(this.selectedClan);
+            if (!this.selectedClan) {
+                this.errors.push("Clan required.");
+            }else{
+                //this.setClan(this.selectedClan);
+                //console.log(this.ClansJson.filter(this.selectedClan));
+                this.newCharacter.push(this.selectedClan);               
+            }
+            if (!this.selectedGrade) {
+                this.errors.push('Grade required.');
+            }else{
+                this.newCharacter.push(this.selectedGrade)
+            }
+            if(!this.newNameCharacter){
+                this.errors.push("Name required");
+            }
+            if (!this.errors.length) {
+                return true;
+            }
+            console.log(this.newCharacter);
+            e.preventDefault();
         },
     }
 }
