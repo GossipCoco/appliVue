@@ -8,35 +8,11 @@
             </ul>
         </p>
         <form class="container-form-create-character"
-        @submit="checkForm"
-        action="/characters/allcharacters"
-        method="POST"
+            @submit="checkForm"
+            action="/characters/allcharacters"
+            method="POST"
         >
-            <div class="row">           
-                <div class="col-4">
-                    <label for="selectClan" class="col-sm-4 col-form-label">Groupe ou clan</label>
-                </div>
-                <div class="col-8">
-                    <select v-model="selectedClan"  class="form-select form-select-lg mb-3" id="selectClan" @change="selectClan(selectedClan)">
-                        <option v-for="(clan, id) in clans" v-bind:value="clan.id" :key="id">
-                            {{ clan.id }} - {{ clan.name }}
-                        </option>
-                    </select>                  
-                </div>                
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <label for="selectGenre" class="col-sm-4 col-form-label">Genre du personnage</label>
-                </div>
-                <div class="col-8">
-                    <select v-model="selectedGenre"  class="form-select form-select-lg mb-3" id="selectGenre">
-                        <option v-for="(genre, id) in genre" v-bind:value="genre.genre" :key="id">
-                            {{ genre.genre }}
-                        </option>
-                    </select>
-                </div>
-            </div>
-            
+            <select-clan label="Clan ou Groupe" @setClan="setClan"/>
             <div v-if=" selectedClan === 0 || selectedClan === 1|| selectedClan === 2 || selectedClan === 3 || selectedClan === 4">
                 <div class="row">         
                     <div class="col-4">
@@ -51,11 +27,22 @@
                     </div>
                 </div>
             </div>
-            <div v-else-if=" selectedClan === 5">                
-                    <select-clan label="Ancien Clan"/>
+            <div v-else-if=" selectedClan === 5 || selectedClan === 7">
+                <select-clan label="Ancien Clan"/>
             </div>
-            <div v-else></div>
-            
+            <div v-else></div> 
+            <div class="row">
+                <div class="col-4">
+                    <label for="selectGenre" class="col-sm-4 col-form-label">Genre du personnage</label>
+                </div>
+                <div class="col-8">
+                    <select v-model="selectedGenre"  class="form-select form-select-lg mb-3" id="selectGenre">
+                        <option v-for="(genre, id) in genre" v-bind:value="genre.genre" :key="id">
+                            {{ genre.genre }}
+                        </option>
+                    </select>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-4">
                     <label for="newName" class="col-6 col-form-label">Nom du personnage</label>
@@ -87,7 +74,7 @@
                 <div class="col-8">
                     <textarea class="form-control form-control-md" type="text" v-model="biographieChar" id="biographieChar" rows="3"></textarea>
                 </div>          
-                </div>            
+            </div>            
             <div class="row">
                 <div class="col-12">
                     <button class="btn btn-primary">Créer son personnage</button>
@@ -130,10 +117,8 @@ export default {
             console.log("id clan", value);
         },
         setClan(value){
-            console.log(value)
-            const clanArray = this.ClansJson.filter(value);
-            console.log(clanArray);
-
+            console.log("id clan récupéré du select",value)  
+            this.selectedClan = value          
         },
         setGrade(value){
 

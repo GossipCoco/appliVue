@@ -27,6 +27,7 @@ export default {
         selectClan(value){
             console.log("id clan", value);
             this.clanSelected = value;
+            this.$emit("setClan", this.clanSelected)
         },
         selectAncienClan(value){
             this.$emit("selectAncienClan", this.clanSelected)

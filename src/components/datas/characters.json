@@ -89,7 +89,7 @@
       "description": ""
     },{
       "id": 8,
-      "name": 0,
+      "name": "Plume Grise",
       "genre": "mâle",
       "clan": "Clan du Tonnerre",
       "idClan": 0,
@@ -127,12 +127,24 @@
     ,{
       "id": 11,
       "name": "Etoile du Léopard",
-      "genre": 0,
+      "genre": 1,
       "clan": "Clan de la Rivière",
       "idClan": 3,
       "grade": "chef",
       "age": "123",
       "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/master/src/assets/images/personnage/etoile_du_leopard.png",
+      "idUser": 1,
+      "biographie": "Étoile du Léopard est une ancienne chef du Clan de la Rivière entre Étoile Balafrée et Étoile de Brume. Elle est née de Patte de Pierre et Ciel Clair, sous le nom de Petit Léopard. Elle devient apprentie sous le nom de Nuage de Léopard, son mentor est Croc Blanc. Elle deviendra guerrière sous le nom de Taches de Léopard. Elle sera le mentor de Griffe Blanche et Plume de Faucon. Elle sera nommée lieutenante par Étoile Balafrée et à la mort de celui-là, deviendra chef sous le nom d'Étoile du Léopard.",
+      "description": ""
+    },{
+      "id": 12,
+      "name": "Tornade Blanche",
+      "genre": 0,
+      "clan": "Clan des Etoiles",
+      "idClan": 3,
+      "grade": "Lieutenant",
+      "age": "123",
+      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/master/src/assets/images/personnage/Tornade_Blancheg.png",
       "idUser": 1,
       "biographie": "Étoile du Léopard est une ancienne chef du Clan de la Rivière entre Étoile Balafrée et Étoile de Brume. Elle est née de Patte de Pierre et Ciel Clair, sous le nom de Petit Léopard. Elle devient apprentie sous le nom de Nuage de Léopard, son mentor est Croc Blanc. Elle deviendra guerrière sous le nom de Taches de Léopard. Elle sera le mentor de Griffe Blanche et Plume de Faucon. Elle sera nommée lieutenante par Étoile Balafrée et à la mort de celui-là, deviendra chef sous le nom d'Étoile du Léopard.",
       "description": ""
