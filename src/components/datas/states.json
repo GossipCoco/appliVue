@@ -1,0 +1,10 @@
+[
+    {
+        "id":0,
+        "statut": "vivant"
+    },
+    {
+        "id":1,
+        "statut": "décédé"
+    }
+]

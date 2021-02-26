@@ -1,6 +1,7 @@
 [
     {
       "id": 1,
+      "idStatut":0,
       "name": "Etoile de Feu",
       "clan": "Clan du Tonerre",
       "ancienClan": "",
@@ -15,6 +16,7 @@
     },
     {
       "id": 2,
+      "idStatut":0,
       "name": "Etoile Bleue",
       "clan": "Clan du Etoile",
       "ancienClan": "Clan du Tonnerre",
@@ -29,6 +31,7 @@
     },
     {
       "id": 3,
+      "idStatut":0,
       "name": "Caramel",
       "genre": 0,
       "clan": "Aucun",
@@ -43,6 +46,7 @@
     },
     {
       "id": 4,
+      "idStatut":0,
       "name": "Pomme de Pin",
       "clan": "Clan des Etoiles",
       "ancienClan": "Clan du Tonnerre",
@@ -57,6 +61,7 @@
     },
     {
       "id": 5,
+      "idStatut":0,
       "name": "Etoile Filante",
       "genre": 0,
       "clan": "Clan du Vent",      
@@ -70,6 +75,7 @@
       "description": ""
     },{
       "id": 6,
+      "idStatut":0,
       "name": "Fléau",
       "genre": 0,     
       "idClan": 9,
@@ -83,6 +89,7 @@
       "description": ""
     },{
       "id": 7,
+      "idStatut":0,
       "name": "Museau Cendré",
       "genre": 1,
       "idClan": 0,
@@ -96,6 +103,7 @@
       "description": ""
     },{
       "id": 8,
+      "idStatut":0,
       "name": "Plume Grise",
       "genre": "mâle",
       "clan": "Clan du Tonnerre",
@@ -109,6 +117,7 @@
       "description": ""
     },{
       "id": 9,
+      "idStatut":0,
       "name": "Nuage de Jais",
       "genre": 0,
       "clan": "Solitaire",
@@ -122,6 +131,7 @@
       "description": ""
     },{
       "id": 10,
+      "idStatut":0,
       "name": "Gerboise",
       "genre": 0,
       "clan": "Solitaire",
@@ -136,6 +146,7 @@
     }
     ,{
       "id": 11,
+      "idStatut":0,
       "name": "Etoile du Léopard",
       "genre": 1,
       "clan": "Clan de la Rivière",
@@ -149,6 +160,7 @@
       "description": ""
     },{
       "id": 12,
+      "idStatut":0,
       "name": "Tornade Blanche",
       "genre": 0,
       "clan": "Clan des Etoiles",

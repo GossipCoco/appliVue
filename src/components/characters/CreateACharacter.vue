@@ -12,7 +12,7 @@
             action="/characters/allcharacters"
             method="POST"
         >
-            <select-clan label="Clan ou Groupe" @setClan="setClan"/>
+            <select-clan label="Clan ou Groupe" @setClan="setClan" v-bind:typeClan="currentClan"/>
             <div v-if=" selectedClan === 0 || selectedClan === 1|| selectedClan === 2 || selectedClan === 3 || selectedClan === 4">
                 <div class="col-6">
                     <label for="selectGrade" class="form-label">Grade du personnage</label>                            
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div v-else-if=" selectedClan === 5 || selectedClan === 7">
-                <select-clan label="Ancien Clan" @setClan="setClan"/>
+                <select-clan label="Ancien Clan" @setClan="setClan" v-bind:typeClan="ancienClan"/>
             </div>
             <div v-else></div>
             <div class="col">
@@ -94,15 +94,17 @@ export default {
             grades: GradesJson,
             genre: genre,
             errors:[],
-            newCharacter:[]
+            newCharacter:[],
+            currentClan: 'current',
+            ancienClan: 'ancien'
         }
     },
     methods:{
         selectClan(value){
-            console.log("id clan", value);
+            //console.log("id clan", value);
         },
         setClan(value){
-            console.log("id clan récupéré du select",value)  
+            //console.log("id clan récupéré du select",value)  
             this.selectedClan = value
             if(this.selectedClan === 5){
                 return "Quelle est l'ancien clan?"
