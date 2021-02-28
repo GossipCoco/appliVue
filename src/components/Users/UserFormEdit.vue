@@ -27,6 +27,11 @@ export default {
             usrEmail: this.userPersonnalInfo.email,
             answerName: '',
             answerEmail: '',
+            form: {
+                email: '',
+                name: '',
+                checked: []
+            },
         }
     },
     watch: {

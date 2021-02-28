@@ -16,11 +16,11 @@
             <div v-if=" selectedClan === 0 || selectedClan === 1|| selectedClan === 2 || selectedClan === 3 || selectedClan === 4">
                 <div class="col-6">
                     <label for="selectGrade" class="form-label">Grade du personnage</label>                            
-                    <select v-model="selectedGrade"  class="form-select  form-select-lg " id="selectGrade">
+                    <b-form-select v-model="selectedGrade"  class="form-select  form-select-lg " id="selectGrade">
                         <option v-for="(grade, id) in grades" v-bind:value="grade.grade" :key="id">
                             {{ grade.grade }}
                         </option>
-                    </select>
+                    </b-form-select>
                 </div>
             </div>
             <div v-else-if=" selectedClan === 5 || selectedClan === 7">
@@ -31,11 +31,11 @@
                 <label for="selectGenre" class="form-label">Genre du personnage</label>
             </div>
             <div class="col-8">
-                <select v-model="selectedGenre"  class="form-select form-select-lg mb-3" id="selectGenre" style="width:20rem">
+                <b-form-select v-model="selectedGenre"  class="form-select form-select-lg mb-3" id="selectGenre" style="width:20rem">
                     <option v-for="(genre, id) in genre" v-bind:value="genre.genre" :key="id">
                         {{ genre.genre }}
                     </option>
-                </select>
+                </b-form-select>
             </div>          
             <div class="col">
                 <label for="newName" class="col-6 col-form-label">Nom du personnage</label>
@@ -59,14 +59,8 @@
                 <label for="biographieChar" class="col-6 col-form-label">Biographie</label>
             </div>
             <div class="col">
-                <textarea class="form-control form-control-md" type="text" v-model="biographieChar" id="biographieChar" rows="3"></textarea>
+                <b-form-textarea class="form-control form-control-md" type="text" v-model="biographieChar" id="biographieChar" rows="3"></b-form-textarea>
             </div>          
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
             <div class="col">
                 <button class="btn btn-primary">Créer son personnage</button>
             </div>            
