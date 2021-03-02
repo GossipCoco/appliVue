@@ -23,3 +23,6 @@
 .main-container-app p{
     text-align: center;
 }
+.presentation-app p{
+    text-align: justify;
+}
