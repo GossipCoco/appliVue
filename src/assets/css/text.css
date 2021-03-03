@@ -1,4 +1,6 @@
 @import 'variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
 .user-list ul li{
     text-align: left;
 }
@@ -30,4 +32,12 @@
 }
 .nav-contain a{
 
+}
+.title-site-containe h3{
+    font-family: 'Spectral SC', serif;
+    font-size: 38px;
+}
+.title-site-containe h3.titleBook{
+    font-size: 48px;
+    font-weight: 400;
 }

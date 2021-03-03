@@ -1,6 +1,9 @@
 <template>
   <div class="nav-contain">
     <b-navbar toggleable="lg" type="dark" variant="info">
+      <b-navbar-brand class="container-logo">
+          <img src="https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/logo.png" alt="Kitten">
+        </b-navbar-brand>   
       <b-nav-item><router-link to="/">{{ menu.home }}</router-link></b-nav-item>       
       <b-nav-item-dropdown text="Personnage" left>
         <b-dropdown-item><router-link to="/characters/allcharacters">Tous les personnages</router-link></b-dropdown-item>
