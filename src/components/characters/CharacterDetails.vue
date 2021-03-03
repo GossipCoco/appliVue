@@ -3,17 +3,18 @@
         <div class="row presentation-contain">
             <div class="col-md-2 container-background-image-clan" v-bind:style="{ 'background-image': 'url(' + backgroundImgClan + ')' }">
                 <h2>Détail sur {{characterDetails.name}}</h2>                
+                <!-- <img :src="image"> -->
                 <img :src="characterImage">
+                
             </div>
             <div class="col-md-10">
                 <div class="row">
                     <div class="col">
-                        <img :src="clanByCharacter.img" />
+                         <img :src="clanByCharacter.img" /> 
                     </div>                    
                     <div class="col">
                         <h3>{{characterDetails.clan}}</h3>
                     </div>
-
                 </div>
                 <p>{{characterDetails.age}} lunes soit {{ humanAge}} ans</p>
                 <p>
@@ -49,7 +50,9 @@ export default {
             allClans: ClansJson,
             clanByCharacter: null,
             humanAge: '',
-            backgroundImgClan: ''
+            backgroundImgClan: '',
+            //urlImg: 'assets/images/personnage/Etoiledefeu.png',
+            //image: require('@/'+ urlImg)
         }
     },
     created: function(){
@@ -57,6 +60,9 @@ export default {
         this.charId = this.charId - 1
         this.characterDetails = this.allCharacters[this.charId]
         this.characterImage = this.characterDetails.image
+        console.log(this.characterImage)
+        //console.log(this.image+this.characterImage)
+        //this.image = require('@/'+ characterImage)
         this.charClanId = this.characterDetails.idClan
         this.charClanId = this.charClanId
         this.clanByCharacter = this.allClans[this.charClanId]
@@ -66,9 +72,6 @@ export default {
         }else{
             this.humanAge = this.characterDetails.age / 12
         }
-        
-
-
     }
 }
 </script>

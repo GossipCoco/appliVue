@@ -10,15 +10,11 @@
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                     <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="char.id" class="btn btn-primary">En savoir plus</router-link>
                     <transition>
-                            <router-view v-bind:charId="char.id"/>
-                        </transition>
+                        <router-view v-bind:charId="char.id"/>
+                    </transition>
                 </div>
             </div>            
         </div>
-        <!-- <div class="col-1 container-form-create-character">
-            <router-link to="/characters/createacharacter" class="btn btn-primary">Créer un nouveau personnage</router-link>
-                <router-view></router-view>
-        </div> -->
     </div>
 </template>
 <script>
@@ -35,12 +31,23 @@ export default {
         return{
             imageChar: this.charList.image,
             Characters: Characters,
-            genreChar: ''
+            genreChar: '',
+            urlImage: ''
         }
     },
     created: function(){
-        this.genreChar = this.Characters.genre
+        this.genreChar = this.Characters.genre,
+        //console.log(this.charList)
+        this.urlImage = this.charList.image
+        console.log("Url img", this.urlImage)
 
+    },
+    computed: {
+        imgUrl (value) {
+            //console.log("test url", require(value));
+            //return require(this.urlImage)
+            // The path could be '../assets/img.png', etc., which depends on where your vue file is
+        }
     }
 }
 </script>
