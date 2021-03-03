@@ -13,7 +13,7 @@
 .nav-contain{
     flex:1;
 }
-.bg-primary {
+.bg-primary, .bg-info {
   background-color: rgba(0, 73, 22,1) !important;
 }
 /* MENU LATERAL */
@@ -81,7 +81,8 @@
     flex-direction: column;
 }
 .top-main-contain{
-  height: 250px;
+  height: 250px;  
+  width: 100%;
 }
 .main-app-containe{
   flex:2;

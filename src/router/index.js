@@ -10,6 +10,7 @@ import AllCharacters from '@/components/characters/AllCharacters'
 import CharacterDetails from '@/components/characters/CharacterDetails'
 import CreateACharacter from '@/components/characters/CreateACharacter'
 import listOfAllUsers from '@/components/datas/usersDatas.json'
+import CreditContainer from '@/components/layout/CreditContainer'
 
 Vue.use(VueRouter)
 
@@ -42,7 +43,7 @@ const routes = [
   },{
     path: '/characters/allcharacters',
     name: 'AllCharacters',
-    component : AllCharacters
+    component : MainContain
   },{
     path: '/characters/characterDetails/:idCharacter',
     name: "characterDetails",
@@ -52,6 +53,10 @@ const routes = [
     path: '/characters/createacharacter',
     name: 'CreateACharacter',
     component : CreateACharacter
+  },{
+    path: '/credit',
+    name: 'CreditContainer',
+    component: CreditContainer
   }
 ]
 const router = new VueRouter({

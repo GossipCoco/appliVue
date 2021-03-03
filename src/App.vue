@@ -1,33 +1,22 @@
 /* eslint-disable */
 <template>
-  <div>
-    <div class="global-contain">
-      <main-menu-top />
-      <div class="main-content">     
-        <div class="grid-container">
+  <div class="global-contain">
+    <main-menu-top />
+    <div class="main-content">
+      <div class="row">
+        <!-- <div class="col col-md-auto menu-left">
+          <main-menu-left />
+        </div> -->
+        <div class="col">
           <div class="row">
-            <div class="col col-md-auto menu-left">
-              <main-menu-left />
-            </div>
-            <div class="col">
-              <div class="row">
-                <div class="col col-main-contain">
-                  <div class="row top-main-contain">
-                    <div class="col title-site-containe">
-                      <h3>{{msg}}</h3>
-                      <h3 class="titleBook">{{titleBook}}</h3>
-                    </div>    
-                  </div>
-                  <div class="row main-app-containe">
-                    <router-view/>
-                  </div>
-                </div>
+            <div class="col col-main-contain">
+              <div class="row main-app-containe">
+                <router-view/>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <footer-contain />
     </div>
   </div>
 </template>

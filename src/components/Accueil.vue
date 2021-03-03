@@ -1,5 +1,12 @@
 <template>
-    <div class="col main-container-app">
+    <div class="row">
+    <div class="top-main-contain">
+                    <div class="col title-site-containe">
+                      <h3>{{msg}}</h3>
+                      <h3 class="titleBook">{{titleBook}}</h3>
+                    </div>    
+                  </div>
+    <div class="main-container-app">
         <div class="presentation-contain">
             <img class="presentation-cover-book" v-bind:src="imgCover" />
             <p class="presentation-app">
@@ -14,6 +21,7 @@
                 A terme, l'idée sera de créer aussi de nouvelles histoires et de nouvelles instrigues dans cet univers riche et passionnant et, pourquoi pas, une partie map pour faire évoluer votre ou vos personnages.
             </p>
         </div>
+    </div>
     </div>
 </template>
 <script>
