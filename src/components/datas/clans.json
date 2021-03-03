@@ -5,7 +5,7 @@
         "name": "Clan du Tonnerre",
         "img": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/clans/Clan_du_Tonnerre.jpg",
         "description": "Le Clan du Tonnerre (  Angl.  ThunderClan ) est un des quatre Clans de chats sauvages de la forêt. Le premier chef et fondateur du Clan, Étoile du Tonnerre, a été baptisé ainsi en allusion au Chemin du Tonnerre, et, par extension, le Clan a été nommé ainsi. Il chasse principalement des souris, des campagnols, des écureuils, des musaraignes, des lapins et des oiseaux comme des étourneaux, des pies ou des grives. En période de paix, le Clan du Tonnerre est respectueux des autres Clans et très généreux envers les autres. Pendant les guerres, les guerriers du Clan du Tonnerre sont braves, courageux et loyaux. Les chats du Clan du Tonnerre agissent en fonction de ce qu'ils estiment juste, et peuvent, au besoin, remettre en question le Code du guerrier. Les autres Clans ont pu mépriser le Clan du Tonnerre pour avoir accueilli des chats errants, des solitaires ou encore des chats domestiques (tel Étoile de Feu).",
-        "illustration": ""
+        "illustration": "https://raw.githubusercontent.com/GossipCoco/appliVue/master/src/assets/images/trees-mystery.jpg"
     },{
         "id":1,
         "img":"https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/clans/Clan_de_l%2527Ombre.jpg",
@@ -23,7 +23,7 @@
         "img":"https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/clans/Clan_de_la_Rivi%253Fre.jpg",
         "name": "Clan de la Rivière",
         "description":"Le Clan de la Rivière (  Angl.  RiverClan ) est un des quatre clans de chats dont l'histoire est racontée dans la série La guerre des Clans. Il a été fondé par Rivière. Leurs ancêtres appartiennent au Clan des Étoiles. Leur camp est protégé par des roseaux et situé près d'une rivière (dans la première forêt).<br>Les chats du Clan de la Rivière sont connus pour leur amour de l'eau et leur habileté à pêcher. Ils aiment les belles choses et ramassent pierres, coquillages et plumes pour décorer leurs tanières. Ils se nourrissent principalement de poissons mais peuvent aussi manger des rats d'eau, des souris ou encore des musaraignes. Ils sont élégants et bien nourris ; leurs fourrures sont longues et brillantes. Ils sont intelligents, mais les autres tribus les considèrent comme têtus et paresseux, presque trop bien nourris.<br>Le Clan est dirigé (pour ce qui est de Un murmure dans la nuit) par Étoile de Brume. Son lieutenant est Cœur de Roseau, la guérisseuse du Clan est Papillon et l'apprenti guérisseuse est Feuille de Saule.",
-        "illustration": ""
+        "illustration": "https://raw.githubusercontent.com/GossipCoco/appliVue/master/src/assets/images/riviere.jpg"
     },{
         "id":4,
         "img":"https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/clans/Clan_du_Ciel.jpg",

@@ -1,7 +1,7 @@
 <template>
     <div class="col main-container-app">
-        <div class="row">
-            <div class="col-md-2">
+        <div class="row presentation-contain">
+            <div class="col-md-2 container-background-image-clan" v-bind:style="{ 'background-image': 'url(' + backgroundImgClan + ')' }">
                 <h2>Détail sur {{characterDetails.name}}</h2>                
                 <img :src="characterImage">
             </div>
@@ -48,7 +48,8 @@ export default {
             characterImage: '',
             allClans: ClansJson,
             clanByCharacter: null,
-            humanAge: ''
+            humanAge: '',
+            backgroundImgClan: ''
         }
     },
     created: function(){
@@ -59,6 +60,7 @@ export default {
         this.charClanId = this.characterDetails.idClan
         this.charClanId = this.charClanId
         this.clanByCharacter = this.allClans[this.charClanId]
+        this.backgroundImgClan = this.clanByCharacter.illustration
         if(this.characterDetails.age === "Inconnu"){
             return this.humanAge = "Inconnu"
         }else{

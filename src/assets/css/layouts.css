@@ -6,7 +6,9 @@
     display: flex;
     flex-direction: column;
     background-image: url("../images/background7.jpg");
-    background-size: cover;
+    background-size: cover;    
+    min-height: 878px;
+    background-attachment: fixed;
 }
 .grid-container{
   min-height: 100%;
@@ -71,6 +73,9 @@
   padding: 1rem;
   border-radius: 20px;
   margin-bottom: 1rem;
+}
+.container-background-image-clan{
+  background-size: cover;
 }
 .main-container{
   display: flex;

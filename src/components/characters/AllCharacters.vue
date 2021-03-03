@@ -3,7 +3,7 @@
         <div class="col-sm" v-for="char in charList" :key="char.id">
             <div class="card" style="width: 18rem;"  >
                 <div class="container-image-character">
-                <img :src="char.image" class="card-img-top" :alt="char.name">
+                    <img :src="char.image" class="card-img-top" :alt="char.name">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">{{char.name}}</h5>
