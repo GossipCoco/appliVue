@@ -11,7 +11,7 @@
             <div class="col-md-10">
                 <div class="row">
                     <div class="col">
-                        <!-- <img :src="require('@/assets/images/clans/'+logoClan)" /> -->
+                         <img :src="require('@/assets/images/clans/'+logoClan)" /> 
                     </div>                    
                     <div class="col">
                         <h3>{{characterDetails.clan}}</h3>
@@ -65,7 +65,7 @@ export default {
         this.clanByCharacter = this.allClans[this.charClanId]
         this.backgroundImgClan = this.clanByCharacter.illustration
         this.logoClan = this.clanByCharacter.img
-        console.log(this.backgroundImgClan)
+        console.log(this.logoClan)
         if(this.characterDetails.age === "Inconnu"){
             return this.humanAge = "Inconnu"
         }else{

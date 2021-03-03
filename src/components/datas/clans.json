@@ -19,7 +19,7 @@
         "illustration": "aerial-view-plains-fields.jpg"
     },{
         "id":3,
-        "img":"Clan_de_la_Rivi%253Fre.jpg",
+        "img":"Clan_de_la_riviere.jpg",
         "name": "Clan de la Rivière",
         "description":"Le Clan de la Rivière (  Angl.  RiverClan ) est un des quatre clans de chats dont l'histoire est racontée dans la série La guerre des Clans. Il a été fondé par Rivière. Leurs ancêtres appartiennent au Clan des Étoiles. Leur camp est protégé par des roseaux et situé près d'une rivière (dans la première forêt).<br>Les chats du Clan de la Rivière sont connus pour leur amour de l'eau et leur habileté à pêcher. Ils aiment les belles choses et ramassent pierres, coquillages et plumes pour décorer leurs tanières. Ils se nourrissent principalement de poissons mais peuvent aussi manger des rats d'eau, des souris ou encore des musaraignes. Ils sont élégants et bien nourris ; leurs fourrures sont longues et brillantes. Ils sont intelligents, mais les autres tribus les considèrent comme têtus et paresseux, presque trop bien nourris.<br>Le Clan est dirigé (pour ce qui est de Un murmure dans la nuit) par Étoile de Brume. Son lieutenant est Cœur de Roseau, la guérisseuse du Clan est Papillon et l'apprenti guérisseuse est Feuille de Saule.",
         "illustration": "riviere.jpg"
@@ -31,25 +31,25 @@
         "illustration": "etoiles.jpg"
     },{
         "id":5,
-        "img":"Clan_des_%253Ftoiles.jpg",
+        "img":"Clan_des_etoiles.jpg",
         "name": "Clan des Etoiles",
         "description":"Le Clan des Étoiles (  Angl.  StarClan ) regroupe les guerriers décédés des quatre Clans, voir cinq si on rajoute le Clan du Ciel. Les chats bannis des Clans ou ayant décidé de quitter le Clan, de gré ou de force deviennent des Solitaires mais sont acceptés dans le Clan des Étoiles (voir ci-dessous). Ils vivent ainsi après la mort, sous forme d'esprits, et peuvent veiller sur les chats vivants des Clans.",
         "illustration": "etoiles.jpg"
     },{
         "id":6,
-        "img":"Tribu_de_l%2527Eau_Vive.png",
+        "img":"Tribu_de_lEau_Vive.png",
         "name": "Tribu de l'Eau Vive",
         "description":"La Tribu de l'Eau Vive (  Angl.  Tribe of Rushing Water ) est une tribu de chats vivants dans les montagnes, par delà les Hautes Pierres. Ils ont des coutumes différentes des Clans mais certaines sont très proches. Les chats de la Tribu parlent la même langue que ceux des Clans mais avec un accent différent. Leur Tribu est organisée différemment : le chef appelé le soigneur, est à la fois chef et guérisseur ; il porte toujours le nom de Conteur des Pointes Rocheuses ou juste Conteur ou Conteuse des Pointes Rocheuses si le chat est femelle. Le soigneur reste en permanence dans la caverne et choisit lui-même son successeur. Les guerriers sont séparés en deux groupes : les garde-cavernes qui sont chargés de protéger la tribu et les chasse-proies qui la nourrissent. Les chatons sont destinés dès leur naissance à devenir garde-cavernes ou chasse-proies, et une fois assez grand ils deviennent aspirants (équivalent d'apprentis). Les \"reines\" sont appelées porteuses. Les chats se partagent les proies (chacun mange un petit morceau de gibier et le passe ensuite à son voisin). Leurs ancêtres sont appelés Tribu de la Chasse Éternelle et envoient eux aussi des visions et des prophéties. Contrairement aux quatre Clans, ils ne reçoivent pas leurs prophéties grâce aux rêves et aux apparitions de leurs ancêtres, mais lisent les signes dans les flaques d'eau et la nature (nuages, feuilles mortes...). La Tribu vit dans une caverne appelée Caverne de l'Eau Vive qui la protège des intempéries. Le chef communie avec la Tribu de la Chasse Éternelle dans la Caverne aux Pointes Rocheuses.",
         "illustration": "lake.jpg"
     },{
         "id":7,
-        "img":"For%253Ft_Sombre.png",
+        "img":"Foret_Sombre.png",
         "name": "Forêt Sombre",
         "description":"La Forêt Sombre (  Angl.  Dark Forest ), dite aussi le Lieu sans Étoiles (  Angl.  The Place of no Stars ) est l'extrême opposé du Clan des Étoiles. C'est l'endroit où sont bannis les chats qui ont commis des crimes envers leurs Clans, le Code du Guerrier, et qui sont fiers de leurs actes. Cette forêt est décrite comme étant un lieu vaste et vide ; une forêt sombre sans étoiles et sans lune. Le sol est nu et la seule source de lumière provient des champignons toxiques lumineux accrochés aux arbres. Il n'y a ni proie, ni eau et les chats ne ressentent pas la faim ni la soif.",
         "illustration": "forest-dark.jpg"
     },{
         "id":8,
-        "img":"Tribu_de_la_Chasse_%253Fternelle.jpg",
+        "img":"Tribu_de_la_Chasse_eternelle.jpg",
         "name": "Tribu de la Chasse Eternelle",
         "description":"La Tribu de la Chasse Éternelle (  Angl.  Tribe of Endless Hunting ), qui est le terrain de chasse des ancêtres de la Tribu de l'Eau Vive, correspond au Clan des Étoiles pour les Clans.",
         "illustration": "etoiles.jpg"
