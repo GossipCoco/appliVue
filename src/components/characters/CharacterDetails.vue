@@ -2,7 +2,7 @@
 <template>
     <div class="col main-container-app">
         <div class="row presentation-contain">
-            <div class="col-md-2 container-background-image-clan" v-bind:style="{ 'background-image': 'url(' + require('@/assets/images/'+ backgroundImgClan) + ')' }">
+            <div class="col-md-2 container-background-image-clan" v-bind:style="{ 'background-image': 'url(' + require('@/assets/images/backgrounds/'+ backgroundImgClan) + ')' }">
                 <!--  to do : v-bind:style="{ 'background-image': 'url(' + require('@/assets/images/'+ backgroundImgClan) + ')' }" -->
                 <h2>Détail sur {{characterDetails.name}}</h2>                
                 <!-- <img :src="image"> -->
