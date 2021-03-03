@@ -1,5 +1,5 @@
 <template>
-    <div class="col-12 main-container-app">
+    <div class="col-12 presentation-contain main-container-app">
         <p>{{title}}</p>
         <p v-if="errors.length">
             <b>Please correct the following error(s):</b>

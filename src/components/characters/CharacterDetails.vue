@@ -3,18 +3,16 @@
     <div class="col main-container-app">
         <div class="row presentation-contain">
             <div class="col-md-2 container-background-image-clan" v-bind:style="{ 'background-image': 'url(' + require('@/assets/images/backgrounds/'+ backgroundImgClan) + ')' }">
-                <!--  to do : v-bind:style="{ 'background-image': 'url(' + require('@/assets/images/'+ backgroundImgClan) + ')' }" -->
-                <h2>Détail sur {{characterDetails.name}}</h2>                
-                <!-- <img :src="image"> -->
                 <img :src="require('@/assets/images/personnage/'+characterImage)">
             </div>
             <div class="col-md-10">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-2 logo-clan">
                          <img :src="require('@/assets/images/clans/'+logoClan)" /> 
                     </div>                    
-                    <div class="col">
-                        <h3>{{characterDetails.clan}}</h3>
+                    <div class="col-10">
+                        <h3>Détail sur {{characterDetails.name}}</h3>
+                        <h2>{{characterDetails.clan}}</h2>
                     </div>
                 </div>
                 <p>{{characterDetails.age}} lunes soit {{ humanAge}} ans</p>

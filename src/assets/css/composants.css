@@ -21,3 +21,10 @@
 .container-logo{
     margin-right: -15rem;
 }
+.container-background-image-clan img{
+    position: relative;
+    top: 2rem;
+}
+.logo-clan img{
+    width:50%
+}
