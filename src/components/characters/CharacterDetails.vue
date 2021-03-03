@@ -2,7 +2,8 @@
 <template>
     <div class="col main-container-app">
         <div class="row presentation-contain">
-            <div class="col-md-2 container-background-image-clan" v-bind:style="{ 'background-image': 'url(' + backgroundImgClan + ')' }">
+            <div class="col-md-2 container-background-image-clan" v-bind:style="{ 'background-image': 'url(' + require('@/assets/images/'+ backgroundImgClan) + ')' }">
+                <!--  to do : v-bind:style="{ 'background-image': 'url(' + require('@/assets/images/'+ backgroundImgClan) + ')' }" -->
                 <h2>Détail sur {{characterDetails.name}}</h2>                
                 <!-- <img :src="image"> -->
                 <img :src="require('@/assets/images/personnage/'+characterImage)">
@@ -10,7 +11,7 @@
             <div class="col-md-10">
                 <div class="row">
                     <div class="col">
-                         <img :src="clanByCharacter.img" /> 
+                        <!-- <img :src="require('@/assets/images/clans/'+logoClan)" /> -->
                     </div>                    
                     <div class="col">
                         <h3>{{characterDetails.clan}}</h3>
@@ -51,6 +52,7 @@ export default {
             clanByCharacter: null,
             humanAge: '',
             backgroundImgClan: '',
+            logoClan: ''
         }
     },
     created: function(){
@@ -62,6 +64,8 @@ export default {
         this.charClanId = this.charClanId
         this.clanByCharacter = this.allClans[this.charClanId]
         this.backgroundImgClan = this.clanByCharacter.illustration
+        this.logoClan = this.clanByCharacter.img
+        console.log(this.backgroundImgClan)
         if(this.characterDetails.age === "Inconnu"){
             return this.humanAge = "Inconnu"
         }else{
