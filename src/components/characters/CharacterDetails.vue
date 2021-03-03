@@ -1,11 +1,11 @@
+ /* eslint-disable */
 <template>
     <div class="col main-container-app">
         <div class="row presentation-contain">
             <div class="col-md-2 container-background-image-clan" v-bind:style="{ 'background-image': 'url(' + backgroundImgClan + ')' }">
                 <h2>Détail sur {{characterDetails.name}}</h2>                
                 <!-- <img :src="image"> -->
-                <img :src="characterImage">
-                
+                <img :src="require('@/assets/images/personnage/'+characterImage)">
             </div>
             <div class="col-md-10">
                 <div class="row">
@@ -51,8 +51,6 @@ export default {
             clanByCharacter: null,
             humanAge: '',
             backgroundImgClan: '',
-            //urlImg: 'assets/images/personnage/Etoiledefeu.png',
-            //image: require('@/'+ urlImg)
         }
     },
     created: function(){
@@ -60,9 +58,6 @@ export default {
         this.charId = this.charId - 1
         this.characterDetails = this.allCharacters[this.charId]
         this.characterImage = this.characterDetails.image
-        console.log(this.characterImage)
-        //console.log(this.image+this.characterImage)
-        //this.image = require('@/'+ characterImage)
         this.charClanId = this.characterDetails.idClan
         this.charClanId = this.charClanId
         this.clanByCharacter = this.allClans[this.charClanId]

@@ -9,7 +9,8 @@
       "idClan": 0,
       "grade": "chef",
       "age": "86",
-      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/personnage/Etoiledefeu.png",
+      "image": "Etoiledefeu.png",
+      "url": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/personnage/Etoiledefeu.png",
       "idUser": 1,
       "biographie": "Étoile de Feu est un ancien chef du Clan du Tonnerre à la suite d'Étoile Bleue. Il est né de Caramel et Noix de Muscade, et vit en tant que chat domestique sous le nom de Rusty. Il rejoint le Clan du Tonnerre et devient apprenti sous le nom de Nuage de Feu, il est entraîné par Cœur de Lion, Griffe de Tigre et Étoile Bleue. Il deviendra guerrier sous le nom de Cœur de Feu. Après l'exil de Griffe de Tigre, il est nommé lieutenant à sa place. Il devient le mentor de Nuage Cendré avant que celle-ci se fasse renverser par un monstre. Plus tard, entraîne son neveu, Flocon de Neige et le fils d'Étoile du Tigre, Griffe de Ronce.",
       "description": "Étoile de Feu (  Angl.  Firestar ) est un large et maigre chat roux flamme tigré à la courte et belle fourrure épaisse, au ventre roux pâle et à la longue queue. Il a des yeux perçants vert émeraude, des oreilles larges et des griffes acérées."
@@ -24,7 +25,7 @@
       "idClan": 5,
       "grade": "chef",
       "age": "78",
-      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/personnage/Etoile_Bleue1.png",
+      "image": "Etoile_Bleue1.png",
       "idUser": 1,
       "biographie": "Étoile Bleue est une ancienne chef du Clan du Tonnerre, entre Étoile du Soleil et Étoile de Feu. Elle est née de Fleur de Lune et Plume de Tempête, sous le nom de Petit Bleuet. Elle devient apprentie sous le nom de Nuage Bleu, son mentor est Pelage de Pierre, puis Pelage de Soleil. Elle deviendra finalement guerrière sous le nom de Lune Bleue. Elle sera nommée lieutenante sous Étoile du Soleil et à sa mort, elle recevra ses neuf vies et deviendra chef sous le nom de Étoile Bleue.",
       "description": "Étoile Bleue (  Angl.  Bluestar ) est une chatte au pelage gris-bleu clair uniforme. Ses yeux bleu limpide étaient à la fois glacés et lumineux, perçants et brillants. Son museau autour duquel se trouvent quelques poils argentés est zébré de poils blancs, tout comme le bout de sa queue. Elle est mince, souple, majestueuse, magnifique et grande. Ses larges épaules sont puissantes, sa tête est large et sa queue longue. Sa longue fourrure soyeuse est épaisse et douce, celle de sa queue est lisse et touffue. Elle a une oreille déchirée et une balafre en travers des épaules."
@@ -39,7 +40,7 @@
       "idClan": 11,
       "grade": "chat domestique",
       "age": "Inconnu",
-      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/personnage/caramel.png",
+      "image": "caramel.png",
       "idUser": 1,
       "biographie": "Caramel (  Angl.  Jake ) est un chat au pelage roux comme les flammes, doux et soyeux et aux yeux vert-feuille. Il a une oreille déchirée guérie depuis longtemps et il est un peu dodu.",
       "description": ""
@@ -54,7 +55,7 @@
       "idClan": 0,
       "grade": "Ancien",
       "age": "88",
-      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/personnage/Pomme_de_Pin3.png",
+      "image": "Pomme_de_Pin3.png",
       "idUser": 1,
       "biographie": "Pomme de Pin (  Angl.  Patchpelt ) est un petit mâle noir et blanc aux yeux ambrés, à la fourrure lisse.",
       "description": ""
@@ -69,7 +70,7 @@
       "idClan": 2,
       "grade": "Chef",
       "age": "Aucun",
-      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/personnage/Etoile_Filante-0.png",
+      "image": "Etoile_Filante-0.png",
       "idUser": 1,
       "biographie": "Étoile Filante était un ancien chef du Clan du Vent dans les territoires forestiers. Il est né d'Ajonc des Sables et Oiseau Pâle, sous le nom de Petit Fil, avec Petit Canari, décédée peu de temps après sa naissance. Il devient apprenti coureur des landes sous le nom de Nuage Filant, avec pour mentor Rayon de l'Aube, au grand désarroi d'Ajonc des Sables. Plus tard, Ajonc des Sables a montré à Moineau les tunnels instables mais, lorsqu'ils se sont effondrés, Ajonc des Sables est mort. Nuage Filant a blâmé Moineau pour la mort de son père. Il est devenu guerrier sous le nom de Plume Filante. Sa soif de vengeance le fit quitter le Clan du Vent pour retrouver Moineau. Lors de son voyage à la recherche de Moineau, il a rencontré un chat domestique nommé Caramel, avec qui il forme un lien fort.",
       "description": ""
@@ -83,7 +84,7 @@
       "ancienClan": "",
       "grade": "Chef",
       "age": "Aucun",
-      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/personnage/fleau.png",
+      "image": "fleau.png",
       "idUser": 1,
       "biographie": "Fléau (  Angl.  Scourge ) est un petit mâle noir avec une patte blanche et des yeux bleus glacés. Il a un collier violet orné de crocs de chiens et de chats, et des griffes renforcées par des crocs de chiens.",
       "description": ""
@@ -97,7 +98,7 @@
       "ancienClan": "",
       "grade": "Guerrisseuse",
       "age": "48",
-      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/personnage/Museaucendre.png",
+      "image": "Museaucendre.png",
       "idUser": 1,
       "biographie": "Museau Cendré est une ancienne guérisseuse du Clan du Tonnerre sous Étoile Bleue et Étoile de Feu. Elle est née de Pelage de Givre et Cœur de Lion, sous le nom de Petite Cendre. Elle devient apprentie sous le nom de Nuage Cendré, son mentor est Cœur de Feu, puis Croc Jaune. Elle deviendra finalement guérisseuse sous le nom de Museau Cendré. Elle sera le mentor de Feuille de Lune.",
       "description": ""
@@ -111,7 +112,7 @@
       "idClan": 0,
       "grade": "Ancien",
       "age": "Aucun",
-      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/personnage/Plume_Grise.png",
+      "image": "Plume_Grise.png",
       "idUser": 1,
       "biographie": "Plume Grise (  Angl.  Graystripe ) est un grand chat plutôt massif, musclé à la longue et épaisse fourrure ébouriffée et soyeuse, gris ardoise. Il a une grande tête, un large museau, une forte mâchoire, de larges et puissantes épaules, une bande de fourrure gris sombre sur son dos, l'oreille gauche déchirée, une épaisse queue touffue, de larges pattes souples et robustes, des griffes aiguisées, des dents pointues, et de grands yeux jaunes.",
       "description": ""
@@ -125,7 +126,7 @@
       "idClan": 10,
       "grade": "Aucun",
       "age": "96",
-      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/personnage/Nuage_de_Jais.png",
+      "image": "Nuage_de_Jais.png",
       "idUser": 1,
       "biographie": "Nuage de Jais était un solitaire qui vivait à la ferme de Gerboise avec Gerboise, autrefois un apprenti du Clan du Tonnerre sous la direction d'Étoile Bleue dans les territoires forestiers. Il est né de Plume de Rouge-Gorge et Pelage Crépu aux côtés de son frère, Pelage de Poussière. En tant qu’apprenti, Nuage de Jais a été encadré par Griffe de Tigre et l’a vu assassiner Plume Rousse, avec Griffe de Tigre menaçant de le faire taire. Lorsque Nuage de Feu rejoint le Clan du Tonnerre, les deux apprentis se rapprochent de Nuage Gris. Craignant que Nuage de Jais ne soit tué, Nuage Gris et Nuage de Feu l’emmenèrent vivre dans une grange avec Gerboise pour le protéger de Griffe de Tigre. Lorsque le Clan du Sang arriva dans la forêt, Nuage de Jais et Gerboise ont aidé Étoile de Feu à vaincre Fléau, et Nuage de Jais aida Gerboise à surmonter son passé du Clan du Sang.",
       "description": ""
@@ -139,7 +140,7 @@
       "idClan": 10,
       "grade": "Aucun",
       "age": "",
-      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/dev/src/assets/images/personnage/gerboise.png",
+      "image": "gerboise.png",
       "idUser": 1,
       "biographie": "Gerboise est un solitaire qui vit dans une ferme à la lisière du territoire du Clan du Vent dans la forêt. Il est né dans le Clan du Sang aux côtés de ses frères et sœurs, Violette, Criquet et Farceur. Après que Serpent et Givre aient attaqué leur sœur, Gerboise l'amena à un chat domestique, et il partit s’installer dans une grange. Gerboise était ami avec les clans, et quand Nuage de Jais s'est échappé du Clan du Tonnerre avec l'aide de Cœur de Feu et Plume Grise, l’ancien apprenti a rejoint Gerboise, et les deux chats sont devenus de plus en plus incroyablement proches. Il a aidé le Clan du Lion pendant la bataille contre le Clan du Sang, et Nuage de Jais l'a aidé à surmonter son passé.",
       "description": "Gerboise (  Angl.  Barley ) est un chat noir et blanc aux yeux bleus. "
@@ -154,7 +155,7 @@
       "idClan": 3,
       "grade": "chef",
       "age": "123",
-      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/master/src/assets/images/personnage/etoile_du_leopard.png",
+      "image": "etoile_du_leopard.png",
       "idUser": 1,
       "biographie": "Étoile du Léopard est une ancienne chef du Clan de la Rivière entre Étoile Balafrée et Étoile de Brume. Elle est née de Patte de Pierre et Ciel Clair, sous le nom de Petit Léopard. Elle devient apprentie sous le nom de Nuage de Léopard, son mentor est Croc Blanc. Elle deviendra guerrière sous le nom de Taches de Léopard. Elle sera le mentor de Griffe Blanche et Plume de Faucon. Elle sera nommée lieutenante par Étoile Balafrée et à la mort de celui-là, deviendra chef sous le nom d'Étoile du Léopard.",
       "description": ""
@@ -168,7 +169,7 @@
       "idClan": 3,
       "grade": "Lieutenant",
       "age": "123",
-      "image": "https://raw.githubusercontent.com/GossipCoco/appliVue/master/src/assets/images/personnage/Tornade_Blancheg.png",
+      "image": "Tornade_Blancheg.png",
       "idUser": 1,
       "biographie": "Étoile du Léopard est une ancienne chef du Clan de la Rivière entre Étoile Balafrée et Étoile de Brume. Elle est née de Patte de Pierre et Ciel Clair, sous le nom de Petit Léopard. Elle devient apprentie sous le nom de Nuage de Léopard, son mentor est Croc Blanc. Elle deviendra guerrière sous le nom de Taches de Léopard. Elle sera le mentor de Griffe Blanche et Plume de Faucon. Elle sera nommée lieutenante par Étoile Balafrée et à la mort de celui-là, deviendra chef sous le nom d'Étoile du Léopard.",
       "description": ""

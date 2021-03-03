@@ -1,9 +1,10 @@
+ /* eslint-disable */
 <template>
     <div class="row contain-all-characters">
         <div class="col-sm" v-for="char in charList" :key="char.id">
             <div class="card" style="width: 18rem;"  >
                 <div class="container-image-character">
-                    <img :src="char.image" class="card-img-top" :alt="char.name">
+                    <img :src="require('@/assets/images/personnage/'+char.image)" class="card-img-top" :alt="char.name">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">{{char.name}}</h5>
@@ -31,23 +32,11 @@ export default {
         return{
             imageChar: this.charList.image,
             Characters: Characters,
-            genreChar: '',
-            urlImage: ''
+            genreChar: ''
         }
     },
     created: function(){
-        this.genreChar = this.Characters.genre,
-        //console.log(this.charList)
-        this.urlImage = this.charList.image
-        console.log("Url img", this.urlImage)
-
-    },
-    computed: {
-        imgUrl (value) {
-            //console.log("test url", require(value));
-            //return require(this.urlImage)
-            // The path could be '../assets/img.png', etc., which depends on where your vue file is
-        }
+        this.genreChar = this.Characters.genre     
     }
 }
 </script>
