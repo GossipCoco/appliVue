@@ -13,22 +13,32 @@
                     <div class="col-10">
                         <h3>Détail sur {{characterDetails.name}}</h3>
                         <h2>{{characterDetails.clan}}</h2>
+                        
                     </div>
                 </div>
-                <p>{{characterDetails.age}} lunes soit {{ humanAge}} ans</p>
-                <p>
-                    {{characterDetails.grade}}
-                </p>
-                <p class="presentation-text">
-                    {{characterDetails.description}}
-                </p>
-                <p class="presentation-text">
-                    {{characterDetails.biographie}}
-                </p>
-                <p class="presentation-text">
-                    Description du clan <br>
-                    {{clanByCharacter.description}}
-                </p>
+                <div class="row">
+                    <div class="col fiche-personnage">
+                        <p class="info-global">
+                            <span>{{characterDetails.age}}</span> lunes soit <span>{{ humanAge}}</span> ans
+                        </p>
+                        <p class="info-global">
+                            <span>Grade du personnage</span> : 
+                            {{characterDetails.grade}}
+                        </p>
+                        <p class="presentation-text">
+                            <span>Description</span>
+                            {{characterDetails.description}}
+                        </p>
+                        <p class="presentation-text">
+                            <span>Biographie</span>
+                            {{characterDetails.biographie}}
+                        </p>
+                        <p class="presentation-text">
+                            Description du clan <br>
+                            {{clanByCharacter.description}}
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

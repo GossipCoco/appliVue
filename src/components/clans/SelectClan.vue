@@ -12,18 +12,17 @@
 import ClansJson from '../datas/clans'
 export default {
     name: 'SelectClan',
-    props:['label', 'typeClan'],
+    props:['label', 'clans', 'typeClan'],
     data(){
         return{            
-            clans: ClansJson,
+            clans: clans,
             clanSelected: '',
             infoClan:[]
-
         }
     },
     methods:{
         selectClan(value){
-            console.log("id clan", value, "type clan", this.typeClan);            
+            //console.log("id clan", value, "type clan", this.typeClan);            
             this.clanSelected = value;
             this.$emit("setClan", this.clanSelected)
         },

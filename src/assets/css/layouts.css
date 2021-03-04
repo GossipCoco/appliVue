@@ -69,7 +69,7 @@
   
 }
 .presentation-contain, .presentation-app{
-  background-color: rgba(255,255,255, 0.75);
+  background-color: rgba(255,255,255, 0.80);
   padding: 1rem;
   border-radius: 20px;
   margin-bottom: 1rem;
@@ -124,6 +124,18 @@
   max-height: 500px;
   overflow-y: scroll;
   
+}
+/* Container form create a character */
+
+.form-create-character{
+  margin: 2rem;
+}
+.contain-btn{
+  margin-top: 1rem;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 /* Container for flexboxes */
 .row {

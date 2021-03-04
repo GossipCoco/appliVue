@@ -38,3 +38,12 @@
     font-size: 48px;
     font-weight: 400;
 }
+.fiche-personnage span{
+    font-weight: 600;
+}
+.fiche-personnage p{
+    text-align: left;
+}
+p.presentation-text{
+    text-align: justify;
+}

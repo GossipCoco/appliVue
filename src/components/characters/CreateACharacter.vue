@@ -1,5 +1,5 @@
 <template>
-    <div class="col-12 presentation-contain main-container-app">
+    <div class="col-12 main-container-app form-create-character presentation-contain ">
         <p>{{title}}</p>
         <p v-if="errors.length">
             <b>Please correct the following error(s):</b>
@@ -12,7 +12,7 @@
             action="/characters/allcharacters"
             method="POST"
         >
-            <select-clan label="Clan ou Groupe" @setClan="setClan" v-bind:typeClan="currentClan"/>
+            <select-clan label="Clan ou Groupe" @setClan="setClan" v-bind:typeClan="currentClan" v-bind:clans="clans"/>
             <div v-if=" selectedClan === 0 || selectedClan === 1|| selectedClan === 2 || selectedClan === 3 || selectedClan === 4">
                 <div class="col-6">
                     <label for="selectGrade" class="form-label">Grade du personnage</label>                            
@@ -61,7 +61,7 @@
             <div class="col">
                 <b-form-textarea class="form-control form-control-md" type="text" v-model="biographieChar" id="biographieChar" rows="3"></b-form-textarea>
             </div>          
-            <div class="col">
+            <div class="col contain-btn">
                 <button class="btn btn-primary">Créer son personnage</button>
             </div>            
         </form>
@@ -96,25 +96,29 @@ export default {
             errors:[],
             newCharacter:[],
             currentClan: 'current',
-            ancienClan: 'ancien'
+            ancienClan: 'ancien',
+            allAnciensClans: [],
+            
         }
     },
     methods:{
         selectClan(value){
-            //console.log("id clan", value);
         },
         setClan(value){
-            //console.log("id clan récupéré du select",value)  
+            //console.log("id clan", value)
             this.selectedClan = value
             if(this.selectedClan === 5){
+                this.allAnciensClans = this.allAnciensClans.push(this.ClansJson);
+                console.log("new arrau",this.allAnciensClans);
                 return "Quelle est l'ancien clan?"
+            }else{
+
             }          
         },
         setGrade(value){
 
         },
         checkForm: function (e) {
-            //console.log(e);
             this.errors = [];
             this.newCharacter = [];
             const newCharacterArray = [];

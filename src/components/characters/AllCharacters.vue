@@ -40,7 +40,7 @@ export default {
         }
     },
     created: function(){
-        this.genreChar = this.Characters.genre     
+        this.genreChar = this.Characters.genre
     }
 }
 </script>
