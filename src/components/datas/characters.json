@@ -172,5 +172,33 @@
       "idUser": 1,
       "biographie": "Étoile du Léopard est une ancienne chef du Clan de la Rivière entre Étoile Balafrée et Étoile de Brume. Elle est née de Patte de Pierre et Ciel Clair, sous le nom de Petit Léopard. Elle devient apprentie sous le nom de Nuage de Léopard, son mentor est Croc Blanc. Elle deviendra guerrière sous le nom de Taches de Léopard. Elle sera le mentor de Griffe Blanche et Plume de Faucon. Elle sera nommée lieutenante par Étoile Balafrée et à la mort de celui-là, deviendra chef sous le nom d'Étoile du Léopard.",
       "description": ""
+    },{
+      "id": 13,
+      "idStatut":0,
+      "name": "Etoile du Tigre",
+      "genre": 0,
+      "clan": "Forêt Sombre",
+      "ancienClan": "Clan de l'Ombre",
+      "idClan": 7,
+      "grade": "Chef",
+      "age": "66",
+      "image": "etoile_du_Tigre1.png",
+      "idUser": 1,
+      "biographie": "Étoile du Tigre est un ancien chef du Clan de l'Ombre entre Étoile Noire et Étoile de Jais. Il est né de Patte de Léopard et Étoile de Sapin, sous le nom de Petit Tigre. Il devient apprenti sous le nom de Nuage de Tigre, son mentor est Griffes d'Épine. Il deviendra guerrier sous le nom de Griffe de Tigre. Il sera le mentor d'Éclair Noir et Nuage de Jais. Il sera nommé lieutenant par Étoile Bleue mais fut exilé pour trahison. Alors que le Clan de l'Ombre était au plus mauvais point, il devint chef sous le nom d'Étoile du Tigre.",
+      "description": "Étoile du Tigre (  Angl.  Tigerstar ) est un grand matou massif et énorme au pelage sombre brun foncé tigré, tacheté, rayé et moucheté. Il a de très longues griffes ressemblants à celle d'un tigre (d'où son nom de guerrier), de larges épaules puissantes, une oreille déchiquetée, une large balafre sur l'arrête de son nez, un large museau noir, une épaisse queue, de grands yeux ambrés, des muscles puissants et une entaille en forme de \"V\" sur l'oreille droite. Il est cruel, manipulateur et avide de pouvoir. C'est l'ennemi juré d’Étoile de Feu."
+    },{
+      "id": 14,
+      "idStatut":1,
+      "name": "Princesse",
+      "genre": 1,
+      "clan": "Chat domestique",
+      "ancienClan": "",
+      "idClan": 11,
+      "grade": "Aucun",
+      "age": "",
+      "image": "Princesse.png",
+      "idUser": 1,
+      "biographie": "Lors de sa première apparition dans le livre, Cœur de Feu était avec sa première apprentie, Nuage Cendré. La novice allait l'attaquer, mais le guerrier roux sentit son instinct lui chuchoter de ne pas lui faire de mal. Alors, il effleure une tige sèche et Princesse, alertée par le bruit, détale vers ses Bipèdes. La nuit, en rêve, Cœur de Feu découvre que la chatte domestique était sa sœur ! Le lendemain, il va la voir dans son jardin. Princesse prend d'abord peur, puis se radoucit. Depuis, un lien autre que celui du sang s'est tissé entre eux. Un jour, Princesse dit à son frère qu'elle vient d'avoir une portée de chatons, et elle sait que ses Bipèdes vont les séparer d'elle. Alors, elle lui demande de s'occuper de son premier-né et de le ramener dans le Clan du Tonnerre pour en faire un vrai guerrier. Le chaton en question est le futur Flocon de Neige, un excellent guerrier et un pisteur hors pair.",
+      "description": "Princesse (  Angl.  Princess ) est une chatte brun clair aux pattes et au poitrail blancs."
     }
 ]

@@ -2,20 +2,24 @@
 <template>
     <div class="row contain-all-characters">
         <div class="col-sm" v-for="char in charList" :key="char.id">
-            <div class="card" style="width: 18rem;"  >
-                <div class="container-image-character">
-                    <img :src="require('@/assets/images/personnage/'+char.image)" class="card-img-top" :alt="char.name">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">{{char.name}}</h5>
-                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                    <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="char.id" class="btn btn-primary">En savoir plus</router-link>
+            <b-card
+                :v-bind:title="char.name"
+                :img-src="require('@/assets/images/personnage/'+char.image)"
+                img-alt="Image"
+                img-top
+                tag="article"
+                style="width: 20rem; height: 40rem"
+                class="mb-4"
+            >
+                <b-card-text>
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+                </b-card-text>
+
+                <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="char.id" class="btn btn-primary">En savoir plus</router-link>
                     <transition>
                         <router-view v-bind:charId="char.id"/>
                     </transition>
-                </div>
-            </div>            
-        </div>
+            </b-card></div>
     </div>
 </template>
 <script>
