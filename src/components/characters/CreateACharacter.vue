@@ -95,10 +95,9 @@ export default {
             genre: genre,
             errors:[],
             newCharacter:[],
-            currentClan: 'current',
-            ancienClan: 'ancien',
             allAnciensClans: [],
-            
+            currentClan: 'current',
+            ancienClan: 'ancien'            
         }
     },
     methods:{
@@ -109,7 +108,7 @@ export default {
             this.selectedClan = value
             if(this.selectedClan === 5){
                 this.allAnciensClans = this.allAnciensClans.push(this.ClansJson);
-                console.log("new arrau",this.allAnciensClans);
+                console.log("new array",this.ClansJson);
                 return "Quelle est l'ancien clan?"
             }else{
 
