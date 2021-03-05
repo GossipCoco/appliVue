@@ -188,7 +188,7 @@
       "description": "Étoile du Tigre (  Angl.  Tigerstar ) est un grand matou massif et énorme au pelage sombre brun foncé tigré, tacheté, rayé et moucheté. Il a de très longues griffes ressemblants à celle d'un tigre (d'où son nom de guerrier), de larges épaules puissantes, une oreille déchiquetée, une large balafre sur l'arrête de son nez, un large museau noir, une épaisse queue, de grands yeux ambrés, des muscles puissants et une entaille en forme de \"V\" sur l'oreille droite. Il est cruel, manipulateur et avide de pouvoir. C'est l'ennemi juré d’Étoile de Feu."
     },{
       "id": 14,
-      "idStatut":1,
+      "idStatut":0,
       "name": "Princesse",
       "genre": 1,
       "clan": "Chat domestique",
@@ -200,5 +200,19 @@
       "idUser": 1,
       "biographie": "Lors de sa première apparition dans le livre, Cœur de Feu était avec sa première apprentie, Nuage Cendré. La novice allait l'attaquer, mais le guerrier roux sentit son instinct lui chuchoter de ne pas lui faire de mal. Alors, il effleure une tige sèche et Princesse, alertée par le bruit, détale vers ses Bipèdes. La nuit, en rêve, Cœur de Feu découvre que la chatte domestique était sa sœur ! Le lendemain, il va la voir dans son jardin. Princesse prend d'abord peur, puis se radoucit. Depuis, un lien autre que celui du sang s'est tissé entre eux. Un jour, Princesse dit à son frère qu'elle vient d'avoir une portée de chatons, et elle sait que ses Bipèdes vont les séparer d'elle. Alors, elle lui demande de s'occuper de son premier-né et de le ramener dans le Clan du Tonnerre pour en faire un vrai guerrier. Le chaton en question est le futur Flocon de Neige, un excellent guerrier et un pisteur hors pair.",
       "description": "Princesse (  Angl.  Princess ) est une chatte brun clair aux pattes et au poitrail blancs."
+    },{
+      "id": 15,
+      "idStatut":0,
+      "name": "Croc Jaune",
+      "genre": 1,
+      "clan": "Clan du Tonnerre",
+      "ancienClan": "Clan de l'Ombre",
+      "idClan": 0,
+      "grade": "Guerrisseur",
+      "age": "",
+      "image": "Croc-jaune-0.png",
+      "idUser": 1,
+      "biographie": "Croc Jaune est une guérisseuse du Clan du Tonnerre sous Étoile Bleue. Elle est née de Reine-des-Prés (CO) et Patte de Fougère avec Petite Noix et Petite Sorbe, sous le nom de Petit Croc. Elle devient apprentie guerrière sous le nom de Nuage de Croc, son mentor est Saut de Biche. Elle deviendra guerrière sous le nom de Croc Jaune. Finalement elle décide de devenir guérisseuse et commence son apprentissage avec Moustache de Sauge. Elle sera le mentor de Nuage de Foin et de Nuage Cendré.",
+      "description": "Croc Jaune (  Angl.  Yellowfang ) est une chatte gris foncé au museau large et plat couturé de cicatrices, aux oreilles déchirées, aux crocs jaunes et aux grands yeux ambrés."
     }
 ]
