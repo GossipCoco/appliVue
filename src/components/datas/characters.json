@@ -24,7 +24,7 @@
       "idClan": 5,
       "grade": "chef",
       "age": "78",
-      "image": "Etoile_Bleue1.png",
+      "image": "Bluestar-warrior.png",
       "idUser": 1,
       "biographie": "Étoile Bleue est une ancienne chef du Clan du Tonnerre, entre Étoile du Soleil et Étoile de Feu. Elle est née de Fleur de Lune et Plume de Tempête, sous le nom de Petit Bleuet. Elle devient apprentie sous le nom de Nuage Bleu, son mentor est Pelage de Pierre, puis Pelage de Soleil. Elle deviendra finalement guerrière sous le nom de Lune Bleue. Elle sera nommée lieutenante sous Étoile du Soleil et à sa mort, elle recevra ses neuf vies et deviendra chef sous le nom de Étoile Bleue.",
       "description": "Étoile Bleue (  Angl.  Bluestar ) est une chatte au pelage gris-bleu clair uniforme. Ses yeux bleu limpide étaient à la fois glacés et lumineux, perçants et brillants. Son museau autour duquel se trouvent quelques poils argentés est zébré de poils blancs, tout comme le bout de sa queue. Elle est mince, souple, majestueuse, magnifique et grande. Ses larges épaules sont puissantes, sa tête est large et sa queue longue. Sa longue fourrure soyeuse est épaisse et douce, celle de sa queue est lisse et touffue. Elle a une oreille déchirée et une balafre en travers des épaules."
@@ -39,7 +39,7 @@
       "idClan": 11,
       "grade": "chat domestique",
       "age": "Inconnu",
-      "image": "caramel.png",
+      "image": "caramel2.png",
       "idUser": 1,
       "biographie": "Caramel (  Angl.  Jake ) est un chat au pelage roux comme les flammes, doux et soyeux et aux yeux vert-feuille. Il a une oreille déchirée guérie depuis longtemps et il est un peu dodu.",
       "description": ""
@@ -54,7 +54,7 @@
       "idClan": 0,
       "grade": "Ancien",
       "age": "88",
-      "image": "Pomme_de_Pin3.png",
+      "image": "pomme.png",
       "idUser": 1,
       "biographie": "Pomme de Pin (  Angl.  Patchpelt ) est un petit mâle noir et blanc aux yeux ambrés, à la fourrure lisse.",
       "description": ""
@@ -111,7 +111,7 @@
       "idClan": 0,
       "grade": "Ancien",
       "age": "Aucun",
-      "image": "Plume_Grise.png",
+      "image": "PlumeGriseleader.png",
       "idUser": 1,
       "biographie": "Plume Grise (  Angl.  Graystripe ) est un grand chat plutôt massif, musclé à la longue et épaisse fourrure ébouriffée et soyeuse, gris ardoise. Il a une grande tête, un large museau, une forte mâchoire, de larges et puissantes épaules, une bande de fourrure gris sombre sur son dos, l'oreille gauche déchirée, une épaisse queue touffue, de larges pattes souples et robustes, des griffes aiguisées, des dents pointues, et de grands yeux jaunes.",
       "description": ""
@@ -196,7 +196,7 @@
       "idClan": 11,
       "grade": "Aucun",
       "age": "",
-      "image": "Princesse.png",
+      "image": "Princesse3.png",
       "idUser": 1,
       "biographie": "Lors de sa première apparition dans le livre, Cœur de Feu était avec sa première apprentie, Nuage Cendré. La novice allait l'attaquer, mais le guerrier roux sentit son instinct lui chuchoter de ne pas lui faire de mal. Alors, il effleure une tige sèche et Princesse, alertée par le bruit, détale vers ses Bipèdes. La nuit, en rêve, Cœur de Feu découvre que la chatte domestique était sa sœur ! Le lendemain, il va la voir dans son jardin. Princesse prend d'abord peur, puis se radoucit. Depuis, un lien autre que celui du sang s'est tissé entre eux. Un jour, Princesse dit à son frère qu'elle vient d'avoir une portée de chatons, et elle sait que ses Bipèdes vont les séparer d'elle. Alors, elle lui demande de s'occuper de son premier-né et de le ramener dans le Clan du Tonnerre pour en faire un vrai guerrier. Le chaton en question est le futur Flocon de Neige, un excellent guerrier et un pisteur hors pair.",
       "description": "Princesse (  Angl.  Princess ) est une chatte brun clair aux pattes et au poitrail blancs."
