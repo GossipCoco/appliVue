@@ -2,10 +2,10 @@
 <template>
     <div class="col main-container-app">
         <div class="row presentation-contain">
-            <div class="col-md-2 container-background-image-clan" v-bind:style="{ 'background-image': 'url(' + require('@/assets/images/backgrounds/'+ backgroundImgClan) + ')' }">
+            <div class="col-md-4 container-background-image-clan" v-bind:style="{ 'background-image': 'url(' + require('@/assets/images/backgrounds/'+ backgroundImgClan) + ')' }">
                 <img :src="require('@/assets/images/personnage/'+characterImage)">
             </div>
-            <div class="col-md-10">
+            <div class="col-md-8">
                 <div class="row">
                     <div class="col-2 logo-clan">
                          <img :src="require('@/assets/images/clans/'+logoClan)" /> 

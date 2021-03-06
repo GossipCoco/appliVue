@@ -76,6 +76,10 @@
 }
 .container-background-image-clan{
   background-size: cover;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 11rem 0 1rem 0;
 }
 .main-container{
   display: flex;
