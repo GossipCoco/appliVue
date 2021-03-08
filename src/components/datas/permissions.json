@@ -1,10 +1,14 @@
 [
     {
-        "idPermission": 1,
+        "idPermission": 0,
         "role": "Admin"
     },{
         
-        "idPermission": 2,
+        "idPermission": 1,
         "role": "User"
+    },{
+        
+        "idPermission": 3,
+        "role": "Anonyme"
     }
 ]

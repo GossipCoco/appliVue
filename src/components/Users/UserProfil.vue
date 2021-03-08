@@ -1,6 +1,6 @@
 <template>
     <div class="col main-container-app">
-        <div class="row">
+        <div class="row presentation-contain">
             <div class="col">
                 <p>
                     <b-avatar :src="userProfil.thumbnailUrl" class="container-avatar" size="72px"></b-avatar><br>
@@ -45,7 +45,7 @@ export default {
         this.usrId = this.currentRoute.slice(17)
     },
     beforeMount: function(){
-        this.usrId = this.usrId - 1;
+        this.usrId = this.usrId;
         this.userProfil = this.UsersDatas[this.usrId];        
     },
     methods:{

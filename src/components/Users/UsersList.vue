@@ -1,13 +1,13 @@
 /* eslint-disable */
 <template>
-  <div class="row">
-      <div class="col main-container-app">
-        <div class="all-users-contain">               
+  <div class="row container-global-all-user">
+      <div class="col-4 main-container-app  presentation-contain ">
+        <div class="all-users-contain contain-user-info">               
           <div class="list-all-user-contain">
             <ul  class="list-group">
-              <li v-for="user in usersList" :key="user.id"  class="list-group-item">
-                {{user.name}}<br> <button  type="button" class="btn btn-link" @click="emitCustomEvent(user)" v-on:click="setUser(user)">Plus d'info</button>
-                <br>
+              <li v-for="user in usersList" :key="user.id"  class="list-group-item contain-list">
+                {{user.name}}
+                <button  type="button" class="btn btn-link" @click="emitCustomEvent(user)" v-on:click="setUser(user)">Plus d'info</button>                
                 <router-link v-bind:to="'/user/userProfil/'+user.id" v-bind:usrInfo="user.id">Voir le profil complet</router-link>
                 <router-view v-bind:usrInfo="user.id"></router-view>
                 <div v-on="methodTest"></div>
@@ -16,13 +16,13 @@
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="user-information" v-if="showUserInfoDetail === true">
+      <div class="col-4  main-container-app  presentation-contain " v-if="showUserInfoDetail === true">
+        <div class="user-information contain-user-info">
           <user-details  v-bind:usrInfo="userPersonnalInfo"></user-details>
         </div>
       </div>
-      <div class="col">
-        <div class="user-information" v-if="showUserInfoDetail === true">
+      <div class="col-4  main-container-app  presentation-contain " v-if="showUserInfoDetail === true">
+        <div class="user-information contain-user-info">
           <user-comments v-bind:photoUser="listPhotos" v-bind:userId="userId" v-bind:userUsrName="userUserName"/>
         </div>
     </div>    
