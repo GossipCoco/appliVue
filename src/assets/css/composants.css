@@ -28,3 +28,9 @@
 .logo-clan img{
     width:50%
 }
+.card-contain-character img{
+    width: 75%;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}

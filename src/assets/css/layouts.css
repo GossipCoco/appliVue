@@ -65,8 +65,7 @@
 /* Contenu principal */
 .main-container-app{
   min-height: 500px;
-  padding: 5rem;
-  
+  padding: 5rem;  
 }
 .presentation-contain, .presentation-app{
   background-color: rgba(255,255,255, 0.80);
@@ -110,6 +109,14 @@
   margin: 1rem 2rem;
 }
 /* Container Characters by Users*/
+.contain-filters{
+  background-color: rgba(255,255,255, 0.80);
+  margin: 1rem 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+
+}
 .contain-all-characters{
   display: flex;
   flex-direction: row;

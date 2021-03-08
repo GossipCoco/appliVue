@@ -4,19 +4,20 @@
     <div>
         <div class="row">
             <div class="col contain-filters">
+                <p>Filtrer par </p>
                 <select-clan label="Clan ou Groupe" @setClan="setClan" v-bind:typeClan="currentClan" v-bind:clans="clans"/>
             </div>
         </div>
         <div class="row contain-all-characters">
             <div class="col-sm" v-for="char in charList" :key="char.id">
-                <b-card
+                <b-card                    
                     :title="char.name"
                     :img-src="require('@/assets/images/personnage/'+char.image)"
                     :img-alt="char.name"
                     img-top
                     tag="article"
-                    style="width: 20rem; height: 40rem"
-                    class="mb-4"
+                    style="width: 20rem; height: 30rem"
+                    class="mb-4 card-contain-character"
                 >
                     <b-card-text>
                     {{char.clan}}
@@ -47,11 +48,17 @@ export default {
             imageChar: this.charList.image,
             Characters: Characters,
             genreChar: '',
-            clans: ClansJson
+            clans: ClansJson,
+            backgroundImgClan: '',
         }
     },
     created: function(){
         this.genreChar = this.Characters.genre
+    },
+    methods: {
+        setclan(value){
+            console.log(value)
+        }
     }
 }
 </script>

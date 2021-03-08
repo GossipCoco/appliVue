@@ -10,9 +10,13 @@
                     <div class="col-2 logo-clan">
                          <img :src="require('@/assets/images/clans/'+logoClan)" /> 
                     </div>                    
-                    <div class="col-10">
+                    <div class="col-8">
                         <h3>Détail sur {{characterDetails.name}}</h3>
                         <h2>{{characterDetails.clan}}</h2>
+                        
+                    </div>
+                    <div class="col-2">
+                        <router-link to="/characters/allcharacters" type="button" class="btn btn-primary">Retourner sur la liste de tous les personnages</router-link>
                         
                     </div>
                 </div>
@@ -65,7 +69,7 @@ export default {
     },
     created: function(){
         this.charId = this.currentRoute.slice(29)
-        this.charId = this.charId - 1
+        this.charId = this.charId
         this.characterDetails = this.allCharacters[this.charId]
         this.characterImage = this.characterDetails.image
         this.charClanId = this.characterDetails.idClan

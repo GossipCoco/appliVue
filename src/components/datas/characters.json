@@ -1,9 +1,9 @@
 [
     {
-      "id": 1,
+      "id": 0,
       "idStatut":0,
       "name": "Etoile de Feu",
-      "clan": "Clan du Tonerre",
+      "clan": "Clan du Tonnerre",
       "ancienClan": "",
       "genre": 0,
       "idClan": 0,
@@ -15,10 +15,10 @@
       "description": "Étoile de Feu (  Angl.  Firestar ) est un large et maigre chat roux flamme tigré à la courte et belle fourrure épaisse, au ventre roux pâle et à la longue queue. Il a des yeux perçants vert émeraude, des oreilles larges et des griffes acérées."
     },
     {
-      "id": 2,
+      "id": 1,
       "idStatut":0,
       "name": "Etoile Bleue",
-      "clan": "Clan du Etoile",
+      "clan": "Clan des Etoiles",
       "ancienClan": "Clan du Tonnerre",
       "genre": 1,
       "idClan": 5,
@@ -30,11 +30,11 @@
       "description": "Étoile Bleue (  Angl.  Bluestar ) est une chatte au pelage gris-bleu clair uniforme. Ses yeux bleu limpide étaient à la fois glacés et lumineux, perçants et brillants. Son museau autour duquel se trouvent quelques poils argentés est zébré de poils blancs, tout comme le bout de sa queue. Elle est mince, souple, majestueuse, magnifique et grande. Ses larges épaules sont puissantes, sa tête est large et sa queue longue. Sa longue fourrure soyeuse est épaisse et douce, celle de sa queue est lisse et touffue. Elle a une oreille déchirée et une balafre en travers des épaules."
     },
     {
-      "id": 3,
+      "id": 2,
       "idStatut":0,
       "name": "Caramel",
       "genre": 0,
-      "clan": "Aucun",
+      "clan": "chat domestique",
       "ancienClan": "",
       "idClan": 11,
       "grade": "chat domestique",
@@ -45,7 +45,7 @@
       "description": ""
     },
     {
-      "id": 4,
+      "id": 3,
       "idStatut":0,
       "name": "Pomme de Pin",
       "clan": "Clan des Etoiles",
@@ -60,7 +60,7 @@
       "description": ""
     },
     {
-      "id": 5,
+      "id": 4,
       "idStatut":0,
       "name": "Etoile Filante",
       "genre": 0,
@@ -74,7 +74,7 @@
       "biographie": "Étoile Filante était un ancien chef du Clan du Vent dans les territoires forestiers. Il est né d'Ajonc des Sables et Oiseau Pâle, sous le nom de Petit Fil, avec Petit Canari, décédée peu de temps après sa naissance. Il devient apprenti coureur des landes sous le nom de Nuage Filant, avec pour mentor Rayon de l'Aube, au grand désarroi d'Ajonc des Sables. Plus tard, Ajonc des Sables a montré à Moineau les tunnels instables mais, lorsqu'ils se sont effondrés, Ajonc des Sables est mort. Nuage Filant a blâmé Moineau pour la mort de son père. Il est devenu guerrier sous le nom de Plume Filante. Sa soif de vengeance le fit quitter le Clan du Vent pour retrouver Moineau. Lors de son voyage à la recherche de Moineau, il a rencontré un chat domestique nommé Caramel, avec qui il forme un lien fort.",
       "description": ""
     },{
-      "id": 6,
+      "id": 5,
       "idStatut":0,
       "name": "Fléau",
       "genre": 0,     
@@ -88,7 +88,7 @@
       "biographie": "Fléau (  Angl.  Scourge ) est un petit mâle noir avec une patte blanche et des yeux bleus glacés. Il a un collier violet orné de crocs de chiens et de chats, et des griffes renforcées par des crocs de chiens.",
       "description": ""
     },{
-      "id": 7,
+      "id": 6,
       "idStatut":0,
       "name": "Museau Cendré",
       "genre": 1,
@@ -102,7 +102,7 @@
       "biographie": "Museau Cendré est une ancienne guérisseuse du Clan du Tonnerre sous Étoile Bleue et Étoile de Feu. Elle est née de Pelage de Givre et Cœur de Lion, sous le nom de Petite Cendre. Elle devient apprentie sous le nom de Nuage Cendré, son mentor est Cœur de Feu, puis Croc Jaune. Elle deviendra finalement guérisseuse sous le nom de Museau Cendré. Elle sera le mentor de Feuille de Lune.",
       "description": ""
     },{
-      "id": 8,
+      "id": 7,
       "idStatut":0,
       "name": "Plume Grise",
       "genre": "mâle",
@@ -116,7 +116,7 @@
       "biographie": "Plume Grise (  Angl.  Graystripe ) est un grand chat plutôt massif, musclé à la longue et épaisse fourrure ébouriffée et soyeuse, gris ardoise. Il a une grande tête, un large museau, une forte mâchoire, de larges et puissantes épaules, une bande de fourrure gris sombre sur son dos, l'oreille gauche déchirée, une épaisse queue touffue, de larges pattes souples et robustes, des griffes aiguisées, des dents pointues, et de grands yeux jaunes.",
       "description": ""
     },{
-      "id": 9,
+      "id": 8,
       "idStatut":0,
       "name": "Nuage de Jais",
       "genre": 0,
@@ -130,7 +130,7 @@
       "biographie": "Nuage de Jais était un solitaire qui vivait à la ferme de Gerboise avec Gerboise, autrefois un apprenti du Clan du Tonnerre sous la direction d'Étoile Bleue dans les territoires forestiers. Il est né de Plume de Rouge-Gorge et Pelage Crépu aux côtés de son frère, Pelage de Poussière. En tant qu’apprenti, Nuage de Jais a été encadré par Griffe de Tigre et l’a vu assassiner Plume Rousse, avec Griffe de Tigre menaçant de le faire taire. Lorsque Nuage de Feu rejoint le Clan du Tonnerre, les deux apprentis se rapprochent de Nuage Gris. Craignant que Nuage de Jais ne soit tué, Nuage Gris et Nuage de Feu l’emmenèrent vivre dans une grange avec Gerboise pour le protéger de Griffe de Tigre. Lorsque le Clan du Sang arriva dans la forêt, Nuage de Jais et Gerboise ont aidé Étoile de Feu à vaincre Fléau, et Nuage de Jais aida Gerboise à surmonter son passé du Clan du Sang.",
       "description": ""
     },{
-      "id": 10,
+      "id": 9,
       "idStatut":0,
       "name": "Gerboise",
       "genre": 0,
@@ -145,7 +145,7 @@
       "description": "Gerboise (  Angl.  Barley ) est un chat noir et blanc aux yeux bleus. "
     }
     ,{
-      "id": 11,
+      "id": 10,
       "idStatut":0,
       "name": "Etoile du Léopard",
       "genre": 1,
@@ -159,7 +159,7 @@
       "biographie": "Étoile du Léopard est une ancienne chef du Clan de la Rivière entre Étoile Balafrée et Étoile de Brume. Elle est née de Patte de Pierre et Ciel Clair, sous le nom de Petit Léopard. Elle devient apprentie sous le nom de Nuage de Léopard, son mentor est Croc Blanc. Elle deviendra guerrière sous le nom de Taches de Léopard. Elle sera le mentor de Griffe Blanche et Plume de Faucon. Elle sera nommée lieutenante par Étoile Balafrée et à la mort de celui-là, deviendra chef sous le nom d'Étoile du Léopard.",
       "description": ""
     },{
-      "id": 12,
+      "id": 11,
       "idStatut":0,
       "name": "Tornade Blanche",
       "genre": 0,
@@ -173,7 +173,7 @@
       "biographie": "Étoile du Léopard est une ancienne chef du Clan de la Rivière entre Étoile Balafrée et Étoile de Brume. Elle est née de Patte de Pierre et Ciel Clair, sous le nom de Petit Léopard. Elle devient apprentie sous le nom de Nuage de Léopard, son mentor est Croc Blanc. Elle deviendra guerrière sous le nom de Taches de Léopard. Elle sera le mentor de Griffe Blanche et Plume de Faucon. Elle sera nommée lieutenante par Étoile Balafrée et à la mort de celui-là, deviendra chef sous le nom d'Étoile du Léopard.",
       "description": ""
     },{
-      "id": 13,
+      "id": 12,
       "idStatut":0,
       "name": "Etoile du Tigre",
       "genre": 0,
@@ -187,7 +187,7 @@
       "biographie": "Étoile du Tigre est un ancien chef du Clan de l'Ombre entre Étoile Noire et Étoile de Jais. Il est né de Patte de Léopard et Étoile de Sapin, sous le nom de Petit Tigre. Il devient apprenti sous le nom de Nuage de Tigre, son mentor est Griffes d'Épine. Il deviendra guerrier sous le nom de Griffe de Tigre. Il sera le mentor d'Éclair Noir et Nuage de Jais. Il sera nommé lieutenant par Étoile Bleue mais fut exilé pour trahison. Alors que le Clan de l'Ombre était au plus mauvais point, il devint chef sous le nom d'Étoile du Tigre.",
       "description": "Étoile du Tigre (  Angl.  Tigerstar ) est un grand matou massif et énorme au pelage sombre brun foncé tigré, tacheté, rayé et moucheté. Il a de très longues griffes ressemblants à celle d'un tigre (d'où son nom de guerrier), de larges épaules puissantes, une oreille déchiquetée, une large balafre sur l'arrête de son nez, un large museau noir, une épaisse queue, de grands yeux ambrés, des muscles puissants et une entaille en forme de \"V\" sur l'oreille droite. Il est cruel, manipulateur et avide de pouvoir. C'est l'ennemi juré d’Étoile de Feu."
     },{
-      "id": 14,
+      "id": 13,
       "idStatut":0,
       "name": "Princesse",
       "genre": 1,
@@ -201,7 +201,7 @@
       "biographie": "Lors de sa première apparition dans le livre, Cœur de Feu était avec sa première apprentie, Nuage Cendré. La novice allait l'attaquer, mais le guerrier roux sentit son instinct lui chuchoter de ne pas lui faire de mal. Alors, il effleure une tige sèche et Princesse, alertée par le bruit, détale vers ses Bipèdes. La nuit, en rêve, Cœur de Feu découvre que la chatte domestique était sa sœur ! Le lendemain, il va la voir dans son jardin. Princesse prend d'abord peur, puis se radoucit. Depuis, un lien autre que celui du sang s'est tissé entre eux. Un jour, Princesse dit à son frère qu'elle vient d'avoir une portée de chatons, et elle sait que ses Bipèdes vont les séparer d'elle. Alors, elle lui demande de s'occuper de son premier-né et de le ramener dans le Clan du Tonnerre pour en faire un vrai guerrier. Le chaton en question est le futur Flocon de Neige, un excellent guerrier et un pisteur hors pair.",
       "description": "Princesse (  Angl.  Princess ) est une chatte brun clair aux pattes et au poitrail blancs."
     },{
-      "id": 15,
+      "id": 14,
       "idStatut":0,
       "name": "Croc Jaune",
       "genre": 1,
@@ -215,7 +215,7 @@
       "biographie": "Croc Jaune est une guérisseuse du Clan du Tonnerre sous Étoile Bleue. Elle est née de Reine-des-Prés (CO) et Patte de Fougère avec Petite Noix et Petite Sorbe, sous le nom de Petit Croc. Elle devient apprentie guerrière sous le nom de Nuage de Croc, son mentor est Saut de Biche. Elle deviendra guerrière sous le nom de Croc Jaune. Finalement elle décide de devenir guérisseuse et commence son apprentissage avec Moustache de Sauge. Elle sera le mentor de Nuage de Foin et de Nuage Cendré.",
       "description": "Croc Jaune (  Angl.  Yellowfang ) est une chatte gris foncé au museau large et plat couturé de cicatrices, aux oreilles déchirées, aux crocs jaunes et aux grands yeux ambrés."
     },{
-      "id": 16,
+      "id": 15,
       "idStatut":0,
       "name": "Eoile de Jais",
       "genre": 0,
@@ -229,7 +229,7 @@
       "biographie": "Croc Jaune est une guérisseuse du Clan du Tonnerre sous Étoile Bleue. Elle est née de Reine-des-Prés (CO) et Patte de Fougère avec Petite Noix et Petite Sorbe, sous le nom de Petit Croc. Elle devient apprentie guerrière sous le nom de Nuage de Croc, son mentor est Saut de Biche. Elle deviendra guerrière sous le nom de Croc Jaune. Finalement elle décide de devenir guérisseuse et commence son apprentissage avec Moustache de Sauge. Elle sera le mentor de Nuage de Foin et de Nuage Cendré.",
       "description": "Croc Jaune (  Angl.  Yellowfang ) est une chatte gris foncé au museau large et plat couturé de cicatrices, aux oreilles déchirées, aux crocs jaunes et aux grands yeux ambrés."
     },{
-      "id": 17,
+      "id": 16,
       "idStatut":0,
       "name": "Conteur des Pointes Rocheuses",
       "genre": 0,
