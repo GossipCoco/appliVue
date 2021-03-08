@@ -1,27 +1,30 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "grade": "Chef"
     },{
-        "id": 2,
+        "id": 1,
         "grade": "Lieutenant"
     },{
-        "id": 3,
+        "id": 2,
         "grade": "Guerrier"
     },{
-        "id":4,
+        "id": 3,
         "grade": "Apprenti"
     },{
-        "id":5,
+        "id": 4,
         "grade": "Chaton"
     },{
-        "id":6,
+        "id": 5,
         "grade": "Guerrisseur"
     },{
-        "id":8,
+        "id": 6,
         "grade": "Reine"
     },{
-        "id":9,
+        "id": 7,
         "grade": "Ancien"
+    },{
+        "id": 8,
+        "grade": "Aucun"
     }
 ]

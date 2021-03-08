@@ -28,7 +28,7 @@
         "img":"Clan_du_Ciel.jpg",
         "name": "Clan du Ciel",
         "description":"Le Clan du Ciel (  Angl.  SkyClan ) est un des cinq Clans du lac. Autrefois, dans la forêt, les Bipèdes avaient détruit leur territoire et Étoile de Givre, le meneur actuel à cette époque dut partir lui et son Clan, car les autres Clans ne voulaient plus d'eux. Après un long voyage, ils arrivèrent aux gorges. Malheureusement, le Clan du Ciel fut décimé et dissous par les rats. Bien des lunes plus tard, Étoile de Feu et Tempête de Sable, deux membres du Clan du Tonnerre reforment un nouveau Clan du Ciel dans les gorges. L'un de ses premiers membres est Œil du Ciel, l'arrière-petit-fils d'un membre de l'ancien Clan du Ciel. Mais, plusieurs lunes plus tard, un groupe de chats errants, à leur tête, Darktail, chassa le Clan des gorges et le Clan du Ciel dut donc vivre au lac, avec les quatre autres Clans, comme autrefois. Étoile de Ronce, le meneur du Clan du Tonnerre, accepta de leur donner la moitié de son territoire et tout redevenu comme avant pour le Clan jadis déchu.",
-        "illustration": "etoiles.jpg"
+        "illustration": "clan-du-ciel.jpg"
     },{
         "id":5,
         "img":"Clan_des_etoiles.jpg",
@@ -69,6 +69,12 @@
         "id":11,
         "img":"Chats_domestiques1.png",
         "name": "Chat domestique",
+        "description":"Les chats domestiques (  Angl.  Kittypet ) ou everkit (  Litt.  Chaton éternel )sont des chats élevés par les Bipèdes, peu appréciés par les chats sauvages, qui les décrivent fainéants, paresseux et menant une vie confortable et facile comparée à eux. Les chats domestiques font courir une rumeur sur les chats sauvages disant qu'ils dévoreraient des os. Lorsque Étoile de Sapin décide d'en devenir un, une nouvelle règle fait sont apparition dans le code du guerrier. Ils sont réputés pour être gros et paresseux, mais lors d'une patrouille composée de Griffe de Ronce, Pelage d'Or, Plume de Jais, Poil d'Ecureuil et Patte de Brume, ils rencontrent deux chats domestiques très forts et dangereux.",
+        "illustration": "maison.jpg"
+    },{        
+        "id":12,
+        "img":"Chats_domestiques1.png",
+        "name": "Pas d'ancien clan",
         "description":"Les chats domestiques (  Angl.  Kittypet ) ou everkit (  Litt.  Chaton éternel )sont des chats élevés par les Bipèdes, peu appréciés par les chats sauvages, qui les décrivent fainéants, paresseux et menant une vie confortable et facile comparée à eux. Les chats domestiques font courir une rumeur sur les chats sauvages disant qu'ils dévoreraient des os. Lorsque Étoile de Sapin décide d'en devenir un, une nouvelle règle fait sont apparition dans le code du guerrier. Ils sont réputés pour être gros et paresseux, mais lors d'une patrouille composée de Griffe de Ronce, Pelage d'Or, Plume de Jais, Poil d'Ecureuil et Patte de Brume, ils rencontrent deux chats domestiques très forts et dangereux.",
         "illustration": "maison.jpg"
     }
