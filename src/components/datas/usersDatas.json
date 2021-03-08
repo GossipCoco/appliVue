@@ -17,7 +17,8 @@
       "inscriptionDate": "2020-12-24",
       "genre": 1,
       "pwd": "123",
-      "thumbnailUrl": "https://raw.githubusercontent.com/GossipCoco/appliVue/master/src/assets/images/users/cat01.jpg"     
+      "thumbnailUrl": "cat01.jpg",
+      "thumbnailUrl2": "https://raw.githubusercontent.com/GossipCoco/appliVue/master/src/assets/images/users/cat01.jpg"       
     },
     {
       "id": 1,
@@ -37,7 +38,7 @@
       "inscriptionDate": "2021-01-21",
       "genre": 0,
       "pwd": "abc",
-      "thumbnailUrl": "https://via.placeholder.com/150/e743b"
+      "thumbnailUrl": "usera-avatar1.png"
     },
     {
       "id": 2,
@@ -57,7 +58,7 @@
       "inscriptionDate": "2021-02-01",
       "genre": 0,
       "pwd": "123",
-      "thumbnailUrl": "https://via.placeholder.com/150/e743b"
+      "thumbnailUrl": "usera-avatar1.png"
     },
     {
       "id": 3,
@@ -77,7 +78,7 @@
       "inscriptionDate": "2021-02-01",
       "genre": 1,
       "pwd": "123",
-      "thumbnailUrl": "https://via.placeholder.com/150/e743b"
+      "thumbnailUrl": "usera-avatar1.png"
     },
     {
       "id": 4,
@@ -97,6 +98,6 @@
       "inscriptionDate": "2021-02-11",
       "genre": 1,
       "pwd": "123",
-      "thumbnailUrl": "https://via.placeholder.com/150/e743b"
+      "thumbnailUrl": "usera-avatar1.png"
     }
   ]

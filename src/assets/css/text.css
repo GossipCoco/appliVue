@@ -47,3 +47,6 @@
 p.presentation-text{
     text-align: justify;
 }
+.contain-infoUser p{
+    text-align: left;
+}
