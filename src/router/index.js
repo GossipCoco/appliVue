@@ -6,10 +6,9 @@ import Login from '@/components/Secure/Login'
 import RegisterUser from '@/components/Secure/RegisterUser'
 import UserList from '@/components/Users/UsersList'
 import UserProfil from '@/components/Users/UserProfil'
-import AllCharacters from '@/components/characters/AllCharacters'
 import CharacterDetails from '@/components/characters/CharacterDetails'
 import CreateACharacter from '@/components/characters/CreateACharacter'
-import listOfAllUsers from '@/components/datas/usersDatas.json'
+import AllClans from '@/components/clans/AllClans'
 import CreditContainer from '@/components/layout/CreditContainer'
 
 Vue.use(VueRouter)
@@ -53,6 +52,10 @@ const routes = [
     path: '/characters/createacharacter',
     name: 'CreateACharacter',
     component : CreateACharacter
+  },{
+    path: '/clan/allclans',
+    name: 'AllClans',
+    component : AllClans
   },{
     path: '/credit',
     name: 'CreditContainer',
