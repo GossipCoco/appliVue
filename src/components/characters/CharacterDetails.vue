@@ -27,7 +27,10 @@
                         </p>
                         <p class="info-global">
                             <span>Grade du personnage</span> : 
-                            {{characterDetails.grade}}
+                            {{nameGrade.grade}}
+                        </p>
+                        <p class="info-globale">
+                            <span>Genre : </span> {{ nameGenre }}
                         </p>
                         <p class="presentation-text">
                             <span>Description</span>
@@ -51,6 +54,8 @@
 import AllCharactersJson from "../datas/characters.json"
 import ClansJson from "../datas/clans.json"
 import GradeJason from "../datas/grades.json"
+import States from "../datas/states.json"
+import Genre from "../datas/genres.json"
 
 export default {
     name:'CharacterDetails',
@@ -61,13 +66,18 @@ export default {
             allCharacters: AllCharactersJson,
             allClans: ClansJson,
             allGrades: GradeJason,
+            allGenres: Genre,
             currentRoute: window.location.pathname,
             characterDetails: null,
             characterImage: '',
             clanByCharacter: null,
             humanAge: '',
             backgroundImgClan: '',
-            logoClan: ''
+            logoClan: '',
+            idGradeCharacter: '',
+            nameGrade: '',
+            idGenreChar: '',
+            nameGenre: ''
         }
     },
     created: function(){
@@ -75,6 +85,10 @@ export default {
         this.charId = this.charId
         this.characterDetails = this.allCharacters[this.charId]
         this.characterImage = this.characterDetails.image
+        this.idGradeCharacter = this.characterDetails.idGrade
+        this.nameGrade = this.allGrades[this.idGradeCharacter]
+        this.idGenreChar = this.characterDetails.idgenre
+        this.nameGenre = this.allGenres[this.idGenreChar].genre
         this.charClanId = this.characterDetails.idClan
         this.charClanId = this.charClanId
         this.clanByCharacter = this.allClans[this.charClanId]
