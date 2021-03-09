@@ -10,21 +10,16 @@
             </div>            
         </div>
         <div class="row">
-            <div class="col-sm" v-for="clan in allclans" :key="clan.id">
-                <div class="card mb-6" style="max-width: 640px;">
-                    <div class="row g-0">
-                        <div class="col-md-2">
-                             <img :src="require('@/assets/images/backgrounds/'+clan.illustration)"/>
-                        </div>
-                        <div class="col-md-10">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-sm container-all-locations" v-for="clan in allclans" :key="clan.id">
+                <b-card :img-src="require('@/assets/images/backgrounds/'+ clan.illustration)" img-alt="Card image" img-top class="mb-2 card-contain-location" v-if="clan.id!==12">
+                    <b-card title="Card title" sub-title="Card subtitle">
+                        <b-card-text>
+                        Some quick example text to build on the <em>card title</em> and make up the bulk of the card's
+                        content.
+                        </b-card-text>
+                        <b-card-text>A second paragraph of text in the card.</b-card-text>                     
+                    </b-card>
+                </b-card>
             </div>
         </div>
     </div>
