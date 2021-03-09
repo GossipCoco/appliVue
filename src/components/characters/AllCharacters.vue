@@ -35,7 +35,6 @@
                     <b-card-text>
                     {{char.clan}}
                     </b-card-text>
-
                     <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="char.id" class="btn btn-primary">En savoir plus</router-link>
                         <transition>
                             <router-view v-bind:charId="char.id"/>

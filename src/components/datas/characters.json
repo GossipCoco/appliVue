@@ -178,7 +178,7 @@
       "age": "123",
       "image": "etoile_du_leopard.png",
       "biographie": "Étoile du Léopard est une ancienne chef du Clan de la Rivière entre Étoile Balafrée et Étoile de Brume. Elle est née de Patte de Pierre et Ciel Clair, sous le nom de Petit Léopard. Elle devient apprentie sous le nom de Nuage de Léopard, son mentor est Croc Blanc. Elle deviendra guerrière sous le nom de Taches de Léopard. Elle sera le mentor de Griffe Blanche et Plume de Faucon. Elle sera nommée lieutenante par Étoile Balafrée et à la mort de celui-là, deviendra chef sous le nom d'Étoile du Léopard.",
-      "description": ""
+      "description": "Étoile du Léopard (  Angl.  Leopardstar ) est une chatte à l'épaisse fourrure dorée tachetée de noir aux yeux ambrés, d'où sa ressemblance avec un léopard."
     },{
       "id": 11,
       "idUser": 1,
@@ -193,8 +193,8 @@
       "grade": "Lieutenant",
       "age": "123",
       "image": "Tornade_Blancheg.png",
-      "biographie": "Étoile du Léopard est une ancienne chef du Clan de la Rivière entre Étoile Balafrée et Étoile de Brume. Elle est née de Patte de Pierre et Ciel Clair, sous le nom de Petit Léopard. Elle devient apprentie sous le nom de Nuage de Léopard, son mentor est Croc Blanc. Elle deviendra guerrière sous le nom de Taches de Léopard. Elle sera le mentor de Griffe Blanche et Plume de Faucon. Elle sera nommée lieutenante par Étoile Balafrée et à la mort de celui-là, deviendra chef sous le nom d'Étoile du Léopard.",
-      "description": ""
+      "biographie": "Tornade Blanche est un membre du Clan du Tonnerre sous Étoile du Soleil, Étoile Bleue et Étoile de Feu. Il naît de Pelage de Neige et Griffe d’Épines sous le nom de Petite Tornade. Il devient ensuite apprenti sous le nom de Nuage de Tornade, son mentor est Pomme de Pin. Il devient finalement guerrier sous le nom de Tornade Blanche et sera le mentor de Tempête de Sable et Cœur Blanc. Il a été nommé lieutenant par Étoile de Feu.",
+      "description": "Tornade Blanche (  Angl.  Whitestorm ) est un chat blanc aux yeux jaunes, avec une cicatrice derrière l'oreille."
     },{
       "id": 12,
       "idStatut":0,
@@ -251,14 +251,14 @@
       "idClan": 1,
       "idGrade": 0,
       "idOldClan": 1,
-      "name": "Eoile de Jais",
+      "name": "Etoile de Jais",
       "clan": "Clan de l'Ombre",
       "ancienClan": "",
       "grade": "Chef",
       "age": "",
       "image": "etoile_de_Jais.png",
-      "biographie": "Croc Jaune est une guérisseuse du Clan du Tonnerre sous Étoile Bleue. Elle est née de Reine-des-Prés (CO) et Patte de Fougère avec Petite Noix et Petite Sorbe, sous le nom de Petit Croc. Elle devient apprentie guerrière sous le nom de Nuage de Croc, son mentor est Saut de Biche. Elle deviendra guerrière sous le nom de Croc Jaune. Finalement elle décide de devenir guérisseuse et commence son apprentissage avec Moustache de Sauge. Elle sera le mentor de Nuage de Foin et de Nuage Cendré.",
-      "description": "Croc Jaune (  Angl.  Yellowfang ) est une chatte gris foncé au museau large et plat couturé de cicatrices, aux oreilles déchirées, aux crocs jaunes et aux grands yeux ambrés."
+      "biographie": "Étoile de Jais est un ancien chef du Clan de l'Ombre à la suite d'Étoile du Tigre. Il est né de Fleur de Houx avec Fleur de Fougère et Croc de Silex. Il devient apprenti sous le nom de Nuage Noir. Encore jeune guerrier, Patte Noire devient le lieutenant d'Étoile Brisée. Cependant, il est exilé du clan avec son chef, devenant alors un chat errant jusqu'à ce qu'Étoile du Tigre prenne la tête du Clan de l'Ombre. Il redevient lieutenant et après la mort subite de son chef, reçoit ses neuf vies ainsi que son nouveau nom, Étoile de Jais. Il guide son clan lors du Grand Périple à la recherche de nouveaux territoires. Lorsqu'un solitaire du nom de Sol arrive au lac, Étoile de Jais se laisse influencer par celui-ci et va jusqu'à renier le Clan des Étoiles. Mais il finit par comprendre les véritables intentions de Sol et revient sur sa décision. Lors d'une tempête qui inonde les territoires des Clans, il perd sa dernière vie et rejoint le Clan des Étoiles. Son lieutenant Pelage Fauve, lui succède à la place de chef.",
+      "description": "Étoile de Jais (  Angl.  Blackstar ) est un grand chat blanc aux longues pattes dont le bout est noir et aux yeux ambrés. Il est polydactyle (Il a un doigt de plus à une de ses pattes)."
     },{
       "id": 16,
       "idUser": 1,
@@ -273,7 +273,7 @@
       "grade": "Chef",
       "age": "",
       "image": "Conteur-des-Pointes-Rocheuses.png",
-      "biographie": "Conteur des Pointes Rocheuses (  Angl.  Teller of the Pointed Stones ) ou Conteur (  Angl.  Stoneteller ) est un chat couvert de cicatrices et mince au long corps brun foncé tigré avec un museau blanc grisé par l'âge, à la fourrure inégale, aux hanches osseuses et aux yeux ambrés.",
+      "biographie": "Conteur, ou Conteur des Pointes Rocheuses, est le Soigneur de la Tribu de l'Eau Vive. Il a une forte liaison avec les ancêtres de la tribu, la Tribu de la Chasse Éternelle, et déchiffre les signes qui lui sont donnés. Quand lui et les membres de la tribu se réunissent pour un récit, un des chats de la tribu, un Garde-Caverne nommé Pic Où Nichent Les Aigles, lui demande s'il a entendu quoi que ce soit de la part de la Tribu de la Chasse Éternelle pour les débarrasser du danger autour d'eux. Conteur des Pointes Rocheuses dit oui, et révèle à sa tribu qu'un chat argenté arrivera et qu'il les sauvera de Long Croc, leur pire ennemi. Lorsque Griffe de Ronce et les autres élus arrivent près de Là où le soleil sombre dans l'eau, Conteur des Pointes Rocheuses se présente comme le Soigneur de la Tribu de l'Eau Vive. Griffe de Ronce suppose que cela signifie Guérisseur, et demande où est leur chef. Conteur des Pointes Rocheuses, confus par cela, répond qu'il ne sait pas ce qu'est un chat de la médecine, et il n'y a pas un autre chef de la tribu. Il explique qu'il interprète les signes de la nature, avec l'aide de la Tribu de la Chasse Éternelle. Quand Conteur et sa tribu voient Pelage d'Orage, ils pensent tout de suite que c'est \"le chat argenté\" dont parlait la Tribu de la Chasse Éternelle, et ils le traitent mieux que les autres. Quand le groupe pense qu'il est temps de partir, Conteur et sa tribu veulent retenir Pelage d'Orage prisonnier. Mais les chat des Clans réussissent à s'échapper. Quelques jours plus tard, ils reviennent, et Conteur découvre que le \"chat argenté\" est en fait Jolie Plume, la sœur de Pelage d'Orage, qui se sacrifie pour tuer Long Croc. Conteur et sa tribu sont maintenant en sécurité dans les montagnes.",
       "description": "Conteur des Pointes Rocheuses (  Angl.  Teller of the Pointed Stones ) ou Conteur (  Angl.  Stoneteller ) est un chat couvert de cicatrices et mince au long corps brun foncé tigré avec un museau blanc grisé par l'âge, à la fourrure inégale, aux hanches osseuses et aux yeux ambrés."
     }
     ,{
@@ -290,7 +290,7 @@
       "grade": "Chef",
       "age": "",
       "image": "Etoile_de_Feuille.png",
-      "biographie": "Conteur des Pointes Rocheuses (  Angl.  Teller of the Pointed Stones ) ou Conteur (  Angl.  Stoneteller ) est un chat couvert de cicatrices et mince au long corps brun foncé tigré avec un museau blanc grisé par l'âge, à la fourrure inégale, aux hanches osseuses et aux yeux ambrés.",
-      "description": "Conteur des Pointes Rocheuses (  Angl.  Teller of the Pointed Stones ) ou Conteur (  Angl.  Stoneteller ) est un chat couvert de cicatrices et mince au long corps brun foncé tigré avec un museau blanc grisé par l'âge, à la fourrure inégale, aux hanches osseuses et aux yeux ambrés."
+      "biographie": "Étant née chatte errante, Étoile de Feuille a eu beaucoup de mal a comprendre les croyances des guerriers de jadis. Lors de sa cérémonie de chef, elle avoue ne pas vraiment croire à leurs ancêtres et fait surtout confiance à Étoile de Feu (ce qui n'enchante pas beaucoup Étoile de Givre venu lui donner sa première vie de chef). Mais après la cérémonie, Étoile de Feuille se sent grisée par cette expérience et n'a plus de doute sur l'existence de ses ancêtres: elle devient alors un grand chef, loyale à ses ancêtres du Clan des Étoiles.",
+      "description": "Étoile de Feuille (  Angl.  Leafstar ) est une chatte brune pâle et beige tigrée aux yeux ambrés. Elle est la chef du nouveau Clan du Ciel, reconstitué par Étoile de Feu dans le hors-série La quête d'Étoile de Feu."
     }
 ]
