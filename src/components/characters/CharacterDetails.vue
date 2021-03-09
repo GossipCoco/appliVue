@@ -50,6 +50,8 @@
 <script>
 import AllCharactersJson from "../datas/characters.json"
 import ClansJson from "../datas/clans.json"
+import GradeJason from "../datas/grades.json"
+
 export default {
     name:'CharacterDetails',
     props:['charId', 'charInfo'],
@@ -57,10 +59,11 @@ export default {
         return {
             charId: '',
             allCharacters: AllCharactersJson,
+            allClans: ClansJson,
+            allGrades: GradeJason,
             currentRoute: window.location.pathname,
             characterDetails: null,
             characterImage: '',
-            allClans: ClansJson,
             clanByCharacter: null,
             humanAge: '',
             backgroundImgClan: '',
@@ -77,7 +80,6 @@ export default {
         this.clanByCharacter = this.allClans[this.charClanId]
         this.backgroundImgClan = this.clanByCharacter.illustration
         this.logoClan = this.clanByCharacter.img
-        console.log(this.logoClan)
         if(this.characterDetails.age === "Inconnu"){
             return this.humanAge = "Inconnu"
         }else{
