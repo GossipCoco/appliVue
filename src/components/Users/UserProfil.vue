@@ -3,7 +3,7 @@
         <div class="row presentation-contain">
             <div class="col">
                 <p>
-                    <b-avatar :src="userProfil.thumbnailUrl" class="container-avatar" size="72px"></b-avatar><br>
+                    <b-avatar :src="require('@/assets/images/users/'+userProfil.thumbnailUrl)" class="container-avatar" size="72px"></b-avatar><br>
                     Mon profil {{ userProfil.name }}<br>
                     Nom d'utilisateur : {{ userProfil.username }}<br>
                     Email : {{ userProfil.email }}<br>

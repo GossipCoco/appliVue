@@ -6,8 +6,7 @@
         <div class="form-edit">
             <form id="editForm">
                 <label>Nom</label>
-                <input
-                type="text" class="form-control" v-model="usrName"> <br>
+                <input type="text" class="form-control" v-model="usrName"> <br>
                 <label>Email</label>
                 <input type="email" class="form-control" v-model="usrEmail"> <br>
                 <button class="btn btn-primary" v-on:click="editUserInformation">Modifier</button>
@@ -40,7 +39,7 @@ export default {
         },
         usrEmail: function(newEmail, oldEmail){
             this.answerEmail = "Ancien email : " + oldEmail + " - Nouvel Email : " + newEmail
-            }
+        }
     },
     methods: {
         editUserInformation (value) {
