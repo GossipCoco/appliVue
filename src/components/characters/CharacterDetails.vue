@@ -112,8 +112,7 @@ export default {
     },
     async mounted(){
         this.allclans = await ClansService.getClans();
-    },
-    
+    },    
     methods: {
         onFocusOut: function(e) {
             this.descriptionCharacter = e.target.innerHTML
