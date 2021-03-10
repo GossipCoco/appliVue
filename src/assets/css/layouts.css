@@ -1,5 +1,7 @@
 @import '../../custom.scss';
 @import './variables.scss';
+/* CONTAINER GLOBAL */
+
 .global-contain, .main-content{
   display: flex;
   flex-direction: column;
@@ -18,7 +20,7 @@
     flex:1;
 }
 .bg-primary, .bg-info {
-  background-color: var(--main-green) !important;
+  background-color: rgba(var(--main-green), 1) !important;
   color: var(--main-white);
 }
 /* MENU LATERAL */
@@ -27,24 +29,22 @@
   height: 100%;
 }
 .col.col-md-auto.menu-left{
-  background-color: var(--main-green);
+  background-color: rgba(var(--main-green), 1);
   min-height: 900px;
 }
 /* Header & title */
 .row.top-main-contain{
   height: 150px;
 }
-.header-ban-contain{
+.header-ban-contain, .title-site-containe{
   flex:1;
 }
 .title-site-containe{
-  flex:1;
   text-align: center;
   padding-top: 3rem;
 }
-
 .top-main-contain{
-  background-image: url(../images/background-header.jpg);
+  background-image: var(--main-header-img);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: local;
@@ -62,7 +62,7 @@
   padding: 5rem;  
 }
 .presentation-contain, .presentation-app{
-  background-color: rgba(255,255,255, 0.80);
+  background-color: rgba(var(--main-white-rgb), 0.80);
   padding: 1rem;
   border-radius: 20px;
   margin: 1rem;
@@ -104,7 +104,7 @@
 }
 /* Container Characters by Users*/
 .contain-filters{
-  background-color: rgba(255,255,255, 0.80);
+  background-color: rgba(var(--main-white-rgb), 0.80);
   margin: 1rem 1rem;
   border-radius: 10px;
   display: flex;
@@ -192,7 +192,7 @@
 }
   /* Style the footer */
   .footer {
-    background-color: var(--main-green) !important;
+    background-color: rgba(var(--main-green), 1) !important;
     padding: 10px;
     text-align: center;
     position: fixed;
@@ -200,7 +200,7 @@
     width: 100%;
   }
   .footer p {
-    color: rgba(255,255,255, 1);
+    color: rgba(var(--main-white-rgb), 1);
   }
   
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */

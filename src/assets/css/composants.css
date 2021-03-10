@@ -8,12 +8,12 @@
     margin: 0 5rem;
 }
 .btn-primary {
-    color: var(--main-white);
-    background-color: var(--main-green);
-    border-color: var(--main-green);
+    color: rgba(var(--main-white-rgb), 1);
+    background-color: rgba(var(--main-green), 1);
+    border-color: rgba(var(--main-green), 1);
 }
 .btn-primary:hover {
-    color: var(--main-green);
+    color: rgba(var(--main-green), 1);
     background-color: var(--main-green-hover);
     border-color: var(--main-green-hover);
 }

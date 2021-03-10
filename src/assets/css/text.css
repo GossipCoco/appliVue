@@ -6,7 +6,7 @@
 /* TITRE */
 .title-site-containe h3{
     
-    color: var(--main-white);
+    color: rgba(var(--main-white-rgb), 1);
     font-family: var(--main-title-font);
     font-size: 60px;
     text-shadow: var(--main-shadow);
@@ -29,11 +29,8 @@
     font-family: var(--main-font);
     font-size: 14px;
 }
-.presentation-text, .presentation-app p, p.presentation-text{
+.presentation-text, .presentation-app p, p.presentation-text, .presentation-contain, .presentation-paragraph-contain{
     text-align: justify;
-}
-.main-container-app p{
-    text-align: center;
 }
 .user-personnal-info, .fiche-personnage p, .contain-infoUser p{
     text-align: left;
@@ -41,12 +38,16 @@
 .fiche-personnage span{
     font-weight: 600;
 }
+.presentation-paragraph-contain{
+    padding: 1rem;
+    font-size: 18px;
+}
 /* LIENS */
 .main-menu-left .nav-link, .nav-link a, .nav-contain a{
-    color: var(--main-white)
+    color: rgba(var(--main-white-rgb), 1)
 }
 .nav-contain .dropdown-item a{
-    color: var(--main-green);
+    color: rgba(var(--main-green), 1);
 }
 
 /* LIST & OTHERS */
