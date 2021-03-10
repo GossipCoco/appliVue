@@ -2,52 +2,54 @@
 @import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
-.user-list ul li{
-    text-align: left;
+
+/* TITRE */
+.title-site-containe h3{
+    
+    color: var(--main-white);
+    font-family: var(--main-title-font);
+    font-size: 60px;
+    text-shadow: var(--main-shadow);
 }
+.title-site-containe h3.titleBook{
+    font-size: 80px;
+    font-weight: 400;
+    text-shadow: var(--main-shadow);
+}
+.title-site-containe h3:first{
+    margin-top: 10rem;
+    text-align: center;
+}
+.title-site-containe h3.titleBook{
+    margin-top: 1rem;
+    text-align: center;
+}
+/* PARAGRAGPHE */
 .user-personnal-info {
-    text-align: left;
     font-family: var(--main-font);
     font-size: 14px;
 }
-.main-menu-left .nav-link, .nav-contain a{
-    color: var(--main-white)
-}
-.nav-contain .dropdown-item a{
-    color: var(--main-green);
-}
-.nav-link a{
-    color: var(--main-white)
-}
-.title-site-containe h3{
-    color: var(--main-white) 
-}
-.presentation-text{
+.presentation-text, .presentation-app p, p.presentation-text{
     text-align: justify;
 }
 .main-container-app p{
     text-align: center;
 }
-.presentation-app p{
-    text-align: justify;
-}
-.title-site-containe h3{
-    font-family: var(--main-title-font);
-    font-size: 38px;
-}
-.title-site-containe h3.titleBook{
-    font-size: 48px;
-    font-weight: 400;
+.user-personnal-info, .fiche-personnage p, .contain-infoUser p{
+    text-align: left;
 }
 .fiche-personnage span{
     font-weight: 600;
 }
-.fiche-personnage p{
-    text-align: left;
+/* LIENS */
+.main-menu-left .nav-link, .nav-link a, .nav-contain a{
+    color: var(--main-white)
 }
-p.presentation-text{
-    text-align: justify;
+.nav-contain .dropdown-item a{
+    color: var(--main-green);
 }
-.contain-infoUser p{
+
+/* LIST & OTHERS */
+.user-list ul li{
     text-align: left;
 }

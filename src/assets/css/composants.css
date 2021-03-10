@@ -1,3 +1,8 @@
+@import '../../custom.scss';
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
+
 /* BUTTONS */
 .all-users-contain button{
     margin: 0 5rem;
@@ -12,6 +17,7 @@
     background-color: var(--main-green-hover);
     border-color: var(--main-green-hover);
 }
+/* IMAGES */
 .container-avatar{
     width: 25%;
 }

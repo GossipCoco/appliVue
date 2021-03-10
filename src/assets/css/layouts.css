@@ -42,16 +42,9 @@
   text-align: center;
   padding-top: 3rem;
 }
-.title-site-containe h3:first{
-    margin-top: 10rem;
-    text-align: center;
-}
-.title-site-containe h3.titleBook{
-  margin-top: 1rem;
-  text-align: center;
-}
+
 .top-main-contain{
-  background-image: url(../images/background.jpg);
+  background-image: url(../images/background-header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: local;
