@@ -56,6 +56,7 @@ import ClansJson from "../datas/clans.json"
 import GradeJason from "../datas/grades.json"
 import States from "../datas/states.json"
 import Genre from "../datas/genres.json"
+import { ClansService } from "../../services/Clans.service"
 
 export default {
     name:'CharacterDetails',
@@ -65,6 +66,7 @@ export default {
             charId: '',
             allCharacters: AllCharactersJson,
             allClans: ClansJson,
+            newAllClans:[],
             allGrades: GradeJason,
             allGenres: Genre,
             currentRoute: window.location.pathname,
@@ -108,13 +110,10 @@ export default {
         }
         
     },
-    mouted (){
-        if(this.characterDetails.age === "Inconnu"){
-            return this.ageInfo = "Inconnu"
-        }else{
-            this.ageInfo = this.characterDetails.age + " lunes soit" +this.characterDetails.age / 12 + "ans"
-        }
+    async mounted(){
+        this.allclans = await ClansService.getClans();
     },
+    
     methods: {
         onFocusOut: function(e) {
             this.descriptionCharacter = e.target.innerHTML

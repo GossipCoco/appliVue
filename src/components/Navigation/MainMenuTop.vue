@@ -15,6 +15,7 @@
       </b-nav-item-dropdown>
       <b-nav-item><router-link to="/clan/allclans">{{ menu.allClans }}</router-link></b-nav-item>
       <b-nav-item><router-link to="/credit">{{ menu.credit }}</router-link></b-nav-item>
+      <b-nav-item><router-link to="/panel-admin">{{ menu.admin }}</router-link></b-nav-item>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <!-- <b-nav-form>
@@ -48,7 +49,8 @@ export default {
         userGestion: 'Gérer les Utilisateur',
         allUsers: 'Utilisateurs',
         allClans: 'Tous les Clans',
-        profil: 'Profil'
+        profil: 'Profil',
+        admin: 'Admin'
       }
     }
   }

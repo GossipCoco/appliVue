@@ -10,6 +10,7 @@ import CharacterDetails from '@/components/characters/CharacterDetails'
 import CreateACharacter from '@/components/characters/CreateACharacter'
 import AllClans from '@/components/clans/AllClans'
 import CreditContainer from '@/components/layout/CreditContainer'
+import PanelAdmin from '@/components/admin/PanelAdmin'
 
 Vue.use(VueRouter)
 
@@ -60,6 +61,10 @@ const routes = [
     path: '/credit',
     name: 'CreditContainer',
     component: CreditContainer
+  },{
+    path: '/panel-admin',
+    name: 'PanelAdmin',
+    component: PanelAdmin
   }
 ]
 const router = new VueRouter({

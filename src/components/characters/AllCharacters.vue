@@ -19,11 +19,15 @@
                 </b-pagination>
             </div>
         </div>
-        <div class="row contain-all-characters">
-            <b-spinner  v-if="loading" variant="success" label="Spinning"></b-spinner>
-            <div class="col-sm" v-for="char in charList.slice((currentPage-1)*perPage,(currentPage-1)*perPage+perPage)" :key="char.id" id="all-characters-card">                 
-                <b-card 
-                    v-if="!loading"                                  
+        <div class="row contain-all-characters">            
+            <div class="col-sm" v-for="char in characters.slice((currentPage-1)*perPage,(currentPage-1)*perPage+perPage)" :key="char.id" id="all-characters-card">                 
+                <b-card
+                :title="char.name"
+                :img-src="require('@/assets/images/personnage/'+char.image)"
+                style="width: 20rem; height: 30rem"
+                class="mb-4 card-contain-character">
+                </b-card>
+                <!-- <b-card                                                
                     :title="char.name"
                     :img-src="require('@/assets/images/personnage/'+char.image)"
                     :img-alt="char.name"
@@ -35,13 +39,13 @@
                     :current-page="currentPage"
                 >
                     <b-card-text>
-                    {{char.clan}}
+                    {{char.name}}
                     </b-card-text>
                     <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="char.id" class="btn btn-primary">En savoir plus</router-link>
                         <transition>
                             <router-view v-bind:charId="char.id"/>
                         </transition>
-                </b-card>                
+                </b-card>-->                
                 
             </div>
         </div>
@@ -50,9 +54,8 @@
 <script>
 
 import SelectClan from "../clans/SelectClan.vue"
-import Characters from "../datas/characters.json"
 import ClansJson from "../datas/clans.json"
-import genres from "../datas/genres.json"
+import { CharactersService } from "../../services/Characters.service"
 export default {
     name: 'AllCharacters',
     props:['charList'],
@@ -63,7 +66,7 @@ export default {
         return{
             loading: false,
             imageChar: this.charList.image,
-            Characters: Characters,
+            characters: [],
             genreChar: '',
             clans: ClansJson,
             backgroundImgClan: '',
@@ -72,14 +75,16 @@ export default {
         }
     },
     created: function(){
-        this.genreChar = this.Characters.genre
+        this.genreChar = this.characters.genre
     },
     async mounted() {        
-        this.loading = false;
+        this.characters = await CharactersService.getCharacters();
+        console.log(this.characters);
+        //this.characters = this.characters.allCharacters;
     },
     computed: {
       rows() {
-        return this.Characters.length
+        return this.characters.length
       }
     },
     methods: {
