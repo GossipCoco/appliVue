@@ -22,7 +22,7 @@
             <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
           </b-nav-form> -->
           <b-navbar-nav>
-            <b-nav-item v-if="loginUser === false"><router-link to="/login" >{{ menu.login }}</router-link></b-nav-item>
+            <b-nav-item v-if="loginUser === true"><router-link to="/login" >{{ menu.login }}</router-link></b-nav-item>
             <b-nav-item v-if="loginUser === false"><router-link to="/register" v-if="userId !== null">{{ menu.register }}</router-link></b-nav-item>
             <b-nav-item v-if="loginUser === true"><router-link v-bind:to="'/user/userProfil/'+userId">{{ menu.profil }}</router-link></b-nav-item>
           </b-navbar-nav>
