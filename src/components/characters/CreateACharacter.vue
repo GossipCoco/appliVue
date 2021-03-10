@@ -74,10 +74,13 @@ import GradesJson from "../datas/grades.json"
 import genre from "../datas/genres.json"
 import prefixs from "../datas/prefixs.json"
 import SelectClan from "../clans/SelectClan.vue"
+import NewCharacter from "./NewCharacter.vue"
+
 export default {
     name: 'CreateACharacter',
     components:{
-        'select-clan': SelectClan
+        'select-clan': SelectClan,
+        'new-character': NewCharacter
     },
     data(){
         return{

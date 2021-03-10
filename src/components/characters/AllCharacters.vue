@@ -20,8 +20,10 @@
             </div>
         </div>
         <div class="row contain-all-characters">
+            <b-spinner  v-if="loading" variant="success" label="Spinning"></b-spinner>
             <div class="col-sm" v-for="char in charList.slice((currentPage-1)*perPage,(currentPage-1)*perPage+perPage)" :key="char.id" id="all-characters-card">                 
-                <b-card                                       
+                <b-card 
+                    v-if="!loading"                                  
                     :title="char.name"
                     :img-src="require('@/assets/images/personnage/'+char.image)"
                     :img-alt="char.name"
@@ -39,7 +41,9 @@
                         <transition>
                             <router-view v-bind:charId="char.id"/>
                         </transition>
-                </b-card></div>
+                </b-card>                
+                
+            </div>
         </div>
     </div>
 </template>
@@ -57,6 +61,7 @@ export default {
     },
     data () {
         return{
+            loading: false,
             imageChar: this.charList.image,
             Characters: Characters,
             genreChar: '',
@@ -68,6 +73,9 @@ export default {
     },
     created: function(){
         this.genreChar = this.Characters.genre
+    },
+    async mounted() {        
+        this.loading = false;
     },
     computed: {
       rows() {
