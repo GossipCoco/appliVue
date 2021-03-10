@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
     :root{
         --main-white: rgba(255, 255, 255,1);
         --main-white-rgb: 255,255,255;
@@ -13,6 +15,6 @@
         --main-header-img: url("../images/background-header.jpg");
 
         /* FONT */
-        --main-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        --main-font: 'Open Sans', sans-serif;;
         --main-title-font: 'Spectral SC', serif;
     }

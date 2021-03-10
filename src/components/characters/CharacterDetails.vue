@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col fiche-personnage">
                         <p class="info-global">
-                            <span>{{characterDetails.age}}</span> lunes soit <span>{{ humanAge}}</span> ans
+                            <span>{{ ageInfo }}</span>
                         </p>
                         <p class="info-global">
                             <span>Grade du personnage</span> : 
@@ -33,13 +33,13 @@
                             <span>Genre : </span> {{ nameGenre }}
                         </p>
                         <p class="presentation-text">
-                            <span>Description</span>
-                            {{characterDetails.description}}
+                            <span>Description</span>                            
                         </p>
+                        <p class="presentation-text" contenteditable="true" v-html="descriptionCharacter" @focusout="onFocusOut($event)"></p>
                         <p class="presentation-text">
-                            <span>Biographie</span>
-                            {{characterDetails.biographie}}
+                            <span>Biographie</span>                            
                         </p>
+                        <p class="presentation-text" contenteditable="true" v-html="biographieCharacter" @focusout="onFocusOut($event)"></p>
                         <p class="presentation-text">
                             Description du clan <br>
                             {{clanByCharacter.description}}
@@ -77,7 +77,10 @@ export default {
             idGradeCharacter: '',
             nameGrade: '',
             idGenreChar: '',
-            nameGenre: ''
+            nameGenre: '',
+            descriptionCharacter: '',
+            biographieCharacter: '',
+            ageInfo: ''
         }
     },
     created: function(){
@@ -85,19 +88,37 @@ export default {
         this.charId = this.charId
         this.characterDetails = this.allCharacters[this.charId]
         this.characterImage = this.characterDetails.image
+        this.descriptionCharacter = this.characterDetails.description
+        this.biographieCharacter = this.characterDetails.biographie
         this.idGradeCharacter = this.characterDetails.idGrade
-        this.nameGrade = this.allGrades[this.idGradeCharacter]
         this.idGenreChar = this.characterDetails.idgenre
-        this.nameGenre = this.allGenres[this.idGenreChar].genre
         this.charClanId = this.characterDetails.idClan
+
+
+        this.nameGrade = this.allGrades[this.idGradeCharacter]
+        this.nameGenre = this.allGenres[this.idGenreChar].genre
         this.charClanId = this.charClanId
         this.clanByCharacter = this.allClans[this.charClanId]
         this.backgroundImgClan = this.clanByCharacter.illustration
         this.logoClan = this.clanByCharacter.img
         if(this.characterDetails.age === "Inconnu"){
-            return this.humanAge = "Inconnu"
+            return this.ageInfo = "Âge du personnage inconnu"
         }else{
-            this.humanAge = this.characterDetails.age / 12
+            this.ageInfo = "Âge du personnage : " + this.characterDetails.age + " lunes soit " + this.characterDetails.age / 12 + "ans"
+        }
+        
+    },
+    mouted (){
+        if(this.characterDetails.age === "Inconnu"){
+            return this.ageInfo = "Inconnu"
+        }else{
+            this.ageInfo = this.characterDetails.age + " lunes soit" +this.characterDetails.age / 12 + "ans"
+        }
+    },
+    methods: {
+        onFocusOut: function(e) {
+            this.descriptionCharacter = e.target.innerHTML
+            this.biographieCharacter = e.target.innerHTML
         }
     }
 }

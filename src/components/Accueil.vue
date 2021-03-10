@@ -9,15 +9,14 @@
     <div class="main-container-app accueil-app">
         <div class="presentation-contain">
             <img class="presentation-cover-book" :src="require('@/assets/images/cover/'+imgCover)" />
-            <p class="presentation-paragraph-contain">
-                {{presentationBook}}
+            <p class="presentation-paragraph-contain" contenteditable="true" v-html="presentationBook" @focusout="onFocusOut($event)">
+                
             </p>
         </div>
         <div class="presentation-contain">
             <h3>Présentation de l'application "La Guerre des Clans"</h3><br>
-            <p>
-                Cette application a pour premier objectif de créer ses propres personnages inspirés de l'univers "La Guerre des Clans". Vous pourrez crer de nouveaux guerriers, apprentis ou même solitaire.<br>
-                A terme, l'idée sera de créer aussi de nouvelles histoires et de nouvelles instrigues dans cet univers riche et passionnant et, pourquoi pas, une partie map pour faire évoluer votre ou vos personnages.
+            <p  class="presentation-paragraph-contain" contenteditable="true" v-html="presentationAppli" @focusout="onFocusOut($event)">
+                
             </p>
         </div>
     </div>
@@ -33,15 +32,23 @@ export default {
             imgCover: 'vol1.jpg',
             msg: 'Bienvenue sur l\'application',
             titleBook: 'La Guerre des Clans',
-            presentationBook: ''
+            presentationBook: '',
+            presentationAppli: ''
         }
     },
     created(){
         this.presentationBook = this.presentation[0].presentationBook
+        this.presentationAppli = this.presentation[0].presentationApp
 
     },  
     mounted(){
 
+    },
+    methods: {
+        onFocusOut: function(e) {
+        this.presentationBook = e.target.innerHTML
+        this.presentationAppli = e.target.innerHTML
+        }
     }
 }
 </script>
