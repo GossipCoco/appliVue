@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
     :root{
         --main-white: rgba(255, 255, 255,1);
         --main-green: rgba(0, 73, 22,1);
+        --main-green-hover: rgba(181, 215, 83,1);
+
+        /* IMAGE */
+        --main-background-img: url("../images/backgrounds/background7.jpg");
+
+        /* FONT */
+        --main-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        --main-title-font: 'Spectral SC', serif;
     }

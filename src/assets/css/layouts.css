@@ -1,13 +1,11 @@
 @import '../../custom.scss';
 @import './variables.scss';
-.global-contain{
+.global-contain, .main-content{
   display: flex;
   flex-direction: column;
 }
 .main-content{
-    display: flex;
-    flex-direction: column;
-    background-image: url("../images/backgrounds/background7.jpg");
+    background-image: var(--main-background-img);
     background-size: cover;    
     min-height: 878px;
     background-attachment: fixed;

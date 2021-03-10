@@ -3,14 +3,14 @@
     margin: 0 5rem;
 }
 .btn-primary {
-    color: #fff;
-    background-color: rgba(0, 73, 22,1);
-    border-color: rgba(0, 73, 22,1);
+    color: var(--main-white);
+    background-color: var(--main-green);
+    border-color: var(--main-green);
 }
 .btn-primary:hover {
-    color: rgba(0, 73, 22,1);
-    background-color: rgba(181, 215, 83,1);
-    border-color: rgba(181, 215, 83,1);
+    color: var(--main-green);
+    background-color: var(--main-green-hover);
+    border-color: var(--main-green-hover);
 }
 .container-avatar{
     width: 25%;

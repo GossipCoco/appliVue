@@ -1,4 +1,5 @@
-@import 'variables.scss';
+@import '../../custom.scss';
+@import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
 .user-list ul li{
@@ -6,20 +7,20 @@
 }
 .user-personnal-info {
     text-align: left;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--main-font);
     font-size: 14px;
 }
 .main-menu-left .nav-link, .nav-contain a{
-    color: rgba(255,255, 255, 1)
+    color: var(--main-white)
 }
 .nav-contain .dropdown-item a{
-    color: rgba(0, 73, 22,1)
+    color: var(--main-green);
 }
 .nav-link a{
-    color: rgba(255,255, 255, 1);
+    color: var(--main-white)
 }
 .title-site-containe h3{
-    color: rgba(255,255, 255, 1); 
+    color: var(--main-white) 
 }
 .presentation-text{
     text-align: justify;
@@ -31,7 +32,7 @@
     text-align: justify;
 }
 .title-site-containe h3{
-    font-family: 'Spectral SC', serif;
+    font-family: var(--main-title-font);
     font-size: 38px;
 }
 .title-site-containe h3.titleBook{
