@@ -1,7 +1,7 @@
  /* eslint-disable */
 <template>
 <!-- TO DO : add filter by clans and by grade -->
-    <div class="col">
+    <div>
         <div class="row">
             <div class="col contain-filters">
                 <p>Filtrer par </p>
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="row contain-all-characters">
-            <div class="col-sm" v-for="char in Characters.slice((currentPage-1)*perPage,(currentPage-1)*perPage+perPage)" :key="char.id" id="all-characters-card">                 
+            <div class="col-sm" v-for="char in charList.slice((currentPage-1)*perPage,(currentPage-1)*perPage+perPage)" :key="char.id" id="all-characters-card">                 
                 <b-card                                       
                     :title="char.name"
                     :img-src="require('@/assets/images/personnage/'+char.image)"
@@ -40,8 +40,7 @@
                         <transition>
                             <router-view v-bind:charId="char.id"/>
                         </transition>
-                </b-card>
-            </div>
+                </b-card></div>
         </div>
     </div>
 </template>
@@ -53,12 +52,13 @@ import ClansJson from "../datas/clans.json"
 import genres from "../datas/genres.json"
 export default {
     name: 'AllCharacters',
+    props:['charList'],
     components:{
         'select-clan': SelectClan
     },
     data () {
         return{
-            imageChar: Characters.image,
+            imageChar: this.charList.image,
             Characters: Characters,
             genreChar: '',
             clans: ClansJson,
@@ -70,7 +70,11 @@ export default {
     created: function(){
         this.genreChar = this.Characters.genre
     },
-    
+    computed: {
+      rows() {
+        return this.Characters.length
+      }
+    },
     methods: {
         setclan(value){
             console.log(value)
