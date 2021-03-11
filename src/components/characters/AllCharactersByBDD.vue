@@ -21,7 +21,8 @@
         </div>
         <div class="row contain-all-characters">
             <div class="col-sm container-allCharacterByBdd" v-for="char in allCharacters" :key="char.id" id="all-characters-card">
-                <b-card                                       
+                <b-card
+                    id="all-characters-card"                                       
                     :title="char.name"
                     :img-src="require('@/assets/images/personnage/'+char.image)"
                     :img-alt="char.name"
@@ -69,9 +70,15 @@ export default {
     created: function(){
         this.genreChar = this.charList.genre
     },
+    computed: {
+      rows() {
+          console.log(typeof this.allCharacter)
+        return this.allCharacters.length
+      }
+    },
     async mounted(){
         this.allCharacters = await CharactersService.getCharacters();
-        console.log(this.allCharacters)
+        //console.log(this.allCharacters)
     },
     methods: {
         setclan(value){

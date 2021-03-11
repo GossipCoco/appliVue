@@ -8,48 +8,36 @@
                 <select-clan label="Clan ou Groupe" @setClan="setClan" v-bind:typeClan="currentClan" v-bind:clans="clans"/>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <b-pagination
-                    v-model="currentPage"
-                    :total-rows="rows"
-                    :per-page="perPage"
-                    aria-controls="all-characters-card"
-                >
-                </b-pagination>
-            </div>
-        </div>
-        <div class="row contain-all-characters">
-            <div class="col-sm" v-for="char in charList.slice((currentPage-1)*perPage,(currentPage-1)*perPage+perPage)" :key="char.id" id="all-characters-card">                 
-                <b-card                                       
-                    :title="char.name"
-                    :img-src="require('@/assets/images/personnage/'+char.image)"
-                    :img-alt="char.name"
-                    img-top
-                    tag="article"
-                    style="width: 20rem; height: 30rem"
-                    class="mb-4 card-contain-character"
-                    :per-page="perPage"
-                    :current-page="currentPage"
-                >
+        <div class="row contain-all-characters">            
+            <div class="col-sm" v-for="char in allCharacters" :key="char.id" id="all-characters-card">                 
+                <b-card                                                
+                :title="char.name"
+                :img-src="require('@/assets/images/personnage/'+char.image)"
+                :img-alt="char.name"
+                img-top
+                tag="article"
+                style="width: 20rem; height: 30rem"
+                class="mb-4 card-contain-character"
+            >
                     <b-card-text>
-                    {{char.clan}}
+                    {{char.name}}
                     </b-card-text>
-
                     <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="char.id" class="btn btn-primary">En savoir plus</router-link>
                         <transition>
                             <router-view v-bind:charId="char.id"/>
                         </transition>
-                </b-card></div>
+                </b-card>       
+                
+            </div>
         </div>
     </div>
 </template>
 <script>
 
-import SelectClan from "../clans/SelectClan.vue"
 import Characters from "../datas/characters.json"
+import SelectClan from "../clans/SelectClan.vue"
 import ClansJson from "../datas/clans.json"
-import genres from "../datas/genres.json"
+import { CharactersService } from "../../services/Characters.service"
 export default {
     name: 'AllCharacters',
     props:['charList'],
@@ -58,22 +46,20 @@ export default {
     },
     data () {
         return{
-            imageChar: this.charList.image,
-            Characters: Characters,
+            loading: false,
+            imageChar: null,
+            allCharacters: Characters,
+            characters: [],
             genreChar: '',
             clans: ClansJson,
             backgroundImgClan: '',
             perPage: 10,
             currentPage: 1,
+            idCharacter: null
         }
     },
     created: function(){
-        this.genreChar = this.Characters.genre
-    },
-    computed: {
-      rows() {
-        return this.Characters.length
-      }
+        this.genreChar = this.characters.genre
     },
     methods: {
         setclan(value){
