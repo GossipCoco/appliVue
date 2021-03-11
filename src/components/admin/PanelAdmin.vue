@@ -39,6 +39,7 @@ export default {
       characters: [],
       newChar: "",
       newCharacter:[],
+      lastId: null,
       newId: null
     };
   },
