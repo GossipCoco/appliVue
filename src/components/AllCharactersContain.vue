@@ -1,6 +1,3 @@
-/* eslint-disable */
-/*eslint space-before-function-paren: ["error", "never"]*/
-/*eslint-env es6*/
 <template>
   <div class="col">
     <all-characters v-bind:charList="listCharacters"/>

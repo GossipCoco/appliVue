@@ -127,8 +127,13 @@
 }
 .list-character-container{
   max-height: 500px;
-  overflow-y: scroll;
-  
+  overflow-y: scroll;  
+}
+.container-a-character{
+  background-color: rgba(var(--main-white-rgb), 1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
 /* Container form create a character */
 

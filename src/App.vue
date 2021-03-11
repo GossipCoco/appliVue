@@ -13,7 +13,7 @@
 </template>
 <script>
 import MainMenuTop from './components/Navigation/MainMenuTop.vue'
-import MainContain from './components/CharactersContain.vue'
+import MainContain from './components/AllCharactersContain.vue'
 import MainMenuLeft from './components/Navigation/MainMenuLeft.vue'
 import FooterMain from './components/layout/FooterContain.vue'
 

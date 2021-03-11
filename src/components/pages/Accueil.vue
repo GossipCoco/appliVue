@@ -23,7 +23,7 @@
     </div>
 </template>
 <script>
-import presentation from "./datas/presentationText.json"
+import presentation from "../datas/presentationText.json"
 export default {
     name: 'Accueil',
     data(){

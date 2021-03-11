@@ -20,26 +20,12 @@
             </div>
         </div>
         <div class="row contain-all-characters">
-            <div class="col-sm" v-for="char in charList.slice((currentPage-1)*perPage,(currentPage-1)*perPage+perPage)" :key="char.id" id="all-characters-card">                 
-                <b-card                                       
-                    :title="char.name"
-                    :img-src="require('@/assets/images/personnage/'+char.image)"
-                    :img-alt="char.name"
-                    img-top
-                    tag="article"
-                    style="width: 20rem; height: 30rem"
-                    class="mb-4 card-contain-character"
-                    :per-page="perPage"
-                    :current-page="currentPage"
-                >
-                    <b-card-text>
-                    {{char.clan}}
-                    </b-card-text>
-                    <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="char.id" class="btn btn-primary">En savoir plus</router-link>
-                        <transition>
-                            <router-view v-bind:charId="char.id"/>
-                        </transition>
-                </b-card>
+            <div class="col-sm container-allCharacterByBdd" v-for="char in allCharacters" :key="char.id" id="all-characters-card">
+                <div class="container-a-character">
+                    <h2>{{ char.name}}</h2><br>                 
+                    <p>{{ char.image }}</p>
+                    <img :src="require('@/assets/images/personnage/'+char.image)" class="container-avatar" size="72px"/>
+                </div>
             </div>
         </div>
     </div>
@@ -55,27 +41,22 @@ import { CharactersService } from "../../services/Characters.service"
 
 export default {
     name: 'AllCharacters',
-    props:['charList'],
     components:{
         'select-clan': SelectClan
     },
     data () {
         return{
-            imageChar: this.charList.image,
-            Characters: Characters,
-            genreChar: '',
-            clans: ClansJson,
-            backgroundImgClan: '',
             perPage: 10,
             currentPage: 1,
             allCharacters:[]
         }
     },
     created: function(){
-        
+        this.genreChar = this.charList.genre
     },
     async mounted(){
-        this.allclans = await ClansService.getClans();
+        this.allCharacters = await CharactersService.getCharacters();
+        console.log(this.allCharacters)
     },
     methods: {
         setclan(value){

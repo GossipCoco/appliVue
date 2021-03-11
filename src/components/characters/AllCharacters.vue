@@ -1,7 +1,7 @@
  /* eslint-disable */
 <template>
 <!-- TO DO : add filter by clans and by grade -->
-    <div>
+    <div class="col">
         <div class="row">
             <div class="col contain-filters">
                 <p>Filtrer par </p>
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="row contain-all-characters">
-            <div class="col-sm" v-for="char in charList.slice((currentPage-1)*perPage,(currentPage-1)*perPage+perPage)" :key="char.id" id="all-characters-card">                 
+            <div class="col-sm" v-for="char in Characters.slice((currentPage-1)*perPage,(currentPage-1)*perPage+perPage)" :key="char.id" id="all-characters-card">                 
                 <b-card                                       
                     :title="char.name"
                     :img-src="require('@/assets/images/personnage/'+char.image)"
@@ -53,14 +53,13 @@ import ClansJson from "../datas/clans.json"
 import genres from "../datas/genres.json"
 export default {
     name: 'AllCharacters',
-    props:['charList'],
     components:{
         'select-clan': SelectClan
     },
     data () {
         return{
-            imageChar: this.charList.image,
-            charList: Characters,
+            imageChar: Characters.image,
+            Characters: Characters,
             genreChar: '',
             clans: ClansJson,
             backgroundImgClan: '',
@@ -69,8 +68,9 @@ export default {
         }
     },
     created: function(){
-        this.genreChar = this.charList.genre
-    },    
+        this.genreChar = this.Characters.genre
+    },
+    
     methods: {
         setclan(value){
             console.log(value)

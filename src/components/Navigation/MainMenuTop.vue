@@ -7,6 +7,7 @@
       <b-nav-item><router-link to="/">{{ menu.home }}</router-link></b-nav-item>       
       <b-nav-item-dropdown text="Personnage" left>
         <b-dropdown-item><router-link to="/characters/allcharacters">Tous les personnages</router-link></b-dropdown-item>
+        <b-dropdown-item><router-link to="/characters/allcharactersByBdd">Tous les personnages via BDD</router-link></b-dropdown-item>
         <b-dropdown-item><router-link to="/characters/createacharacter">Créer un nouveau personnage</router-link></b-dropdown-item>
       </b-nav-item-dropdown>
       <b-nav-item-dropdown text="Utilisateur" left>
