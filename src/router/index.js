@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import MainContain from '@/components/MainContain'
+import CharactersContain from '@/components/CharactersContain'
 import Accueil from '@/components/Accueil'
 import Login from '@/components/Secure/Login'
 import RegisterUser from '@/components/Secure/RegisterUser'
@@ -11,6 +11,8 @@ import CreateACharacter from '@/components/characters/CreateACharacter'
 import AllClans from '@/components/clans/AllClans'
 import CreditContainer from '@/components/layout/CreditContainer'
 import PanelAdmin from '@/components/admin/PanelAdmin'
+import AllCharacters from '@/components/characters/AllCharacters'
+import AllCharactersByBDD from '@/components/characters/AllCharactersByBDD'
 
 Vue.use(VueRouter)
 
@@ -22,7 +24,7 @@ const routes = [
   },{
       path: '/home',
       name: 'Home',
-      component: MainContain
+      component: Accueil
   },{
     path: '/login',
     name: 'Login',
@@ -41,10 +43,16 @@ const routes = [
     component: UserProfil,
     props: true
   },{
-    path: '/characters/allcharacters',
-    name: 'AllCharacters',
-    component : MainContain
-  },{
+    path: '/characters/allcharacters', 
+    name: 'CharactersContain',   
+    component : CharactersContain,    
+  },
+  {
+    path: '/characters/allcharactersByBdd',
+    name: 'AllCharactersByBDD',
+    component : AllCharactersByBDD
+  },
+  {
     path: '/characters/characterDetails/:idCharacter',
     name: "characterDetails",
     component : CharacterDetails,

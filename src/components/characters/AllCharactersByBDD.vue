@@ -1,7 +1,7 @@
  /* eslint-disable */
 <template>
 <!-- TO DO : add filter by clans and by grade -->
-    <div>
+    <div  class="col main-container-app">
         <div class="row">
             <div class="col contain-filters">
                 <p>Filtrer par </p>
@@ -35,7 +35,6 @@
                     <b-card-text>
                     {{char.clan}}
                     </b-card-text>
-
                     <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="char.id" class="btn btn-primary">En savoir plus</router-link>
                         <transition>
                             <router-view v-bind:charId="char.id"/>
@@ -51,6 +50,9 @@ import SelectClan from "../clans/SelectClan.vue"
 import Characters from "../datas/characters.json"
 import ClansJson from "../datas/clans.json"
 import genres from "../datas/genres.json"
+
+import { CharactersService } from "../../services/Characters.service"
+
 export default {
     name: 'AllCharacters',
     props:['charList'],
@@ -60,17 +62,21 @@ export default {
     data () {
         return{
             imageChar: this.charList.image,
-            charList: Characters,
+            Characters: Characters,
             genreChar: '',
             clans: ClansJson,
             backgroundImgClan: '',
             perPage: 10,
             currentPage: 1,
+            allCharacters:[]
         }
     },
     created: function(){
-        this.genreChar = this.charList.genre
-    },    
+        
+    },
+    async mounted(){
+        this.allclans = await ClansService.getClans();
+    },
     methods: {
         setclan(value){
             console.log(value)
