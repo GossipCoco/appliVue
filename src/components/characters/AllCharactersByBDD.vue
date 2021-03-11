@@ -21,11 +21,26 @@
         </div>
         <div class="row contain-all-characters">
             <div class="col-sm container-allCharacterByBdd" v-for="char in allCharacters" :key="char.id" id="all-characters-card">
-                <div class="container-a-character">
-                    <h2>{{ char.name}}</h2><br>                 
-                    <p>{{ char.image }}</p>
-                    <img :src="require('@/assets/images/personnage/'+char.image)" class="container-avatar" size="72px"/>
-                </div>
+                <b-card                                       
+                    :title="char.name"
+                    :img-src="require('@/assets/images/personnage/'+char.image)"
+                    :img-alt="char.name"
+                    img-top
+                    tag="article"
+                    style="width: 20rem; height: 30rem"
+                    class="mb-4 card-contain-character"
+                    :per-page="perPage"
+                    :current-page="currentPage"
+                >
+                    <b-card-text>
+                    {{char.clan}}
+                    </b-card-text>
+
+                    <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="char.id" class="btn btn-primary">En savoir plus</router-link>
+                        <transition>
+                            <router-view v-bind:charId="char.id"/>
+                        </transition>
+                </b-card>
             </div>
         </div>
     </div>
