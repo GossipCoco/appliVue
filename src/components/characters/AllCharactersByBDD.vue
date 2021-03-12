@@ -75,16 +75,12 @@ export default {
     },
     computed: {
       rows() {
-        //console.log(typeof this.allCharacter)
         return this.allCharacters.length
       }
     },
     async mounted(){
         this.allCharacters = await CharactersService.getCharacters();
         this.allClans = await ClansService.getClans();
-        console.log(this.allClans)
-
-        //console.log(this.allCharacters)
     },
     methods: {
         setclan(value){
