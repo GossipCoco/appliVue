@@ -54,6 +54,8 @@ import ClansJson from "../datas/clans.json"
 import genres from "../datas/genres.json"
 
 import { CharactersService } from "../../services/Characters.service"
+import { ClansService } from "../../services/Clans.service"
+import { GradesService } from "../../services/Grades.service"
 
 export default {
     name: 'AllCharacters',
@@ -64,7 +66,8 @@ export default {
         return{
             perPage: 10,
             currentPage: 1,
-            allCharacters:[]
+            allCharacters:[],
+            allClans:[]
         }
     },
     created: function(){
@@ -72,12 +75,15 @@ export default {
     },
     computed: {
       rows() {
-          console.log(typeof this.allCharacter)
+        //console.log(typeof this.allCharacter)
         return this.allCharacters.length
       }
     },
     async mounted(){
         this.allCharacters = await CharactersService.getCharacters();
+        this.allClans = await ClansService.getClans();
+        console.log(this.allClans)
+
         //console.log(this.allCharacters)
     },
     methods: {
