@@ -15,19 +15,19 @@
             v-model="newChar"
             />
         </div>
-
         <div class="col-sm-2">
             <b-button @click="addCharAction" class="primary">Ajouter</b-button>
         </div>
         </div>
-
-        <ul>
-        <li v-for="newChar of newCharacter" :key="newChar.id">
-            {{ newChar}}
-            
-        </li>
-        </ul>
-    </div>
+            <ul>
+                <li v-for="newChar of newCharacters" :key="newChar._id" style="margin: 1rem">
+                    <div style="display: flex; flex-direction: row; width: 450px">
+                        <p style="flex: 1; font-size: 15">{{ newChar.name }} </p>
+                        <b-button @click="deleteChararcter(newChar.name)" variant="secondary"  style="flex: 1; font-size: 15">Supprimer</b-button>
+                    </div>               
+                </li>
+            </ul>        
+        </div>
     </div>
 </template>
 <script>
@@ -36,37 +36,31 @@ export default {
     name: 'PanelAdmin',
   data() {
     return {
-      characters: [],
       newChar: "",
-      newCharacter:[],
-      lastId: null,
-      newId: null
+      newCharacters:[],      
     };
   },
   async mounted() {
-    this.newCharacter = await CharactersService.getNewCharacters();
-    const arrayCharac = Object.keys(this.newCharacter);
-    console.log(arrayCharac.lenght())
+    this.newCharacters = await CharactersService.getNewCharacters();
   },
-  methods: {
-    getNewId(value){
-
-    },
+  methods: {    
     async addCharAction() {
-        const character = { name: this.newChar, id: 0 };
+        const character = { name: this.newChar, iq: 0 };
+        console.log("step1 : ", character);
         const idCharacter = await CharactersService.addCharacter(character);
+        console.log("step2 : ", idCharacter)
         idCharacter.id = idCharacter;
-        this.newCharacter.push(character);
-        console.log(this.newCharacter);     
+        console.log("step3 : ",idCharacter.id)
+        this.newCharacters.push(character);
+        console.log("step4 : ",this.newCharacters)
     },
-    deleteCity(city) {
-        CitiesService.deleteCity(city);
-        const indexToDelete = this.cities.findIndex(
-            cityItem => city.id === cityItem.id
+    deleteChararcter(character) {
+        CharactersService.deleteChararcter(character);
+        const indexToDelete = this.newCharacters.findIndex(
+            characterItem => character.id === characterItem.id
         );
-        this.cities.splice(indexToDelete, 1);
+        this.newCharacters.splice(indexToDelete, 1);
     }
   }
-
 }
 </script>

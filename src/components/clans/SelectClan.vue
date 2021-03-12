@@ -9,7 +9,6 @@
     </div>                
 </template>
 <script>
-import ClansJson from '../datas/clans'
 export default {
     name: 'SelectClan',
     props:['label', 'clans', 'typeClan'],
@@ -21,8 +20,7 @@ export default {
         }
     },
     methods:{
-        selectClan(value){
-            //console.log("id clan", value, "type clan", this.typeClan);            
+        selectClan(value){        
             this.clanSelected = value;
             this.$emit("setClan", this.clanSelected)
         },
