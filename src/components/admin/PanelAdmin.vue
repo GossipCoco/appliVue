@@ -4,9 +4,8 @@
         <h1>Admin</h1>
         <div class="row form-group ajouterVille">
             <div class="col-sm-2">
-                Ajouter une personnage
+                Ajouter un personnage
             </div>
-
         <div class="col-sm-3">
             <input
             type="text"
@@ -46,12 +45,8 @@ export default {
   methods: {    
     async addCharAction() {
         const character = { name: this.newChar, iq: 0 };
-        console.log("step1 : ", character);
         const idCharacter = await CharactersService.addCharacter(character);
-        console.log("step2 : ", idCharacter)
-        idCharacter.id = idCharacter;
         console.log("step3 : ",idCharacter.id)
-        this.newCharacters.push(character);
         console.log("step4 : ",this.newCharacters)
     },
     deleteChararcter(character) {
