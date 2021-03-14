@@ -67,6 +67,9 @@
   border-radius: 20px;
   margin: 1rem;
 }
+.col-main-contain{
+  margin-right: 2rem;
+}
 .container-background-image-clan{
   background-size: cover;
   align-items: center;

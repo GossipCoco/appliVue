@@ -9,6 +9,7 @@
         <b-dropdown-item><router-link to="/characters/allcharacters">Tous les personnages</router-link></b-dropdown-item>
         <b-dropdown-item><router-link to="/characters/allcharactersByBdd">Tous les personnages via BDD</router-link></b-dropdown-item>
         <b-dropdown-item><router-link to="/characters/createacharacter">Créer un nouveau personnage</router-link></b-dropdown-item>
+        <b-dropdown-item><router-link to="/characters/searchacharacter">Rechercher un personnage</router-link></b-dropdown-item>
       </b-nav-item-dropdown>
       <b-nav-item-dropdown text="Utilisateur" left>
         <b-dropdown-item><router-link to="/user/allusers">{{ menu.allUsers}}</router-link></b-dropdown-item>
