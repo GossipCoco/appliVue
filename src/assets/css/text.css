@@ -47,7 +47,10 @@
 }
 /* LIENS */
 .main-menu-left .nav-link, .nav-link a, .nav-contain a{
-    color: rgba(var(--main-white-rgb), 1)
+    color: rgba(var(--main-white-rgb), 1);
+    font-size: 14px;
+    font-family: var(--main-font);
+
 }
 .nav-contain .dropdown-item a{
     color: rgba(var(--main-green), 1);

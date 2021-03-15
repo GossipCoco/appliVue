@@ -19,6 +19,8 @@ import './assets/css/form.css'
 import './assets/css/composants.css'
 import './assets/css/text.css'
 
+import { auth } from "@/firebase";
+
 library.add(faFontAwesome)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -28,6 +30,16 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(VueAxios, axios)
 
+routes.beforeEach((to, from, next) => {
+  const isAuthenticated = auth.currentUser;
+  const isProtected = to.matched.some(route => route.meta.needAuth);
+
+  if (!isAuthenticated && isProtected) {
+    next("/");
+  } else {
+    next();
+  }
+});
 /* eslint-disable no-new */
 const app = new Vue({
   el: '#app',

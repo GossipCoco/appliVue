@@ -79,7 +79,8 @@ const routes = [
   },{
     path: '/panel-admin',
     name: 'PanelAdmin',
-    component: PanelAdmin
+    component: PanelAdmin,
+    meta: { needAuth: true }
   }
 ]
 const router = new VueRouter({
