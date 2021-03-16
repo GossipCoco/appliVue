@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="row contain-all-characters">
-            <div class="col-sm container-allCharacterByBdd" v-for="char in allCharacters" :key="char.id" id="all-characters-card">
+            <div class="col-sm-3 container-allCharacterByBdd" v-for="char in allCharacters" :key="char.id" id="all-characters-card">
                 <b-card
                     id="all-characters-card"                                       
                     :title="char.name"

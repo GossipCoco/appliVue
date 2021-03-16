@@ -1,12 +1,12 @@
 export default [
     {
-        name: "Retour à l'état' sauvage",
+        name: "Retour à l'état sauvage",
         slug: "retour-a-l-etat-sauvage",
         year: 2003,
         resume:
           "Depuis des générations, fidèles aux lois de leurs ancêtres, quatre Clans de chats sauvages se partagent la forêt. Mais le Clan du Tonnerre court un grave danger, et les sinistres guerriers de l'Ombre sont de plus en plus puissants. En s'aventurant un jour dans la forêt, Rusty, petit chat domestique, est loin de se douter qu'il deviendra bientôt le plus valeureux des guerriers...",
         image:
-          "volume1",
+          "volume1.jpg",
         rating: 84,
     },
     {

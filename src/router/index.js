@@ -12,6 +12,7 @@ import CharacterDetails from '@/components/characters/CharacterDetails'
 import CreateACharacter from '@/components/characters/CreateACharacter'
 import SearchACharacter from '@/components/characters/SearchACharacter'
 import AllClans from '@/components/clans/AllClans'
+import AllBooks from '@/components/Books/AllBooks'
 import CreditContainer from '@/components/layout/CreditContainer'
 import PanelAdmin from '@/components/admin/PanelAdmin'
 
@@ -72,6 +73,11 @@ const routes = [
     path: '/clan/allclans',
     name: 'AllClans',
     component : AllClans
+  },
+  {
+    path: '/book/allbooks',
+    name: 'AllBooks',
+    component: AllBooks
   },{
     path: '/credit',
     name: 'CreditContainer',

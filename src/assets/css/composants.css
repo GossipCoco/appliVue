@@ -40,3 +40,7 @@
     align-content: center;
     margin: auto;
 }
+.container-allBooks .card-img-top{
+    width: 211px;
+    height: 345px;
+}

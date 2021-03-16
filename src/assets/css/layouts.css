@@ -138,6 +138,16 @@
   display: flex;
   flex-direction: column;
 }
+
+/*  Container books */
+.container-allBooks{
+  display: flex;
+  flex-direction: row;
+}
+.container-card article{
+  align-items: center;
+  align-content: center;
+}
 /* Container form create a character */
 
 .form-create-character{
@@ -162,7 +172,12 @@
   width: 400px;
 }
 
+/* BOOKS */
 
+.container-title-book{
+  max-height: 100px;
+  max-width: 20rem;
+}
 /* Container for flexboxes */
 .row {
     display: -webkit-flex;

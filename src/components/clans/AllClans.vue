@@ -10,7 +10,7 @@
             </div>            
         </div>
         <div class="row">
-            <div class="col-sm container-all-locations" v-for="clan in allclans" :key="clan.id">
+            <div class="col-sm-3 container-all-locations" v-for="clan in allclans" :key="clan.id">
                 <b-card :img-src="require('@/assets/images/backgrounds/'+ clan.illustration)" img-alt="Card image" img-top class="mb-2 card-contain-location" v-if="clan.id!==12">
                     <b-card :title="clan.name">
                         <b-card-text>

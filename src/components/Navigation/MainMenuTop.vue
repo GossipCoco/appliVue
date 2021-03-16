@@ -10,14 +10,16 @@
         <b-dropdown-item><router-link to="/characters/allcharactersByBdd">Tous les personnages via BDD</router-link></b-dropdown-item>
         <b-dropdown-item><router-link to="/characters/createacharacter">Créer un nouveau personnage</router-link></b-dropdown-item>
         <b-dropdown-item><router-link to="/characters/searchacharacter">Rechercher un personnage</router-link></b-dropdown-item>
-      </b-nav-item-dropdown>
-      <b-nav-item-dropdown text="Utilisateurs" left>
-        <b-dropdown-item><router-link to="/user/allusers">{{ menu.allUsers}}</router-link></b-dropdown-item>
-        <b-dropdown-item v-if="connected">{{ menu.userGestion }}</b-dropdown-item>
-      </b-nav-item-dropdown>
+      </b-nav-item-dropdown>      
       <b-nav-item><router-link to="/clan/allclans">{{ menu.allClans }}</router-link></b-nav-item>
+      <b-nav-item><router-link to="/book/allbooks">{{ menu.allBooks }}</router-link></b-nav-item>
       <b-nav-item><router-link to="/credit">{{ menu.credit }}</router-link></b-nav-item>
-      <b-nav-item><router-link show v-if="connected" to="/panel-admin">{{ menu.admin }}</router-link></b-nav-item>
+      <b-nav-item-dropdown show v-if="connected" text="Admin" left>
+        <b-dropdown-item><router-link to="/panel-admin">{{ menu.admin }}</router-link></b-dropdown-item>
+        <b-dropdown-item><router-link to="/user/allusers">{{ menu.allUsers}}</router-link></b-dropdown-item>
+        <b-dropdown-item>{{ menu.userGestion }}</b-dropdown-item>
+      </b-nav-item-dropdown>
+      <b-nav-item></b-nav-item>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-navbar-nav>
@@ -51,7 +53,8 @@ export default {
         credit: 'Credits',
         userGestion: 'Gérer les Utilisateur',
         allUsers: 'Utilisateurs',
-        allClans: 'Tous les Clans',
+        allClans: 'Tous les Clans',        
+        allBooks: 'Tous les romans',
         profil: 'Profil',
         admin: 'Admin',
         logout: 'Se déconnecter'
