@@ -29,9 +29,10 @@ export default {
     },
     data(){
         return{
-            books: booksDB
+            books: booksDB,
+            booksStore: this.$store.state.books.books
         }
-    }
+    },
 }
 </script>
 <style scoped>

@@ -9,10 +9,12 @@ import CharactersContain from '@/components/characters/CharactersContain'
 import AllCharacters from '@/components/characters/AllCharacters'
 import AllCharactersByBDD from '@/components/characters/AllCharactersByBDD'
 import CharacterDetails from '@/components/characters/CharacterDetails'
+import CharacterDetailsBySlug from '@/components/characters/CharacterDetailsBySlug'
 import CreateACharacter from '@/components/characters/CreateACharacter'
 import SearchACharacter from '@/components/characters/SearchACharacter'
 import AllClans from '@/components/clans/AllClans'
 import AllBooks from '@/components/Books/AllBooks'
+import BookDetails from '@/components/Books/BookDetails'
 import CreditContainer from '@/components/layout/CreditContainer'
 import PanelAdmin from '@/components/admin/PanelAdmin'
 
@@ -61,6 +63,10 @@ const routes = [
       component : CharacterDetails,
       props: true
   },{
+      path: '/characters/characterDetailsBySlug/:slug',
+      name: "characterDetailsBySlug",
+      component : CharacterDetailsBySlug,
+  },{
     path: '/characters/createacharacter',
     name: 'CreateACharacter',
     component : CreateACharacter
@@ -78,6 +84,10 @@ const routes = [
     path: '/book/allbooks',
     name: 'AllBooks',
     component: AllBooks
+  },{
+    path: '/book/:slug',
+    name: 'BookDetails',
+    component: BookDetails
   },{
     path: '/credit',
     name: 'CreditContainer',

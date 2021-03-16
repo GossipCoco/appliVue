@@ -1,26 +1,36 @@
 import booksDb from "../../components/datas/books.db"
-
 export default {
     states: {
-        books: []
+        books: [],
     },
-    mutation: {
-        //Les mutations peuvent modifier les states
-        updateTableau(state, valeur){
-            state.books =  valeur;
+    mutations: {
+        setBooks(state, books){
+            state.books = books;            
+        },
+        updateBook(state, book){
+            state.books = state.books.map(bookElement => {
+                if(bookElement.slug === book.slug){
+                    bookElement = book;
+                }
+                return bookElement;
+            })
         }
     },
     actions: {
-        // les actions sont dispo dans notre code pour utiliser les mutations
-        updateTableau({commit}, valeurTableau){
-            //opérations divers: ex récupérer de données axios
-            //utilisations de services
-            commit('updateTableau', valeurTableau);
+        fetchBooks({ commit }) {
+            const books = booksDb;
+            console.log("action : ", books)
+            commit("setBooks", books);
+          },
+        updateBook({commit}, book){
+            commit("updateBook", book)
         }
     },
-    getters:{
-        getTableauLenght: state => {
-            return state.books.length;
+    getters: {
+        getBook: state => slug =>{
+            const book = state.movie.filter(movieElement => movieElement.slug === slug)
+            console.log("getters : ", book);
+            return book;
         }
     }
 }

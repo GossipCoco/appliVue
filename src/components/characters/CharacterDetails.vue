@@ -112,7 +112,13 @@ export default {
     },
     async mounted(){
         this.allclans = await ClansService.getClans();
-    },    
+    },
+    mounted(){
+        const slug = this.$route.params.slug;   
+        console.log(slug);     
+        this.character = this.allCharacters.find((character)=>character.slug === slug);
+        console.log(character);
+    },
     methods: {
         onFocusOut: function(e) {
             this.descriptionCharacter = e.target.innerHTML

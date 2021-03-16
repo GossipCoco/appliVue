@@ -1,6 +1,7 @@
 [
   {
     "id": 0,
+    "slug": "etoile-de-feu",
     "idUser": 0,
     "idStatut":0,
     "idClan": 0,
@@ -18,6 +19,7 @@
   },
   {
     "id": 1,
+    "slug": "etoile-bleu",
     "idUser": 0,
     "idStatut":0,
     "idClan": 5,
@@ -35,6 +37,7 @@
   },
   {
     "id": 2,
+    "slug": "caramel",
     "idUser": 0,
     "idStatut":0,
     "idClan": 11,
@@ -52,6 +55,7 @@
   },
   {
     "id": 3,
+    "slug": "romme-de-pin",
     "idUser": 0,
     "idStatut":0,
     "idgenre": 0,
@@ -69,6 +73,7 @@
   },
   {
     "id": 4,
+    "slug": "etoile-filante",
     "idUser": 0,
     "idStatut":0,
     "idgenre": 0,     
@@ -85,6 +90,7 @@
     "description": ""
   },{
     "id": 5,
+    "slug": "fleau",
     "idUser": 0,
     "idStatut":0,
     "idgenre": 0,  
@@ -101,6 +107,7 @@
     "biographie": "Fléau est brièvement mentionné comme ayant été tué lors de la bataille contre le Clan du Sang quand Étoile de Feu pense à la façon dont, depuis que les chats du Clan du Sang se sont enfuis dans la forêt, tous ses guerriers, sursautent au moindre craquement de brindille. Plus tard, Petite Araignée et son frère, Petite Musaraigne jouent avec une boule de mousse, prétendant que c'est Fléau. Nuage de Pluie les réprimande, disant qu'il venait seulement de récolter la mousse.<br>Peu après, Étoile de Feu voit Petite Feuille dans un rêve. Elle lui dit que le Clan des Étoiles ne peut pas contrôler tout ce qui se passe dans la forêt et ne pouvait pas chasser Fléau et le Clan du Sang de celle-ci. Lorsqu'une femelle noire et un mâle brun conduisent Étoile de Feu au reste de leur groupe, il se souvient de Fléau et de se demande si ces chats sont comme le Clan du Sang.<br>Pendant qu'Étoile de Feu discute avec Tempête de Sable de la façon dont le Clan du Ciel vaincra les rats, elle lui rappelle qu'il a vaincu Fléau, ajoutant qu'il vaincra donc les rats. Quand Étoile de Feu tente de la convaincre qu'ils doivent délimiter les frontières pour le Clan du Ciel, Tempête de Sable dit qu'il n'y a aucun moyen, et qu'il l' avait vu lorsque Fléau, accompagné du Clan du Sang, avait essayé de s'installer dans la forêt. Fléau est mentionné pour la dernière fois quand Étoile de Feu se souvient de la façon dont le chef du Clan du Sang a tué Étoile du Tigre, lui enlevant ses neuf vies d'un coup."
   },{
     "id": 6,
+    "slug": "museau-cendre",
     "idUser": 0,
     "idStatut":0,
     "idgenre": 1,
@@ -117,6 +124,7 @@
     "description": ""
   },{
     "id": 7,
+    "slug": "plume-grise",
     "idUser": 0,
     "idStatut":0,
     "idgenre": 0,
@@ -133,6 +141,7 @@
     "description": "Plume Grise (  Angl.  Graystripe ) est un grand chat plutôt massif, musclé à la longue et épaisse fourrure ébouriffée et soyeuse, gris ardoise. Il a une grande tête, un large museau, une forte mâchoire, de larges et puissantes épaules, une bande de fourrure gris sombre sur son dos, l'oreille gauche déchirée, une épaisse queue touffue, de larges pattes souples et robustes, des griffes aiguisées, des dents pointues, et de grands yeux jaunes."
   },{
     "id": 8,
+    "slug": "nuage-de-jais",
     "idUser": 0,
     "idStatut":0,
     "idgenre": 0,
@@ -149,6 +158,7 @@
     "description": ""
   },{
     "id": 9,
+    "slug": "gerboise",
     "idUser": 0,
     "idStatut":0,
     "idgenre": 0,
@@ -166,6 +176,7 @@
   }
   ,{
     "id": 10,
+    "slug": "etoile-du-leopard",
     "idUser": 0,
     "idStatut":0,
     "idgenre": 1,
@@ -182,6 +193,7 @@
     "description": "Étoile du Léopard (  Angl.  Leopardstar ) est une chatte à l'épaisse fourrure dorée tachetée de noir aux yeux ambrés, d'où sa ressemblance avec un léopard."
   },{
     "id": 11,
+    "slug": "tornade-blanche",
     "idUser": 0,
     "idStatut":0,
     "idgenre": 0,
@@ -198,6 +210,7 @@
     "description": "Tornade Blanche (  Angl.  Whitestorm ) est un chat blanc aux yeux jaunes, avec une cicatrice derrière l'oreille."
   },{
     "id": 12,
+    "slug": "etoile-du-tigre",
     "idStatut":0,
     "idgenre": 0,
     "idClan": 7,
@@ -214,6 +227,7 @@
     "description": "Étoile du Tigre (  Angl.  Tigerstar ) est un grand matou massif et énorme au pelage sombre brun foncé tigré, tacheté, rayé et moucheté. Il a de très longues griffes ressemblants à celle d'un tigre (d'où son nom de guerrier), de larges épaules puissantes, une oreille déchiquetée, une large balafre sur l'arrête de son nez, un large museau noir, une épaisse queue, de grands yeux ambrés, des muscles puissants et une entaille en forme de \"V\" sur l'oreille droite. Il est cruel, manipulateur et avide de pouvoir. C'est l'ennemi juré d’Étoile de Feu."
   },{
     "id": 13,
+    "slug": "princesse",
     "idUser": 0,
     "idStatut":0,
     "idgenre": 1,
@@ -230,6 +244,7 @@
     "description": "Princesse (  Angl.  Princess ) est une chatte brun clair aux pattes et au poitrail blancs."
   },{
     "id": 14,
+    "slug": "croc-jaune",
     "idUser": 0,
     "idStatut":1,
     "idgenre": 1,
@@ -246,6 +261,7 @@
     "description": "Croc Jaune (  Angl.  Yellowfang ) est une chatte gris foncé au museau large et plat couturé de cicatrices, aux oreilles déchirées, aux crocs jaunes et aux grands yeux ambrés."
   },{
     "id": 15,
+    "slug": "etoile-de-jais",
     "idUser": 0,
     "idStatut":0,
     "idgenre": 0,
@@ -262,6 +278,7 @@
     "description": "Étoile de Jais (  Angl.  Blackstar ) est un grand chat blanc aux longues pattes dont le bout est noir et aux yeux ambrés. Il est polydactyle (Il a un doigt de plus à une de ses pattes)."
   },{
     "id": 16,
+    "slug": "conteur-des-pointes-rocheuses",
     "idUser": 0,
     "idStatut":0,
     "idgenre": 0,
@@ -279,6 +296,7 @@
   }
   ,{
     "id": 17,
+    "slug": "etoile-de-feuille",
     "idUser": 0,
     "idStatut":0,
     "idgenre": 1,

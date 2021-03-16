@@ -32,6 +32,9 @@ export default {
       titleBook: '\"La Guerre des Clans\"',
       description: 'Créez vos propres personnages',
     }
+  },
+  created(){
+    this.$store.dispatch("fetchBooks");
   }
 }
 </script>

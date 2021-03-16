@@ -3,10 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import Vuex from 'vuex'
+import { store } from "./store";
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import routes from './router/index.js'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import { BootstrapVue, IconsPlugin, BootstrapVueIcons } from 'bootstrap-vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faFontAwesome } from '@fortawesome/free-brands-svg-icons'
@@ -28,6 +29,7 @@ Vue.config.productionTip = false
 Vue.use(Vuex)
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+
 Vue.use(VueAxios, axios)
 
 routes.beforeEach((to, from, next) => {
@@ -42,8 +44,8 @@ routes.beforeEach((to, from, next) => {
 });
 /* eslint-disable no-new */
 const app = new Vue({
-  el: '#app',
+  render: h =>h(App),
+  mounted: () => document.dispatchEvent(new Event("x-app-rendered")),
+  store,
   router: routes,
-  components: { App },
-  render: h =>h(App)
-})
+}).$mount("#app");
