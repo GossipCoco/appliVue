@@ -6,6 +6,7 @@
 
 <script>
 import charactersJson from './datas/json/characters.json'
+
 import AllCharacters from './characters/AllCharacters.vue'
 
 export default {

@@ -69,10 +69,11 @@
 </template>
 <script>
 
-import ClansJson from "../datas/clans.json"
-import GradesJson from "../datas/grades.json"
-import genre from "../datas/genres.json"
-import prefixs from "../datas/prefixs.json"
+import ClansJson from "../datas/json/clans.json"
+import GradesJson from "../datas/json/grades.json"
+import genre from "../datas/json/genres.json"
+import prefixs from "../datas/json/prefixs.json"
+import statesCharacters from "../datas/json/states.json"
 import SelectClan from "../clans/SelectClan.vue"
 import NewCharacter from "./NewCharacter.vue"
 

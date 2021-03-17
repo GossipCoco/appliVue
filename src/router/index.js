@@ -16,7 +16,7 @@ import AllBooks from '@/components/Books/AllBooks'
 import BookDetails from '@/components/Books/BookDetails'
 import CreditContainer from '@/components/layout/CreditContainer'
 import PanelAdmin from '@/components/admin/PanelAdmin'
-
+import PageError from '@/components/pages/PageError'
 
 Vue.use(VueRouter)
 
@@ -78,8 +78,7 @@ const routes = [
     path: '/clan/allclans',
     name: 'AllClans',
     component : AllClans
-  },
-  {
+  },{
     path: '/book/allbooks',
     name: 'AllBooks',
     component: AllBooks
@@ -96,7 +95,9 @@ const routes = [
     name: 'PanelAdmin',
     component: PanelAdmin,
     meta: { needAuth: true }
-  }
+  },
+  { path: '/404', component: PageError },  
+  { path: '*', redirect: '/404' }, 
 ]
 const router = new VueRouter({
   mode: 'history',

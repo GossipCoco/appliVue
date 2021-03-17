@@ -53,9 +53,9 @@
 <script>
 import AllCharactersJson from "../datas/json/characters.json"
 import ClansJson from "../datas/json/clans.json"
-import GradeJason from "../datas/grades.json"
-import States from "../datas/states.json"
-import Genre from "../datas/genres.json"
+import GradeJason from "../datas/json/grades.json"
+import States from "../datas/json/states.json"
+import Genre from "../datas/json/genres.json"
 import { ClansService } from "../../services/Clans.service"
 
 export default {

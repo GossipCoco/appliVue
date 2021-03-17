@@ -23,7 +23,6 @@
     </div>
 </template>
 <script>
-import AllClans from "../datas/clans.json"
 import { ClansService } from "../../services/Clans.service"
 export default {
     name: 'AllClans',

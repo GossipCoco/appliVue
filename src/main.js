@@ -19,6 +19,7 @@ import './assets/css/layouts.css'
 import './assets/css/form.css'
 import './assets/css/composants.css'
 import './assets/css/text.css'
+import './assets/css/pagenotfound.css'
 
 import { auth } from "@/firebase";
 
