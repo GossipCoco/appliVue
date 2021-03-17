@@ -42,6 +42,7 @@
                         <transition>
                             <router-view v-bind:charId="char.id"/>
                         </transition>
+                        <b-button :to="'/characters/characterDetailsBySlug/'+char.slug" variant="primary" :character="char">Plus d'infos</b-button>
                 </b-card>
             </div>
         </div>

@@ -40,20 +40,20 @@ export default {
             idClan: null,
             backgroundImg: null,
             clanByCharacter: null,
-
+            allClansService: []
         }
     },
+    async mounted(){
+        this.allClansService = await ClansService.getClans();
+    },
     mounted(){
+        console.log(this.allClansService);
         const slug = this.$route.params.slug;
         this.character = characterDB.find((character)=>character.slug === slug);
         this.characterImage = this.character.image;
         this.idClan = this.character.idClan;
-        console.log(this.idClan);
         this.characterClan = allclans.find((clan)=>clan.id === this.idClan);
-        this.backgroundImg = this.characterClan.illustration;
-        console.log(this.backgroundImg)
-        
-
+        this.backgroundImg = this.characterClan.illustration;       
     }
 }
 </script>
