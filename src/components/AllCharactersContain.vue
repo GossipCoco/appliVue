@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import charactersJson from './datas/characters.json'
+import charactersJson from './datas/json/characters.json'
 import AllCharacters from './characters/AllCharacters.vue'
 
 export default {

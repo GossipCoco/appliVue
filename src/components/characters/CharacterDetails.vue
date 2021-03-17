@@ -51,8 +51,8 @@
     </div>
 </template>
 <script>
-import AllCharactersJson from "../datas/characters.json"
-import ClansJson from "../datas/clans.json"
+import AllCharactersJson from "../datas/json/characters.json"
+import ClansJson from "../datas/json/clans.json"
 import GradeJason from "../datas/grades.json"
 import States from "../datas/states.json"
 import Genre from "../datas/genres.json"

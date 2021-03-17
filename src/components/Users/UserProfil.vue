@@ -24,8 +24,8 @@
     </div>
 </template>
 <script>
-import UsersDatas from '../datas/usersDatas.json'
-import Permissions from '../datas/permissions.json'
+import UsersDatas from '../datas/json/usersDatas.json'
+import Permissions from '../datas/json/permissions.json'
 import UserFormEdit from './UserFormEdit.vue'
 export default {
     name:'UserProfil',

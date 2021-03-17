@@ -35,9 +35,9 @@
 </template>
 <script>
 
-import Characters from "../datas/characters.json"
+import Characters from "../datas/json/characters.json"
 import SelectClan from "../clans/SelectClan.vue"
-import ClansJson from "../datas/clans.json"
+import ClansJson from "../datas/json/clans.json"
 import { CharactersService } from "../../services/Characters.service"
 export default {
     name: 'AllCharacters',

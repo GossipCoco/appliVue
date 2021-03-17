@@ -1,25 +1,25 @@
  /* eslint-disable */
 <template>
-    <div class="col main-container-app">
-        <div class="row presentation-contain">
-            <div class="test-bind" :style="{ 'background-image': 'url(' + require('@/assets/images/backgrounds/'+ backgroundImg) + ')' }">
-                <b-card
-                    title="Card Title"
-                    :img-src="require('@/assets/images/personnage/'+character.image)"
-                    tag="article"                    
-                    class="mb-2"
-                    :style="{ 'background-image': 'url(' + require('@/assets/images/backgrounds/'+ backgroundImg) + ')' }"
-                >
+        <div class="presentation-contain">
+            <b-card no-body class="overflow-hidden" style="max-width: 100%x;">
+                <b-row no-gutters>
+                <b-col md="2"  :style="{ 'background-image': 'url(' + require('@/assets/images/backgrounds/'+ backgroundImg) + ')' }">
+                    <b-card-img :src="require('@/assets/images/personnage/'+character.image)" alt="Image" class="rounded-0"></b-card-img>
+                </b-col>
+                <b-col md="10">
+                    <b-card-body title="Horizontal Card">
+                        <b-card-title><h2>{{ character.name }}</h2></b-card-title>
                     <b-card-text>
-                    Détails sur {{ character.name }}<br>    
+                        <p>{{ character.description}}</p>
                     </b-card-text>
-
-                    <router-link to="/characters/allcharacters" type="button" class="btn btn-primary">Retourner sur la liste de tous les personnages</router-link>
-                </b-card>
-
-            </div>
+                    <b-card-text>
+                            <p>{{ character.biographie}}</p>
+                    </b-card-text>
+                    </b-card-body>
+                </b-col>
+                </b-row>
+            </b-card>
         </div>
-    </div>
 </template>
 <script>
 import characterDB from "../../components/datas/allcharacters.js"

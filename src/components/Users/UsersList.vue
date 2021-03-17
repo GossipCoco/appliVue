@@ -33,8 +33,8 @@
   </div>
 </template>
 <script>
-import usersJson from '../datas/usersDatas.json'
-import photosJson from '../datas/photos.json'
+import usersJson from '../datas/json/usersDatas.json'
+import photosJson from '../datas/json/photos.json'
 import UserDetails from './UserDetails'
 import UserComments from './UserComments'
 export default {

@@ -1,4 +1,4 @@
-import allCharacters from "../components/datas/characters.json"
+import allCharacters from "../components/datas/json/characters.json"
 import { db} from "@/firebase" 
 const charactersRef = db.collection('characters');
 export const CharactersService = {

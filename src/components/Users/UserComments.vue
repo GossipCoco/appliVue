@@ -31,10 +31,7 @@ export default {
     },
     computed: {
         allPhotosById: function () {
-            //Retourn allPhoto où albumId = userId
-            
             const result = this.allPhotos.filter();
-            console.log(result)
             this.allPhotos = result
             return result
         }
