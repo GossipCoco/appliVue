@@ -21,12 +21,12 @@
             </div>
         </div>
         <div class="row contain-all-characters">
-            <div class="col-sm-3 container-allCharacterByBdd" v-for="char in allCharacters" :key="char.id" id="all-characters-card">
+            <div class="col-sm-3 container-allCharacterByBdd" v-for="character in allCharacters" :key="character.id" id="all-characters-card">
                 <b-card
                     id="all-characters-card"                                       
-                    :title="char.name"
-                    :img-src="require('@/assets/images/personnage/'+char.image)"
-                    :img-alt="char.name"
+                    :title="character.name"
+                    :img-src="require('@/assets/images/personnage/'+character.image)"
+                    :img-alt="character.name"
                     img-top
                     tag="article"
                     style="width: 20rem; height: 30rem"
@@ -35,14 +35,14 @@
                     :current-page="currentPage"
                 >
                     <b-card-text>
-                    {{char.clan}}
+                    {{character.clan}}
                     </b-card-text>
 
-                    <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="char.id" class="btn btn-primary">En savoir plus</router-link>
+                    <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="character.id" class="btn btn-primary">En savoir plus</router-link>
                         <transition>
-                            <router-view v-bind:charId="char.id"/>
+                            <router-view v-bind:charId="character.id"/>
                         </transition>
-                        <b-button :to="'/characters/characterDetailsBySlug/'+char.slug" variant="primary" :character="char">Plus d'infos</b-button>
+                        <b-button :to="'/characters/characterDetailsBySlug/'+character.slug" variant="primary" :character="char">Plus d'infos</b-button>
                 </b-card>
             </div>
         </div>
@@ -86,7 +86,7 @@ export default {
     computed: {
       rows() {
         return this.allCharacters.length
-      }
+      },   
     },
     async mounted(){
         this.allCharacters = await CharactersService.getCharacters();

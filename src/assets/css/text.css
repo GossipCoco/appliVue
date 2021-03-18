@@ -30,6 +30,9 @@
     text-align: center;
     text-transform: uppercase;
 }
+.title-character-name h4.card-title{
+    font-size: 38px;
+}
 /* PARAGRAGPHE */
 .user-personnal-info {
     font-family: var(--main-font);

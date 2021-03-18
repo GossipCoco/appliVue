@@ -7,14 +7,19 @@
                     <b-card-img :src="require('@/assets/images/personnage/'+character.image)" alt="Image" class="rounded-0"></b-card-img>
                 </b-col>
                 <b-col md="10">
-                    <b-card-body title="Horizontal Card">
-                        <b-card-title><h2>{{ character.name }}</h2></b-card-title>
-                    <b-card-text>
-                        <p>{{ character.description}}</p>
-                    </b-card-text>
-                    <b-card-text>
-                            <p>{{ character.biographie}}</p>
-                    </b-card-text>
+                    <b-card-body :title="character.name" class="title-character-name">
+                        <b-card-title><h2>{{ character.grade }} du {{ characterClan.name}}</h2></b-card-title>
+                        <b-card-text>
+                            <p class="presentation-text">
+                                <span>Description</span>                            
+                            </p>
+                            <p class="presentation-text" contenteditable="true" v-html="character.description" @focusout="onFocusOut($event)"></p>
+                            <p class="presentation-text">
+                                <span>Biographie</span>                            
+                            </p>
+                            <p class="presentation-text" contenteditable="true" v-html="character.biographie" @focusout="onFocusOut($event)"></p>
+                            
+                        </b-card-text>
                     </b-card-body>
                 </b-col>
                 </b-row>
@@ -33,6 +38,8 @@ export default {
     name:'CharacterDetails', 
     data(){
         return {
+            allClansService: [],
+            clanOfCharacter: [],
             character: null,
             characterImage: null, 
             allClans: allclans,
@@ -40,20 +47,27 @@ export default {
             idClan: null,
             backgroundImg: null,
             clanByCharacter: null,
-            allClansService: []
+            clanName: null,
+
         }
     },
     async mounted(){
         this.allClansService = await ClansService.getClans();
+        this.clanOfCharacter = await ClansService.getClanById(this.idClan)        
     },
     mounted(){
-        console.log(this.allClansService);
         const slug = this.$route.params.slug;
         this.character = characterDB.find((character)=>character.slug === slug);
         this.characterImage = this.character.image;
         this.idClan = this.character.idClan;
         this.characterClan = allclans.find((clan)=>clan.id === this.idClan);
         this.backgroundImg = this.characterClan.illustration;       
+    },
+    methods: {
+        onFocusOut: function(e) {
+            this.descriptionCharacter = e.target.innerHTML
+            this.biographieCharacter = e.target.innerHTML
+        }
     }
 }
 </script>

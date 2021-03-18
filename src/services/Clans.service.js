@@ -1,10 +1,16 @@
 import { db } from "@/firebase"
+const clansRef = db.collection('clans')
 
 export const ClansService = {
     async getClans(){
-        const clansRef = db.collection('clans')
         const clansDoc = await clansRef.get()
         const clans = clansDoc.docs.map(clan=>clan.data())
+        console.log(clans);
         return clans
+    },
+    async getClanById(id){
+        const clanByIDDoc = await clansRef.get();
+        const clanById = clanByIDDoc.docs.map(clan=>clan.id = id);
+        return clanById;
     }
 }
