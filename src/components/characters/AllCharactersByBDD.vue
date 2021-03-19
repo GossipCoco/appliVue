@@ -38,11 +38,11 @@
                     {{character.clan}}
                     </b-card-text>
 
-                    <router-link v-bind:to="'/characters/characterDetails/'+char.id" v-bind:charId="character.id" class="btn btn-primary">En savoir plus</router-link>
+                     <router-link v-bind:to="'/characters/characterDetails/'+character.id" v-bind:charId="character.id" class="btn btn-primary">En savoir plus</router-link>
                         <transition>
                             <router-view v-bind:charId="character.id"/>
                         </transition>
-                        <b-button :to="'/characters/characterDetailsBySlug/'+character.slug" variant="primary" :character="char">Plus d'infos</b-button>
+                        <b-button :to="'/characters/characterDetailsBySlug/'+character.slug" variant="primary" :character="character">Plus d'infos</b-button>
                 </b-card>
             </div>
         </div>
@@ -90,6 +90,7 @@ export default {
     },
     async mounted(){
         this.allCharacters = await CharactersService.getCharacters();
+        console.log(this.allCharacters)
         this.allClans = await ClansService.getClans();
         this.allStates = await StatesService.getStates();
         this.allGrades = await GradesService.getGrades();
