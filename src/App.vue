@@ -34,7 +34,7 @@ export default {
     }
   },
   created(){
-    this.$store.dispatch("fetchBooks");
+    //this.$store.dispatch("fetchBooks");
   }
 }
 </script>

@@ -5,8 +5,8 @@
         <div class="row">
             <div class="col contain-filters">
                 <p>Filtrer par </p>
-                <select-clan label="Clan ou Groupe" @setClan="setClan" v-bind:typeClan="currentClan" v-bind:clans="allClans"/><br>
-                <select-grade label="Grade" @setGrade="setGrade" v-bind:grades="allGrades"></select-grade>
+                <select-clan label="Clan ou Groupe" @setClan="setClan(clanSelected)" v-bind:typeClan="typeClan" v-bind:clans="allClans"/><br>
+                <select-grade label="Grade" @setGrade="setGrade(gradeSelected)" v-bind:grades="allGrades"></select-grade>
             </div>
         </div>
         <div class="row">
@@ -63,8 +63,7 @@ export default {
     name: 'AllCharacters',
     components:{
         'select-clan': SelectClan,
-        'select-grade': SelectGrade,
-        SelectGrade
+        'select-grade': SelectGrade
     },
     data () {
         return{
@@ -77,11 +76,12 @@ export default {
             allGenres: [],
             characterClan: null,
             characterGrade: null,
-            characterGenre: null
+            characterGenre: null,
+            clanSelected: null,
+            gradeSelected: null,
+            typeClan: 'current',
+            clans: ''
         }
-    },
-    created: function(){
-        this.genreChar = this.charList.genre
     },
     computed: {
       rows() {
@@ -90,7 +90,6 @@ export default {
     },
     async mounted(){
         this.allCharacters = await CharactersService.getCharacters();
-        console.log(this.allCharacters)
         this.allClans = await ClansService.getClans();
         this.allStates = await StatesService.getStates();
         this.allGrades = await GradesService.getGrades();

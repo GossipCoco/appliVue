@@ -18,29 +18,46 @@
             <b-button @click="addCharAction" class="primary">Ajouter</b-button>
         </div>
         </div>
-            <ul>
-                <li v-for="newChar of newCharacters" :key="newChar._id" style="margin: 1rem">
-                    <div style="display: flex; flex-direction: row; width: 450px">
-                        <p style="flex: 1; font-size: 15">{{ newChar.name }} </p>
-                        <b-button @click="deleteChararcter(newChar.name)" variant="secondary"  style="flex: 1; font-size: 15">Supprimer</b-button>
-                    </div>               
-                </li>
-            </ul>        
+            <div  class="row">
+                <div class="col-6">
+                    <ul>
+                        <li v-for="newChar of newCharacters" :key="newChar._id" style="margin: 1rem">
+                            <div style="display: flex; flex-direction: row; width: 450px">
+                                <p style="flex: 1; font-size: 15">{{ newChar.name }} </p>
+                                <b-button @click="deleteChararcter(newChar.name)" variant="secondary"  style="flex: 1; font-size: 15">Supprimer</b-button>
+                            </div>               
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li v-for="user in allUsers" :key="user.id">
+                            <p>{{ user.name }}</p>
+                            <p>{{ user.email }}</p>
+                            <p>{{ user.id }}</p>
+                            <p>{{ user.birthday  }}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
         </div>
     </div>
 </template>
 <script>
 import { CharactersService } from "../../services/Characters.service"
+import { UsersService } from '../../services/Users.service'
 export default {
     name: 'PanelAdmin',
   data() {
     return {
       newChar: "",
-      newCharacters:[],      
+      newCharacters:[],
+      allUsers: []
     };
   },
   async mounted() {
     this.newCharacters = await CharactersService.getNewCharacters();
+    this.allUsers = await UsersService.getUsers();
   },
   methods: {    
     async addCharAction() {
