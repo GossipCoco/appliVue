@@ -38,14 +38,12 @@ export default {
             idCharacter: null,
             currentClan: 'current',
             selectedClan: null,
-            newSelectedClan: 'pas de clan'
+            newSelectedClan: 'pas de clan sélectionné'
         }
     },methods:{
         setClan(value){
             this.selectedClan = value;
             console.log(this.selectedClan);
-            //this.selectedClan = this.allClans[this.selectedClan];
-            //console.log(this.selectedClan);
         }
     }
 }
