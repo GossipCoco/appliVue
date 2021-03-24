@@ -5,7 +5,7 @@ export const ClansService = {
     async getClans(){
         const clansDoc = await clansRef.get()
         const clans = clansDoc.docs.map(clan=>Object.create({ ...clan.data(), id: clan.id}))
-       // console.log("all clan : ", clans);
+        console.log("all clan : ", clans);
         return clans
     },
     async getClanById(id){

@@ -5,8 +5,8 @@
         <div class="row">
             <div class="col contain-filters">
                 <p>Filtrer par </p>
-                <select-clan label="Clan ou Groupe" @setClan="setClan(clanSelected)" v-bind:typeClan="typeClan" v-bind:clans="allClans"/><br>
-                <select-grade label="Grade" @setGrade="setGrade(gradeSelected)" v-bind:grades="allGrades"></select-grade>
+                <select-clan label="Clan ou Groupe" @setClan="setClan(clanSelected)"/><br>
+                <!-- <select-grade label="Grade" @setGrade="setGrade(gradeSelected)" v-bind:grades="allGrades"></select-grade> -->
             </div>
         </div>
         <div class="row">
@@ -94,6 +94,7 @@ export default {
         this.allStates = await StatesService.getStates();
         this.allGrades = await GradesService.getGrades();
         this.allGenres = await GenresService.getGenres();
+        console.log(this.allClans[0])
     },
     methods: {
         setclan(value){

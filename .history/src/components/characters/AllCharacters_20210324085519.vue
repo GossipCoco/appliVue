@@ -38,7 +38,6 @@ export default {
             idCharacter: null,
             currentClan: 'current',
             selectedClan: null,
-            newSelectedClan: 'pas de clan sélectionné'
         }
     },methods:{
         setClan(value){

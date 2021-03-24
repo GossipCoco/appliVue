@@ -31,22 +31,19 @@ export default {
     },
     data () {
         return{
+            imageChar: null,
             allCharacters: Characters,
             characters: [],
+            genreChar: null,
             allclans: ClansJson,
             backgroundImgClan: null,
+            perPage: 10,
+            currentPage: 1,
             idCharacter: null,
             currentClan: 'current',
             selectedClan: null,
-            newSelectedClan: 'pas de clan sélectionné'
+            newSelectedClan: 'clan du tonnerre',
         }
-    },methods:{
-        setClan(value){
-            this.selectedClan = value;
-            console.log(this.selectedClan);
-            //this.selectedClan = this.allClans[this.selectedClan];
-            //console.log(this.selectedClan);
-        }
-    }
+    },
 }
 </script>

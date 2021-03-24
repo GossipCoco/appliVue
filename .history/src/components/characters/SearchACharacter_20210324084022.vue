@@ -5,7 +5,7 @@
             <select-clan label="Clan ou Groupe" @setClan="setClan" v-bind:typeClan="currentClan"></select-clan>
             </div>
         <div class="col presentation-contain">Champ de recherche</div>
-        <div class="col presentation-contain contain-search-result">Résultat : <p>{{selectedClan.id}} {{selectedClan.name}}</p></div>
+        <div class="col presentation-contain contain-search-result">Résultat : <p>{{selectedClan}}</p></div>
     </div>
 </template>
 <script>

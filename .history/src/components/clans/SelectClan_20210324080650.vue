@@ -1,6 +1,11 @@
 <template>
     <div class="col-6">
         <label for="selectClan" class="col-sm-4 col-form-label">{{label}}</label>
+        <b-form-select id="selectClan" v-model="clanSelected"  class="form-select form-select-lg mb-3" @change="selectClan(clanSelected)">
+            <option v-for="(clan, id) in allclans" v-bind:value="clan.id" :key="id">
+                {{ clan.id }} - {{ clan.name }}
+            </option>
+        </b-form-select> 
         <b-form-select v-model="clanSelected" :options="allclans" @change="selectClan(clanSelected)"></b-form-select>                       
     </div>                
 </template>
@@ -15,10 +20,9 @@ export default {
     data(){
         return{            
             allclans: allClan,
-            clanSelected: null,
+            clanSelected: '',
             infoClan:[],
-            allClansByBDD: null,
-            selected: null,
+            allClansByBDD: null
         }
     },
     async mounted(){
@@ -26,7 +30,6 @@ export default {
     },
     methods:{
         selectClan(clanSelected){        
-            console.log(clanSelected);
             this.clanSelected = clanSelected;
             this.$emit("setClan", this.clanSelected)
         },

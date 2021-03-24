@@ -12,7 +12,8 @@
             action="/characters/allcharacters"
             method="POST"
         >
-            <select-clan label="Clan ou Groupe" @setClan="setClan" v-bind:typeClan="currentClan" v-bind:clans="clans"/>
+            <select-clan label="Clan ou Groupe" @setClan="setClan" v-bind:typeClan="currentClan"/>
+            <p> clan sélectionné : {{ selectedClan }}</p>
             <div v-if=" selectedClan === 0 || selectedClan === 1|| selectedClan === 2 || selectedClan === 3 || selectedClan === 4">
                 <div class="col-6">
                     <label for="selectGrade" class="form-label">Grade du personnage</label>                            
@@ -86,7 +87,7 @@ export default {
     data(){
         return{
             title: 'Créer un nouveau personnage',
-            selectedClan: '',
+            selectedClan: null,
             selectedGrade: '',
             selectedAncienClan: '',
             selectedGenre: '',
@@ -107,16 +108,10 @@ export default {
     methods:{
         selectClan(value){
         },
-        setClan(value){
-            //console.log("id clan", value)
-            this.selectedClan = value
-            if(this.selectedClan === 5){
-                this.allAnciensClans = this.allAnciensClans.push(this.ClansJson);
-                console.log("new array",this.ClansJson);
-                return "Quelle est l'ancien clan?"
-            }else{
-
-            }          
+        setClan: async function(value){
+            console.log("id clan", value);
+            this.selectedClan = value;
+            return this.selectedClan;
         },
         setGrade(value){
 

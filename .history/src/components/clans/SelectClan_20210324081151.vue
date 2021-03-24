@@ -26,7 +26,6 @@ export default {
     },
     methods:{
         selectClan(clanSelected){        
-            console.log(clanSelected);
             this.clanSelected = clanSelected;
             this.$emit("setClan", this.clanSelected)
         },
