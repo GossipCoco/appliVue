@@ -22,7 +22,28 @@
         </div>
         <div class="row contain-all-characters">
             <div class="col-sm-3 container-allCharacterByBdd" v-for="character in allCharacters" :key="character.id" id="all-characters-card">
-                <character-card v-bind:characterCard="character"></character-card>
+                <b-card
+                    id="all-characters-card"                                       
+                    :title="character.name"
+                    :img-src="require('@/assets/images/personnage/'+character.image)"
+                    :img-alt="character.name"
+                    img-top
+                    tag="article"
+                    style="width: 20rem; height: 30rem"
+                    class="mb-4 card-contain-character"
+                    :per-page="perPage"
+                    :current-page="currentPage"
+                >
+                    <b-card-text>
+                    {{character.clan}}
+                    </b-card-text>
+
+                     <router-link v-bind:to="'/characters/characterDetails/'+character.id" v-bind:charId="character.id" class="btn btn-primary">En savoir plus</router-link>
+                        <transition>
+                            <router-view v-bind:charId="character.id"/>
+                        </transition>
+                        <b-button :to="'/characters/characterDetailsBySlug/'+character.slug" variant="primary" :character="character">Plus d'infos</b-button>
+                </b-card>
             </div>
         </div>
     </div>

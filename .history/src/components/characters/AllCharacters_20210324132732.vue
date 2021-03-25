@@ -1,4 +1,6 @@
+ /* eslint-disable */
 <template>
+<!-- TO DO : add filter by clans and by grade -->
     <div>
         <div class="row">
             <div class="col contain-filters">
@@ -43,9 +45,9 @@ export default {
         setClan(value){
             this.showResult = true;
             this.selectedClan = value;
-        },
-        getClanById(value){
-            
+            console.log(this.selectedClan);
+            //this.selectedClan = this.allClans[this.selectedClan];
+            //console.log(this.selectedClan);
         }
     }
 }
