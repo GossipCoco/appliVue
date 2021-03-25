@@ -60,6 +60,7 @@ import { ClansService } from "../../services/Clans.service"
 
 export default {
     name:'CharacterDetails',
+    props:['charId', 'charInfo'],
     data(){
         return {
             allCharacters: AllCharactersJson,
@@ -83,13 +84,7 @@ export default {
             ageInfo: null
         }
     },
-    
-    async mounted(){
-        this.allclans = await ClansService.getClans();
-    },
-    mounted(){
-        const gettedId = this.$route.params.idCharacter;
-        this.charId = gettedId
+    created: function(){
         this.characterDetails = this.allCharacters[this.charId]
         this.characterImage = this.characterDetails.image
         this.descriptionCharacter = this.characterDetails.description
@@ -97,6 +92,8 @@ export default {
         this.idGradeCharacter = this.characterDetails.idGrade
         this.idGenreChar = this.characterDetails.idgenre
         this.charClanId = this.characterDetails.idClan
+
+
         this.nameGrade = this.allGrades[this.idGradeCharacter]
         this.nameGenre = this.allGenres[this.idGenreChar].genre
         this.charClanId = this.charClanId
@@ -108,7 +105,16 @@ export default {
         }else{
             this.ageInfo = "Âge du personnage : " + this.characterDetails.age + " lunes soit " + this.characterDetails.age / 12 + "ans"
         }
-
+        
+    },
+    async mounted(){
+        this.allclans = await ClansService.getClans();
+    },
+    mounted(){
+        const slug = this.$route.params.slug;   
+        console.log(slug);     
+        this.character = this.allCharacters.find((character)=>character.slug === slug);
+        console.log(character);
     },
     methods: {
         onFocusOut: function(e) {

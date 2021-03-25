@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col contain-filters">
                 <p>Filtrer par </p>
-                 <select-clan label="Clan ou Groupe" @setClan="setClan" v-bind:typeClan="currentClan"/><br>
+                <select-clan label="Clan ou Groupe" @setClan="setClan(clanSelected)"/><br>
                 Résultat : <p v-if="showResult === true">{{clanSelected}}</p>
                 <!-- <select-grade label="Grade" @setGrade="setGrade(gradeSelected)" v-bind:grades="allGrades"></select-grade> -->
             </div>
@@ -63,8 +63,7 @@ export default {
             gradeSelected: null,
             typeClan: 'current',
             clans: '',            
-            showResult: false,
-            currentClan: 'current',
+            showResult: false
         }
     },
     computed: {
@@ -80,7 +79,9 @@ export default {
         this.allGenres = await GenresService.getGenres();        
     },
     methods: {
-        setClan(value){            
+        setclan(value){
+            console.log(value)
+            
             this.showResult = true;
             this.clanSelected = value;
         },

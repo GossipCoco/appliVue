@@ -60,6 +60,7 @@ import { ClansService } from "../../services/Clans.service"
 
 export default {
     name:'CharacterDetails',
+    props:['charId', 'charInfo'],
     data(){
         return {
             allCharacters: AllCharactersJson,
@@ -83,12 +84,39 @@ export default {
             ageInfo: null
         }
     },
-    
+    /*created: function(){
+        const getId = this.$route.params.id;
+        //console.log(getId);
+        this.charId = this.currentRoute.slice(29)
+        this.charId = this.charId
+        this.characterDetails = this.allCharacters[this.charId]
+        this.characterImage = this.characterDetails.image
+        this.descriptionCharacter = this.characterDetails.description
+        this.biographieCharacter = this.characterDetails.biographie
+        this.idGradeCharacter = this.characterDetails.idGrade
+        this.idGenreChar = this.characterDetails.idgenre
+        this.charClanId = this.characterDetails.idClan
+
+
+        this.nameGrade = this.allGrades[this.idGradeCharacter]
+        this.nameGenre = this.allGenres[this.idGenreChar].genre
+        this.charClanId = this.charClanId
+        this.clanByCharacter = this.allClans[this.charClanId]
+        this.backgroundImgClan = this.clanByCharacter.illustration
+        this.logoClan = this.clanByCharacter.img
+        if(this.characterDetails.age === "Inconnu"){
+            return this.ageInfo = "Âge du personnage inconnu"
+        }else{
+            this.ageInfo = "Âge du personnage : " + this.characterDetails.age + " lunes soit " + this.characterDetails.age / 12 + "ans"
+        }
+        
+    },*/
     async mounted(){
         this.allclans = await ClansService.getClans();
     },
     mounted(){
         const gettedId = this.$route.params.idCharacter;
+        console.log("route : ", gettedId);  
         this.charId = gettedId
         this.characterDetails = this.allCharacters[this.charId]
         this.characterImage = this.characterDetails.image
@@ -97,6 +125,8 @@ export default {
         this.idGradeCharacter = this.characterDetails.idGrade
         this.idGenreChar = this.characterDetails.idgenre
         this.charClanId = this.characterDetails.idClan
+
+
         this.nameGrade = this.allGrades[this.idGradeCharacter]
         this.nameGenre = this.allGenres[this.idGenreChar].genre
         this.charClanId = this.charClanId

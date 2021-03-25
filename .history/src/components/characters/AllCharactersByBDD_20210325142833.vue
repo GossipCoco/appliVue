@@ -63,8 +63,7 @@ export default {
             gradeSelected: null,
             typeClan: 'current',
             clans: '',            
-            showResult: false,
-            currentClan: 'current',
+            showResult: false
         }
     },
     computed: {
@@ -80,7 +79,9 @@ export default {
         this.allGenres = await GenresService.getGenres();        
     },
     methods: {
-        setClan(value){            
+        setclan(value){
+            console.log(value)
+            
             this.showResult = true;
             this.clanSelected = value;
         },

@@ -60,8 +60,10 @@ import { ClansService } from "../../services/Clans.service"
 
 export default {
     name:'CharacterDetails',
+    props:['charId', 'charInfo'],
     data(){
         return {
+            charId: null,
             allCharacters: AllCharactersJson,
             allClans: ClansJson,
             newAllClans:[],
@@ -71,25 +73,21 @@ export default {
             characterDetails: null,
             characterImage: null,
             clanByCharacter: null,
-            humanAge: null,
-            backgroundImgClan: null,
-            logoClan: null,
-            idGradeCharacter: null,
-            nameGrade: null,
-            idGenreChar: null,
-            nameGenre: null,
-            descriptionCharacter: null,
-            biographieCharacter: null,
-            ageInfo: null
+            humanAge: NULL,
+            backgroundImgClan: NULL,
+            logoClan: NULL,
+            idGradeCharacter: NULL,
+            nameGrade: NULL,
+            idGenreChar: NULL,
+            nameGenre: NULL,
+            descriptionCharacter: NULL,
+            biographieCharacter: NULL,
+            ageInfo: NULL
         }
     },
-    
-    async mounted(){
-        this.allclans = await ClansService.getClans();
-    },
-    mounted(){
-        const gettedId = this.$route.params.idCharacter;
-        this.charId = gettedId
+    created: function(){
+        this.charId = this.currentRoute.slice(29)
+        this.charId = this.charId
         this.characterDetails = this.allCharacters[this.charId]
         this.characterImage = this.characterDetails.image
         this.descriptionCharacter = this.characterDetails.description
@@ -97,6 +95,8 @@ export default {
         this.idGradeCharacter = this.characterDetails.idGrade
         this.idGenreChar = this.characterDetails.idgenre
         this.charClanId = this.characterDetails.idClan
+
+
         this.nameGrade = this.allGrades[this.idGradeCharacter]
         this.nameGenre = this.allGenres[this.idGenreChar].genre
         this.charClanId = this.charClanId
@@ -108,7 +108,16 @@ export default {
         }else{
             this.ageInfo = "Âge du personnage : " + this.characterDetails.age + " lunes soit " + this.characterDetails.age / 12 + "ans"
         }
-
+        
+    },
+    async mounted(){
+        this.allclans = await ClansService.getClans();
+    },
+    mounted(){
+        const slug = this.$route.params.slug;   
+        console.log(slug);     
+        this.character = this.allCharacters.find((character)=>character.slug === slug);
+        console.log(character);
     },
     methods: {
         onFocusOut: function(e) {

@@ -89,6 +89,7 @@ export default {
     },
     mounted(){
         const gettedId = this.$route.params.idCharacter;
+        console.log("route : ", gettedId);  
         this.charId = gettedId
         this.characterDetails = this.allCharacters[this.charId]
         this.characterImage = this.characterDetails.image

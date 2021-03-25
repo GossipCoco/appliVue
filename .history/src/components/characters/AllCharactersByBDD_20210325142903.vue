@@ -80,7 +80,9 @@ export default {
         this.allGenres = await GenresService.getGenres();        
     },
     methods: {
-        setClan(value){            
+        setclan(value){
+            console.log(value)
+            
             this.showResult = true;
             this.clanSelected = value;
         },
