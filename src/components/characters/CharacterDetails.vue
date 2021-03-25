@@ -64,7 +64,6 @@ export default {
         return {
             allCharacters: AllCharactersJson,
             allClans: ClansJson,
-            newAllClans:[],
             allGrades: GradeJason,
             allGenres: Genre,
             currentRoute: window.location.pathname,
