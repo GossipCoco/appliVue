@@ -13,9 +13,9 @@
                 </p>
             </div>
             <div  class="col" v-if="userProfil.idPermission === 1">
-                <div>
+                <!-- <div>
                     <user-form-edit @editInfoUsrSuccess="editInfoUsrSuccess"/>
-                </div>
+                </div> -->
             </div>
             <div class="col" v-else>
                 Aucune modification autorisée
@@ -27,6 +27,8 @@
 import UsersDatas from '../datas/json/usersDatas.json'
 import Permissions from '../datas/json/permissions.json'
 import UserFormEdit from './UserFormEdit.vue'
+
+import { UsersService } from '../../services/Users.service'
 export default {
     name:'UserProfil',
     props: ['usrInfo'],
@@ -38,11 +40,18 @@ export default {
             usrId: '',
             UsersDatas: UsersDatas,
             currentRoute: window.location.pathname,
-            userProfil: null,            
+            userProfil: null,
+            usrProfil: [], 
+            usrIdTest :0,          
         }
     },
     created: function () {
         this.usrId = this.currentRoute.slice(17)
+    },
+    async mounted(){
+        this.usrProfil = await UsersService.getUsers();
+        console.log(usrProfil.findIndex(profil => profil.id === '0'));
+        
     },
     beforeMount: function(){
         this.usrId = this.usrId;

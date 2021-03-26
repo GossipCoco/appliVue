@@ -12,12 +12,10 @@
                     </div>                    
                     <div class="col-8">
                         <h3>Détail sur {{characterDetails.name}}</h3>
-                        <h2>{{characterDetails.clan}}</h2>
-                        
+                        <h2>{{characterDetails.clan}}</h2>                        
                     </div>
                     <div class="col-2">
-                        <router-link to="/characters/allcharacters" type="button" class="btn btn-primary">Retourner sur la liste de tous les personnages</router-link>
-                        
+                        <router-link to="/characters/allcharacters" type="button" class="btn btn-primary">Retourner sur la liste de tous les personnages</router-link>                        
                     </div>
                 </div>
                 <div class="row">
@@ -81,8 +79,7 @@ export default {
             biographieCharacter: null,
             ageInfo: null
         }
-    },
-    
+    },    
     async mounted(){
         this.allclans = await ClansService.getClans();
     },
@@ -107,7 +104,6 @@ export default {
         }else{
             this.ageInfo = "Âge du personnage : " + this.characterDetails.age + " lunes soit " + this.characterDetails.age / 12 + "ans"
         }
-
     },
     methods: {
         onFocusOut: function(e) {
