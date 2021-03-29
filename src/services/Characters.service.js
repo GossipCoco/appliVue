@@ -5,11 +5,13 @@ export const CharactersService = {
     async getCharacters(){        
         const charactersDoc = await charactersRef.get();
         const characters = charactersDoc.docs.map(character => Object.create({ ...character.data(), id: character.id}));
+        console.log(characters);
         return characters;
     },
     async getCharacterById(id){
         const searchCharacterDoc = await charactersRef.get();
         const searchCharacter = searchCharacterDoc.docs.map(character=>character.id = id);
+        console.log(searchCharacter);
         return searchCharacter;
     },
     /* TEST NEWS CHARACTERS */

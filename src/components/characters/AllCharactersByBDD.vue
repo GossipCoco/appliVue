@@ -65,6 +65,7 @@ export default {
             clans: '',            
             showResult: false,
             currentClan: 'current',
+            searchChar: [],
         }
     },
     computed: {
@@ -77,7 +78,10 @@ export default {
         this.allClans = await ClansService.getClans();
         this.allStates = await StatesService.getStates();
         this.allGrades = await GradesService.getGrades();
-        this.allGenres = await GenresService.getGenres();        
+        this.allGenres = await GenresService.getGenres();     
+        
+        
+
     },
     methods: {
         setClan(value){            
