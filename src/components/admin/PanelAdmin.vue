@@ -11,23 +11,22 @@
                         <b-form>
                             <b-input-group label="Nom d'utilisateur :" label-for="inline-form-input-name">
                             <b-form-input
-                                id="inline-form-input-name"
-                                class="mb-2 mr-sm-2 mb-sm-0"
-                                placeholder="Jane Doe"
+                                id="inline-form-input-name"                               
+                                placeholder="Nom d'utilisateur"
                                 v-model="newUser" />
                             </b-input-group>
                             <b-input-group label="Email :" label-for="inline-form-input-email">
                             <b-form-input
                                 id="inline-form-input-email"
-                                placeholder="Username"
+                                placeholder="Email"
                                 v-model="newUserEmail" />
                             </b-input-group>
-
                             <b-form-group id="input-group-3" label="Pays :" label-for="input-3">
                                 <b-form-select
                                 id="input-3"
-                                v-model="allCountries.name"
-                                :options="name"
+                                v-model="location"
+                                placeholder="Choisir"
+                                :options="allCountries"
                                 required
                                 ></b-form-select>
                             </b-form-group>
@@ -36,15 +35,23 @@
                     </div>        
                     <div class="col-sm-6">
                         <h2>Liste des utilisateurs</h2>
-                        <ul>
-                            <li v-for="user in allUsers" :key="user.id" class="panel-admin-all-users">                            
+                        <b-list-group>
+                            <b-list-group-item v-for="user in allUsers" :key="user.id" >
                                 <p><span> ID et login : </span>{{ user.id }} - {{ user.login }}</p>
                                 <p><span> Username : </span>{{ user.name }}</p>
                                 <p><span> Email : </span> {{ user.email }}</p>
                                 <p><span> Anniversaire : </span>{{ user.birthday  }}</p>
-                            </li>
-                        </ul>
+                                <p><span> Anniversaire : </span>{{ user.birthday  }}</p>
+                            </b-list-group-item>
+                        </b-list-group>
                     </div>
+                </div>
+                <div class="col-sm-12">
+                    <ul>
+                        <li v-for="characterByUser in charactersByUser" :key="characterByUser.id">
+                            {{ characterByUser.id }} - {{ characterByUser.idUser }} - {{ characterByUser.idCharacter }}
+                        </li>
+                    </ul>
                 </div>
             </div> 
         </div>    
@@ -53,28 +60,36 @@
 <script>
 import { CharactersService } from "../../services/Characters.service"
 import { UsersService } from '../../services/Users.service'
-import allCountries from '../datas/json/allCountries.json'
+import { CharactersByUserService } from '../../services/CharactersByUser.service'
+import allCountries from '../datas/allCountries.js'
 export default {
     name: 'PanelAdmin',
   data() {
     return {
         allCountries: allCountries,
         newUser: '',
+        charactersByUser: [],
         newUserEmail: '',
-        newCharacters:[],
         allUsers: [],
-        lastId: null
+        lastId: null,
+        location: '',
+        idCharacter: '',
+        allCharacters: [],
+        characterByUserArray: []
     };
   },
   async mounted() {
-    this.newCharacters = await CharactersService.getNewCharacters();
     this.allUsers = await UsersService.getUsers();
+    this.allCharacters = await CharactersService.getCharacters();
+    this.charactersByUser = await CharactersByUserService.getCharactersByUser();
+    //console.log(this.charactersByUser.idCharacter)
+
   },
   methods: {    
     async addUserAction() {
         this.lastId = this.allUsers.length;
         this.lastId = this.lastId;
-        const user = { id: this.lastId, name: this.newUser, login: this.newUser, email: this.newUserEmail };
+        const user = { id: this.lastId, name: this.newUser, login: this.newUser, email: this.newUserEmail, location: this.location };
         const idUser = await UsersService.addUser(user);
     },
     deleteChararcter(character) {
