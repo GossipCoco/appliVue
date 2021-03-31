@@ -1,58 +1,69 @@
 <template>
-    <div class="main-container-app accueil-app">
+    <div class="main-container-app accueil-app panel-admin">
         <div class="presentation-contain">
-        <h1>Admin</h1>
-        <div class="row form-group ajouterVille">
-            <div class="col-sm-2">
-                Ajouter un personnage
-            </div>
-        <div class="col-sm-3">
-            <input
-            type="text"
-            id="characterField"
-            class="form-control"
-            v-model="newChar"
-            />
-        </div>
-        <div class="col-sm-2">
-            <b-button @click="addCharAction" class="primary">Ajouter</b-button>
-        </div>
-        </div>
-            <div  class="row">
-                <div class="col-6">
-                    <ul>
-                        <li v-for="newChar of newCharacters" :key="newChar._id" style="margin: 1rem">
-                            <div style="display: flex; flex-direction: row; width: 450px">
-                                <p style="flex: 1; font-size: 15">{{ newChar.name }} </p>
-                                <b-button @click="deleteChararcter(newChar.name)" variant="secondary"  style="flex: 1; font-size: 15">Supprimer</b-button>
-                            </div>               
-                        </li>
-                    </ul>
+            <h1>Panel Administrateur</h1>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <h2>Ajouter un utilisateur</h2>
                 </div>
-                <div class="col-6">
-                    <ul>
-                        <li v-for="user in allUsers" :key="user.id">
-                            <p>{{ user.name }}</p>
-                            <p>{{ user.email }}</p>
-                            <p>{{ user.id }}</p>
-                            <p>{{ user.birthday  }}</p>
-                        </li>
-                    </ul>
+                <div class="addUser-container">
+                    <div class="col-sm-6">
+                        <b-form>
+                            <b-input-group label="Nom d'utilisateur :" label-for="inline-form-input-name">
+                            <b-form-input
+                                id="inline-form-input-name"
+                                class="mb-2 mr-sm-2 mb-sm-0"
+                                placeholder="Jane Doe"
+                                v-model="newUser" />
+                            </b-input-group>
+                            <b-input-group label="Email :" label-for="inline-form-input-email">
+                            <b-form-input
+                                id="inline-form-input-email"
+                                placeholder="Username"
+                                v-model="newUserEmail" />
+                            </b-input-group>
+
+                            <b-form-group id="input-group-3" label="Pays :" label-for="input-3">
+                                <b-form-select
+                                id="input-3"
+                                v-model="allCountries.name"
+                                :options="name"
+                                required
+                                ></b-form-select>
+                            </b-form-group>
+                            <b-button @click="addUserAction" class="primary" variant="primary">Ajouter cet utilisateur</b-button>
+                        </b-form>
+                    </div>        
+                    <div class="col-sm-6">
+                        <h2>Liste des utilisateurs</h2>
+                        <ul>
+                            <li v-for="user in allUsers" :key="user.id" class="panel-admin-all-users">                            
+                                <p><span> ID et login : </span>{{ user.id }} - {{ user.login }}</p>
+                                <p><span> Username : </span>{{ user.name }}</p>
+                                <p><span> Email : </span> {{ user.email }}</p>
+                                <p><span> Anniversaire : </span>{{ user.birthday  }}</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>    
-        </div>
+            </div> 
+        </div>    
     </div>
 </template>
 <script>
 import { CharactersService } from "../../services/Characters.service"
 import { UsersService } from '../../services/Users.service'
+import allCountries from '../datas/json/allCountries.json'
 export default {
     name: 'PanelAdmin',
   data() {
     return {
-      newChar: "",
-      newCharacters:[],
-      allUsers: []
+        allCountries: allCountries,
+        newUser: '',
+        newUserEmail: '',
+        newCharacters:[],
+        allUsers: [],
+        lastId: null
     };
   },
   async mounted() {
@@ -60,11 +71,11 @@ export default {
     this.allUsers = await UsersService.getUsers();
   },
   methods: {    
-    async addCharAction() {
-        const character = { name: this.newChar, iq: 0 };
-        const idCharacter = await CharactersService.addCharacter(character);
-        console.log("step3 : ",idCharacter.id)
-        console.log("step4 : ",this.newCharacters)
+    async addUserAction() {
+        this.lastId = this.allUsers.length;
+        this.lastId = this.lastId;
+        const user = { id: this.lastId, name: this.newUser, login: this.newUser, email: this.newUserEmail };
+        const idUser = await UsersService.addUser(user);
     },
     deleteChararcter(character) {
         CharactersService.deleteChararcter(character);

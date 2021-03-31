@@ -69,3 +69,6 @@
 .user-list ul li{
     text-align: left;
 }
+.panel-admin-all-users p span{
+    font-weight: 600;
+}

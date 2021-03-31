@@ -18,5 +18,10 @@ export const UsersService = {
         const searchUserDoc = await usersRef.get();
         const searchUser = searchUserDoc.docs.map(user => user.email = email);
         return searchUser;
-    }
+    },
+    async addUser(user) {
+        const newUserRef = db.collection('allusers')
+        const result = await newUserRef.add(user);
+        return result.id;
+    },
 };
