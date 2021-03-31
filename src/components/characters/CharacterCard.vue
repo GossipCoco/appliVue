@@ -16,7 +16,7 @@
             <transition>
                 <router-view v-bind:charId="characterCard.id"/>
             </transition>
-            <b-button :to="'/characters/characterDetailsBySlug/'+characterCard.slug" variant="primary" :character="characterCard">Plus d'infos</b-button>
+            <b-button :to="'/characters/characterDetailsBySlug/'+characterCard.slug" variant="primary" :characterCard="characterCard">Plus d'infos</b-button>
         </b-card>   
     </div>
 </template>
@@ -27,7 +27,6 @@ export default {
     props: ['characterCard'],
     data () {
         return {
-
         }
     }
 }

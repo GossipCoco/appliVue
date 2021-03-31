@@ -44,3 +44,7 @@
     width: 211px;
     height: 345px;
 }
+.background-clan-contain{
+    background-repeat: no-repeat;
+    background-size: cover;
+}

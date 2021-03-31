@@ -3,8 +3,7 @@
         <div class="row presentation-contain">
             <div class="col">
                 <p>
-                    <!-- <b-avatar :src="require('@/assets/images/users/'+usrTest.avatar)" class="container-avatar" size="72px"></b-avatar><br> -->
-                    <b-avatar :src="getImg(usrTest.avatar)" class="container-avatar" size="72px"></b-avatar><br>
+                    <b-avatar :src="getImg(usrTest.avatar)" class="container-avatar" size="72px"></b-avatar><br>                  
                     Mon profil {{ userProfil.name }}<br>
                     Nom d'utilisateur : {{ userProfil.username }}<br>
                     Email : {{ userProfil.email }}<br>
@@ -49,7 +48,8 @@ export default {
             usrCurrentProfil: [],
             usrIdTest :[],     
             usrTest: [],
-            usrEmail:[]
+            usrEmail:[],
+            publicPath: process.env.BASE_URL
         }
     },
     created: function () {
@@ -68,8 +68,7 @@ export default {
         this.userProfil = this.UsersDatas[this.usrId];        
     },
     methods:{
-        getImg (pic) {
-            console.log("computed : ", pic);
+        getImg (pic) {            
             return require('@/assets/images/users/'+pic)
         },
         showFormEdit(){
