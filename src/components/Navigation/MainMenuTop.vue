@@ -15,7 +15,7 @@
       <b-nav-item><router-link to="/book/allbooks">{{ menu.allBooks }}</router-link></b-nav-item>
       <b-nav-item><router-link to="/credit">{{ menu.credit }}</router-link></b-nav-item>
       <b-nav-item-dropdown show v-if="connected" text="Admin" left>
-        <b-dropdown-item><router-link to="/panel-admin">{{ menu.admin }}</router-link></b-dropdown-item>
+        <b-dropdown-item><router-link to="/panel-admin/allusers">{{ menu.admin }}</router-link></b-dropdown-item>
         <b-dropdown-item><router-link to="/user/allusers">{{ menu.allUsers}}</router-link></b-dropdown-item>
         <b-dropdown-item>{{ menu.userGestion }}</b-dropdown-item>
       </b-nav-item-dropdown>
