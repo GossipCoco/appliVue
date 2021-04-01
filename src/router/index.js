@@ -16,6 +16,8 @@ import AllBooks from '@/components/Books/AllBooks'
 import BookDetails from '@/components/Books/BookDetails'
 import CreditContainer from '@/components/layout/CreditContainer'
 import PanelAdmin from '@/components/admin/PanelAdmin'
+import AllUsers from '@/components/admin/AllUsers'
+import AddUserForm from '@/components/admin/AddUserForm'
 import PageError from '@/components/pages/PageError'
 
 Vue.use(VueRouter)
@@ -94,7 +96,11 @@ const routes = [
     path: '/panel-admin',
     name: 'PanelAdmin',
     component: PanelAdmin,
-    meta: { needAuth: true }
+    meta: { needAuth: true },
+    children: [
+      { path: 'allusers', component: AllUsers, name: 'AllUsers' },
+      { path: 'add-user', component: AddUserForm, name: 'AddUserForm' },
+    ]
   },
   { path: '/404', component: PageError },  
   { path: '*', redirect: '/404' }, 
