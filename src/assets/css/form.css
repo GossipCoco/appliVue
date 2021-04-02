@@ -5,6 +5,6 @@
 .container-form-create-character .row{
     margin: 5px;
 }
-.addUser-container .input-group{
-    margin: 1rem 0 0 0;
+.add-user-form .input-group{
+        margin: 0 0 2rem 0;
 }

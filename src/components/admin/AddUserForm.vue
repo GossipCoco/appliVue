@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-form>
+        <b-form class="add-user-form">
             <b-input-group label="Nom d'utilisateur :" label-for="inline-form-input-name">
             <b-form-input
                 id="inline-form-input-name"                               
@@ -13,6 +13,8 @@
                 placeholder="Email"
                 v-model="newUserEmail" />
             </b-input-group>
+             <label for="example-datepicker">Choose a date</label>
+            <b-form-datepicker id="example-datepicker" v-model="userBirthday" class="mb-2"></b-form-datepicker>            
             <b-form-group id="input-group-3" label="Pays :" label-for="input-3">
                 <b-form-select
                 id="input-3"
@@ -33,7 +35,8 @@
     export default {
         name: 'AddUserForm',
         data(){
-            return{                
+            return{
+                dataReady: false,                
                 allCountries: allCountries,
                 newUser: '',
                 charactersByUser: [],
@@ -43,14 +46,21 @@
                 location: '',
                 idCharacter: '',
                 allCharacters: [],
-                characterByUserArray: []
+                characterByUserArray: [], 
+                userBirthday: ''
             }
+        },
+        async mounted() {
+            this.allUsers = await UsersService.getUsers();
+            this.dataReady = true;
         },
          methods: {    
                 async addUserAction() {
                 this.lastId = this.allUsers.length;
+                console.log(this.lastId);
                 this.lastId = this.lastId;
-                const user = { id: this.lastId, name: this.newUser, login: this.newUser, email: this.newUserEmail, location: this.location };
+                console.log(this.userBirthday)
+                const user = { id: this.lastId, name: this.newUser, login: this.newUser, email: this.newUserEmail, location: this.location, dateBirthday: this.userBirthday, avatar: 'cat01.jpg' };
                 const idUser = await UsersService.addUser(user);
             },
         }        
