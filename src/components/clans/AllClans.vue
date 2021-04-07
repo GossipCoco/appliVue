@@ -15,6 +15,7 @@
                     <b-card :title="clan.name">
                         <b-card-text>
                         {{clan.description.substring(0, 120)}}... (suite)
+                        <b-button :to="'/clan/clanDetails/'+clan.slug" variant="primary">Plus d'infos</b-button>
                         </b-card-text>
                     </b-card>
                 </b-card>
