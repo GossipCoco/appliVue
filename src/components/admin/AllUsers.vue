@@ -10,7 +10,7 @@
                     <p><span> Email : </span> {{ user.email }}</p>
                     <p><span> Location : </span> {{ user.location }}</p>
                     <p><span> Date de naissance : </span> {{ user.dateBirthday }}</p>
-                    <button  type="button" class="btn btn-link btn-sm" v-on:click="setUser(user)">Plus d'info</button> 
+                    <button  type="button" class="btn btn-link btn-sm" v-on:click="setUserInfo()">Plus d'info</button> 
                 </b-list-group-item>
             </b-list-group>
             </div>
@@ -24,6 +24,7 @@
 </template>
 <script>
     import { UsersService } from '../../services/Users.service'
+    import { RolesService } from '../../services/Roles.service'
     import UserDetails from './UserDetails.vue'
     export default {
         name: 'AllUsers',
@@ -35,6 +36,7 @@
                 dataReady: false,
                 oldUser: [], 
                 showUserInfoDetail: false,
+                roleUser: null,
             }
         },
         filters:{
@@ -45,6 +47,7 @@
         },
         async mounted() {
             this.allUsers = await UsersService.getUsers();
+            this.allRoles = await RolesService.getRoles();
             this.dataReady = true;
         },
         methods: {
@@ -53,6 +56,11 @@
                 this.userPersonnalInfo = value;                
                 this.showUserInfoDetail = true
             },
+        },
+        computed: {
+            setUserInfo(){
+                //to do : set info
+            }
         }
     }
 </script>
