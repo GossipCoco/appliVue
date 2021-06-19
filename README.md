@@ -1,6 +1,6 @@
 # vuetraining
 
-> entrainement a vue
+> La Guerre des Clans l'Application
 
 ## Build Setup
 
